@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/bootstrap/css/estilos.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/estilosadmin.css" rel="stylesheet">
 
 
     <!-- Custom styles -->
@@ -48,20 +48,13 @@
                                       </span>
                                   </div>
                               </div>
-                              <br>  
-                              <div class="form-group">
-                                  <div class="input-group">
-                                  <label class="checkbox-inline text-center"><input type="checkbox" value=""> Médico</label>
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Auxiliar</label>                                      
-                                  </div>
-                              </div>
+                            <br>
                                                    
                                <div class="form-group sign-btn">
                                   <input type="submit" class="btn" value="Entrar">
                                   <p><a href="#" class="forgot evhover">Olvidé mi contraseña!</a></p>
                                </div>                             
-                               <!-- <div class="col-sm-12 mx-auto text-center" style="margin: auto">
+                               <div class="col-sm-12 mx-auto text-center" style="margin: auto">
                                     <a href="https://www.facebook.com/">
                                       <i class="fa fa-facebook-square fa-2x evhover"></i>
                                     </a>
@@ -69,10 +62,9 @@
                                     <a href="https://www.instagram.com/?hl=es-la">
                                       <i class="fa fa-instagram fa-2x evhover"></i>           
                                     </a>
-                                </div> -->
-                                
-
-                          </form>
+                                </div>                    
+                        
+                        </form>
                         </div>
                         <div class="back signup_form"></div>
                     </div>

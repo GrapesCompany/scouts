@@ -13,7 +13,8 @@ html, body {
 body {
     font-family: 'Raleway',sans-serif;
     position: relative;
- }
+    /*background: rgba(0, 0, 0, 0) url("../img/ptn.png") repeat scroll 0 0;*/
+}
 
 .in-page {
     min-height: 520px;
@@ -28,7 +29,7 @@ a {
 }
 
 a:hover, a:focus {
-    color: white;
+    color: #1b5a7c;
 }
 
 .btn-cyan {
@@ -42,8 +43,8 @@ a:hover, a:focus {
 }
 
 .form-control:focus {
-    border-color: #0f0766;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #ab0e86;
+    border-color: #6ddabe;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #4bbb8b;
     outline: 0 none;
 }
 
@@ -52,7 +53,7 @@ a:hover, a:focus {
 }
 
 .login-screen {
-    background-image: url(https://s15.postimg.cc/8xs7ctltn/nueva.jpg);
+    background-image: url(https://s15.postimg.cc/jdhcn1px7/fondoooo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -113,8 +114,8 @@ a:hover, a:focus {
 }
 
 .login .sign-btn input.btn {
-    background: #59057b;
-    border-color:#59057b;
+    background: #4bbb8b;
+    border-color:#4bbb8b;
     color: #fff;
     width: 180px;
 }
@@ -126,11 +127,10 @@ a:hover, a:focus {
 .evhover:hover{
  font-weight:bolder;
  color: white;
- }
- 
+}
 
 .login .sign-btn input.btn:hover {
-  background: #59057b;
+  
   border-color:#fff;
   opacity: 0.4;
 }
