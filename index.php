@@ -53,7 +53,11 @@
                                   <input type="submit" class="btn" value="Entrar">
                                   <p><a href="#" class="forgot evhover">Olvidé mi contraseña!</a></p>
                                </div>
-
+                                <div class="form-group">
+                                  <div class="input-group">
+                                  <a href="#" class="forgot evhover">Ingresar al Sistema Administrativo</a>                                   
+                                  </div>
+                              </div>
                                <div class="col-sm-12 mx-auto text-center" style="margin: auto">
                                     <a href="https://www.facebook.com/">
                                       <i class="fa fa-facebook-square fa-2x evhover"></i>
