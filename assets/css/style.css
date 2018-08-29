@@ -9,9 +9,8 @@ Bootstrap Admin Template by EGrappler.com
 */
 
 body {
-	background: #ddd;
+	background: #f9f6f1;
 	font: 13px/1.7em 'Open Sans';
-	 
 }
     
 p { 
@@ -109,7 +108,7 @@ textarea {
     color: #666;
 }
 
-.navbar-search .search-query { background:#fff; border:0; color:#fff; line-height:normal;}
+.navbar-search .search-query { background:#59057b; color:#fff; line-height:normal;}
 
 
 /*------------------------------------------------------------------
@@ -185,7 +184,7 @@ textarea {
 
 .subnavbar .container > ul > li.active > a {
 	
-	border-bottom:3px solid #ab0e86;
+	border-bottom:3px solid #ff7f74;
 	color: #383838;
 }
     
@@ -314,7 +313,8 @@ textarea {
 }
 
 .footer-inner {
-	padding: 15px 0;	
+	padding: 15px 0;
+	
 	font-size: 12px;
 	background: #111;
 	color: #999;
@@ -353,7 +353,7 @@ textarea {
 	height: 40px;
 	line-height: 40px;
 	
-	background: #ddd;
+	background: #f9f6f1;
 	background:-moz-linear-gradient(top, #f9f6f1 0%, #f2efea 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f6f1), color-stop(100%,#f2efea)); /* Chrome,Safari4+ */
 	background:-webkit-linear-gradient(top, #f9f6f1 0%,#f2efea 100%); /* Chrome10+,Safari5.1+ */
@@ -1101,7 +1101,7 @@ width: 11px;}
 	height: 250px;
 }
 
-.dropdown-menu li>a:hover, .dropdown-menu .active>a, .dropdown-menu .active>a:hover { background:#59057b;}
+.dropdown-menu li>a:hover, .dropdown-menu .active>a, .dropdown-menu .active>a:hover { background:#59057b; opacity: 0.9;}
 
 .accordion-heading { background:#e5e5e5;  }
 .accordion-heading a { color:#545454; text-decoration:none; font-weight:bold; }

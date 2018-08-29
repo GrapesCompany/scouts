@@ -1,0 +1,76 @@
+.colores{
+    font-family: "Open Sans";
+}
+
+.padd{
+    text-align: center;
+}
+
+.paddi{
+    padding-left: 100px;
+}
+
+.medidarow{
+    width: 100px !important;
+}
+
+.tama{
+    box-sizing: content-box !important;
+}
+
+.monte{
+    width: 100%;
+    height: 30px;
+    font-size: 12pt;
+}
+
+
+.monte:focus{
+    border-color: #59057b !important;
+    color: black !important;
+    opacity: 0.7;
+}
+
+.colorwidget{
+border-color: transparent;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
+.tamletra{
+    font-size: 12pt;
+}
+
+.sinpadd{
+    padding-top: 0px;
+    padding-bottom: 0px;   
+    
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.colorbtnd{
+   
+    background-color: #59057b !important;
+    color: white;
+}
+
+.colorbtn{ 
+    color: white;
+    background-color: #59057b;
+    height:40px;
+    width:140px;
+    font-size: 12pt;
+  }
+  
+  .colorbtn:hover{     
+    background-color: #9e48c0c0 !important;
+  }
+
+  .hespan{
+      height:80px !important;
+  }
+
+

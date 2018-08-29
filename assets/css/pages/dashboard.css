@@ -21,7 +21,7 @@ Bootstrap Admin Template by EGrappler.com
 	
 	text-decoration: none;
 	
-	background: #ddd;
+	background: #f9f6f1;
 	
 	border-radius: 5px;
 }
@@ -35,7 +35,7 @@ Bootstrap Admin Template by EGrappler.com
 }
 
 .shortcuts .shortcut:hover {
-	background: #59057b;
+	background: #00ba8b;
 }
 
 .shortcuts .shortcut:hover span{
