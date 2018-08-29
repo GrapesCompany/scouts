@@ -45,13 +45,17 @@
 					<li class="dropdown">						
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-user"></i> 
-							Usuario
+							Administrador
 							<b class="caret"></b>
 						</a>
 						
 						<ul class="dropdown-menu">
-							<li><a href="javascript:;">Perfil</a></li>
-							<li><a href="javascript:;">Cerrar Sesión</a></li>
+							<li><a href="#" onclick="showModificarJefeGrupo(this.value)">Perfil</a></li>
+							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
+							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
+
+
+							
 						</ul>						
 					</li>
 				</ul>
@@ -86,7 +90,7 @@
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showAgregarJefeGrupo(this.value)">Jefe de Grupo</a></li>
 						<li><a href="#" onclick="showAgregarDirigente(this.value)">Dirigente</a></li>
-                        <li><a href="pricing.html">Scout</a></li>
+                        <li><a href="#" onclick="showAgregarScout(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 
@@ -119,11 +123,19 @@
 	    <div class="container">
 <!-- __________________________________________________________________________________________________________________________________ -->
 
- <!--Agregar Jefe de Grupo-->              
- <div id="div_nuevojefegrupo" class="container"></div>
+<!--Agregar Jefe de Grupo-->              
+<div id="div_nuevojefegrupo" class="container"></div>
 
-  <!--Agregar Dirigente-->              
-  <div id="div_nuevodirigente" class="container"></div> 
+<!--Agregar Dirigente-->              
+<div id="div_nuevodirigente" class="container"></div> 
+
+<!--Agregar Scout-->              
+<div id="div_nuevoscout" class="container"></div> 
+
+<!--Modificar Jefe de Grupo-->              
+<div id="div_modificarjefegrupo" class="container"></div> 
+
+ 
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -132,8 +144,63 @@
 </div> <!-- /main -->
     
     
- 
-    
+    <!-- Seccion Salir-->
+    <div class="modal fade colorbtn2" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea salir?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+           
+          </div>
+         
+          <div class="modal-footer">
+          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
+          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+            
+          </div>
+        </div>
+      </div>
+	</div>
+	
+
+	    <!-- Seccion Cambiar Contraseña-->
+		<div class="modal fade colorbtn2" id="logoutModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar la contraseña?
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+			        
+          </div>
+         
+          <div class="modal-footer">
+		  
+		  <label for="invisible" class="tamletra aligfn">Contraseña Actual</label>
+		  <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
+		  <hr>
+		  <label for="invisible" class="tamletra aligfn">Contraseña Nueva</label>
+		  <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
+		  
+		  <label for="invisible" class="tamletra aligfn">Repetir Contraseña Nueva </label>
+          <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
+		 
+          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Guardar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
 <!-- Le javascript
 ================================================== -->

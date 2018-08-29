@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Nuevo Dirigente</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Nuevo Scout</h2>
          
           <hr>
 
@@ -70,11 +70,8 @@
  <div class="span4 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">				   
-      <label for="genero" class="tamletra">Género</label>				
-    <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Género" required="required" autofocus="autofocus">
-              <option value="1" class="monte">Masculino</option>
-              <option value="2">Femenino</option>                           
-        </select> 
+       <label for="direccion" class="tamletra">Dirección</label>
+       <input type="text" id="direccion" name="direccion" class="form-control monte" placeholder="Dirección" required="required">
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -118,8 +115,7 @@
    <div class="widget">	      			
      <div class="widget-content colorwidget">
  <label for="especialidad" class="tamletra">Contraseña</label>
-          <input type="password" id="especialidad" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
-         
+          <input type="password" id="especialidad" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">      
 </div> <!-- /widget-content -->
    </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -128,23 +124,73 @@
   <div class="span4 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget invisible">
-     <label for="invisible" class="tamletra">Contraseña</label>
-            <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
-           
-  </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
+     <label for="invisible" class="tamletra">Invisible</label>
+            <input type="password" id="invisible" class="form-control monte" placeholder="invisible" required="required" autofocus="autofocus"> 
+         
+            </div> <!-- /widget-content -->   
+     </div> <!-- /widget --> 
  </div> <!-- /span4 -->
 
- <div class="span8 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content colorwidget">
-       <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
-      
- </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
- </div> <!-- /span4 -->
 
+
+ <div class="container">	    	  
+  <div class="span10"> 
+     <div class="widget medida2">
+       <div class="widget-content medida">
+         <h3 class="colores"> <i class="icon-user"></i> Representante</h3>
+          <hr>
+            <div class="container medida">	
+
+            <div class="span4 hespan2">	      		
+            <div class="widget">	      			
+              <div class="widget-content colorwidget">
+          <label for="cedular" class="tamletra">Cédula</label>
+                   <input type="text" id="cedular" class="form-control monte2" placeholder="1717171717" required="required" autofocus="autofocus">      
+         </div> <!-- /widget-content -->
+            </div> <!-- /widget -->
+          </div> <!-- /span4 -->
+
+          <div class="span4 hespan2">	      		
+            <div class="widget">	      			
+              <div class="widget-content colorwidget">
+          <label for="nombrer" class="tamletra">Nombre</label>
+                   <input type="text" id="nombrer" class="form-control monte2" placeholder="Example" required="required" autofocus="autofocus">      
+         </div> <!-- /widget-content -->
+            </div> <!-- /widget -->
+          </div> <!-- /span4 -->
+
+          <div class="span4 hespan2">	      		
+          <div class="widget">	      			
+            <div class="widget-content colorwidget">
+        <label for="direccionr" class="tamletra">Dirección</label>
+                 <input type="text" id="direccionr" class="form-control monte2" placeholder="Riobamba" required="required" autofocus="autofocus">      
+       </div> <!-- /widget-content -->
+          </div> <!-- /widget -->
+        </div> <!-- /span4 -->
+
+        <div class="span4 hespan2">	      		
+        <div class="widget">	      			
+          <div class="widget-content colorwidget">
+      <label for="telefonor" class="tamletra">Telefóno</label>
+               <input type="text" id="telefonor" class="form-control monte2" placeholder="0999988888" required="required" autofocus="autofocus">      
+     </div> <!-- /widget-content -->
+        </div> <!-- /widget -->
+      </div> <!-- /span4 -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="span8 hespan">	      		
+  <div class="widget">	      			
+    <div class="widget-content colorwidget">
+    <br>
+   <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
+</div> <!-- /widget-content -->
+  </div> <!-- /widget -->
+</div> <!-- /span4 -->
 
 </div> <!-- /container -->
 </div> <!-- /widget-content -->

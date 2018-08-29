@@ -10,6 +10,16 @@
     padding-left: 100px;
 }
 
+.medida{
+    max-width: 560pt !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.medida2{
+    padding-left: 0px; 
+}
+
 .medidarow{
     width: 100px !important;
 }
@@ -18,11 +28,18 @@
     box-sizing: content-box !important;
 }
 
+.monte2{
+    width: 100%;
+    height: 30px;
+    font-size: 12pt;
+}
+
 .monte{
     width: 100%;
     height: 30px;
     font-size: 12pt;
 }
+
 
 
 .monte:focus{
@@ -64,6 +81,26 @@ padding-bottom: 0px;
     width:140px;
     font-size: 12pt;
   }
+
+  .colorbtn3{ 
+    color: white;
+    background-color: #5a057b9c;
+    font-size: 12pt;
+  }
+
+  .colorbtn3:hover{     
+    background-color: #9e48c0c9 !important;
+  }
+
+  .letrasalir{
+    font-size: 12pt !important; 
+  }
+
+  .colorbtn2{ 
+    color: white;
+    background-color: #59057b;
+    font-size: 12pt;
+  }
   
   .colorbtn:hover{     
     background-color: #9e48c0c0 !important;
@@ -72,5 +109,32 @@ padding-bottom: 0px;
   .hespan{
       height:80px !important;
   }
+
+  .hespan2{
+    width:320px !important;
+    height:80px !important;
+}
+
+.tambutton{
+    height:30px !important;
+    width:60px !important;
+}
+
+.tambutton2{
+    height:30px !important;
+    width:90px !important;
+    font-size: 12pt !important;   
+}
+
+.reubicarclose{
+    margin-top: -3px !important;
+    border: 0px solid black !important;
+    border-radius: 5px !important;    
+}
+
+.aligfn{
+    text-align: left;
+}
+
 
 
