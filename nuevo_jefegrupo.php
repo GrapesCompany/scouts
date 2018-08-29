@@ -92,6 +92,17 @@
  
 
  <div class="span4 hespan">	      		
+     <div class="widget">	      			
+       <div class="widget-content colorwidget">
+   <label for="fec_elec" class="tamletra">Fecha de Elección</label>
+            <input type="date" id="fec_elec" class="form-control monte" placeholder="Fecha de Elección" required="required" autofocus="autofocus">
+ </div> <!-- /widget-content -->
+     </div> <!-- /widget -->
+   </div> <!-- /span4 -->
+
+
+
+ <div class="span4 hespan">	      		
  <div class="widget">	      			
    <div class="widget-content colorwidget">
  <label for="direccion" class="tamletra">Dirección</label>
@@ -111,7 +122,15 @@
    </div> <!-- /span4 -->
 
 
- 
+   <div class="span4 hespan">	      		
+   <div class="widget">	      			
+     <div class="widget-content colorwidget">
+     <textarea type="text" id="motivo" class="form-control monte3" placeholder="Información Adicional" rows="3"></textarea>
+     <label for="motivo"></label></div> <!-- /widget-content -->
+   </div> <!-- /widget -->
+ </div> <!-- /span4 -->
+
+
 
  <div class="span8 hespan">	      		
      <div class="widget">	      			
