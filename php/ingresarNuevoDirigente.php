@@ -14,11 +14,12 @@ $fech_nac=$_POST['fech_nac'];
 $correo=$_POST['correo'];
 $inputPassword=$_POST['inputPassword'];
 $unidad=$_POST['unidad'];
+$unidadEspesifica=$_POST['uespecifica'];
 $cargo=$_POST['cargo'];
 
 
 
-$conexion=conectar();
+
 
 $conexion=conectar();
 $sql = "SELECT `CEDULA_TRA` FROM `dirigente` WHERE `CEDULA_TRA`='$cedula'" ;
@@ -51,7 +52,7 @@ mysqli_query( $conexion, "INSERT INTO `jefe_grupo` (
     `ID_GRUPO_SCOUT`, 
     `UNIDAD`, 
     `CARGO` ) values
-    ('$cedula' ,'$unidad', 'unidad espesifica' , '$cargo' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
+    ('$cedula' ,'$unidad', '$unidadEspesifica' , '$cargo' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
 
  cerrar($conexion);

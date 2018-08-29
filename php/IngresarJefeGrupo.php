@@ -36,10 +36,10 @@ echo "El Auxiliar que desea registrar ya existe en la base de datos.  ";
    `FECH_NAC_TRA`, 
    `CONTRASENA_TRA`, 
    `ESTADO_TRA`,
-   GENERO_TRA,
-   EDAD_TRA, 
+   `GENERO_TRA`,
+   `EDAD_TRA`, 
    `EMAIL_TRA`) values
-   ('$cedula' , '$nombre' , '$apellido' , '$direccion', '$telefono','$fech_nac','$inputPassword','0','$genero'.'$edad','$correo')" ) or die("Problemas en el select.  ".mysqli_error($conexion));
+   ('$cedula' , '$nombre' , '$apellido' , '$direccion', '$telefono','$fech_nac','$inputPassword','0','$genero','$edad','$correo')" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
 
 
@@ -49,9 +49,10 @@ mysqli_query( $conexion, "INSERT INTO `jefe_grupo` (
     `INFORMACION`) values
     ('$cedula' , '$fec_elec' , '$info' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
-
+   echo "El jefe de grupo se ha registrado correctamente.  ";
  cerrar($conexion);
- echo "El jefe de grupo se ha registrado correctamente.  ";
+
+
 }
 
 

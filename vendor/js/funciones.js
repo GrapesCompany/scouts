@@ -144,8 +144,10 @@ function showListarUDirigente(str) {
         '&genero=' + document.getElementById('genero').value +
         '&fech_nac=' + document.getElementById('fech_nac').value +
         '&direccion=' + document.getElementById('direccion').value +
+        '&fec_elec=' + document.getElementById('fec_elec').value +
+          '&info=' + document.getElementById('info').value +
         '&correo=' + document.getElementById('celectronico').value;
-
+    
     if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
         document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
         document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
@@ -188,7 +190,9 @@ function showListarUDirigente(str) {
     '&fech_nac=' + document.getElementById('fech_nac').value +
     '&direccion=' + document.getElementById('direccion').value +
     '&fec_elec=' + document.getElementById('fec_elec').value +
-    '&info=' + document.getElementById('info').value +
+    '&uespecifica=' + document.getElementById('uespecifica').value +
+  
+
 
     '&correo=' + document.getElementById('celectronico').value;
      

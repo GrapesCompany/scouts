@@ -149,7 +149,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
+      <button type="button"  onclick="ingresarNuevoDirigente()" class="btn btn-primary btn-block colorbtn">Registrar</button>
       
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
