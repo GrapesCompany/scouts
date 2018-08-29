@@ -3,7 +3,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>SCOUT Administración</title>
+    <title>SCOUT Dirigente</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">    
@@ -36,7 +36,7 @@
 			</a>
 			
 			<a class="brand" href="index2.php">
-				SCOUT SAN FELIPE NERI - ADMINISTRACIÓN			
+				SCOUT SAN FELIPE NERI - DIRIGENTE			
 			</a>		
 			
 			<div class="nav-collapse">
@@ -193,8 +193,8 @@
          
           <div class="modal-footer">
 		  
-		  <label for="catual" class="tamletra aligfn">Contraseña Actual</label>
-		  <input type="password" id="catual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
+		  <label for="cactual" class="tamletra aligfn">Contraseña Actual</label>
+		  <input type="password" id="cactual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
 		  <hr>
 		  <label for="cnueva" class="tamletra aligfn">Contraseña Nueva</label>
 		  <input type="password" id="cnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  

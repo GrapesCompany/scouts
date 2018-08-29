@@ -2,9 +2,13 @@
 
 function showAgregarJefeGrupo(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
-    document.getElementById("div_modificarjefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = "";
+    document.getElementById("div_listardirigentes").innerHTML = ""; 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -19,10 +23,15 @@ function showAgregarJefeGrupo(str) {
 
 function showAgregarDirigente(str) {
 
-    document.getElementById("div_nuevojefegrupo").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevoscout").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
- 
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = "";
+    document.getElementById("div_listardirigentes").innerHTML = ""; 
+
+
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
          if (this.readyState == 4 && this.status == 200) {
@@ -36,10 +45,13 @@ function showAgregarDirigente(str) {
 
  function showAgregarScout(str) {
 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
-    document.getElementById("div_nuevojefegrupo").innerHTML = "";  
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
-    
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = "";
+    document.getElementById("div_listardirigentes").innerHTML = ""; 
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -54,10 +66,13 @@ function showAgregarDirigente(str) {
 
  function showModificarJefeGrupo(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
-      
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = ""; 
+    document.getElementById("div_listardirigentes").innerHTML = "";  
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -72,11 +87,13 @@ function showAgregarDirigente(str) {
 
 function showListarUScout(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
-    document.getElementById("div_listarudirigente").innerHTML = ""; 
-      
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = ""; 
+    document.getElementById("div_listardirigentes").innerHTML = "";  
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -91,10 +108,13 @@ function showListarUScout(str) {
 
 function showListarUDirigente(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
-    document.getElementById("div_listaruscout").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = "";
+    document.getElementById("div_listardirigentes").innerHTML = ""; 
       
 
     var xmlhttp = new XMLHttpRequest();
@@ -108,8 +128,50 @@ function showListarUDirigente(str) {
     xmlhttp.send();
 }
 
+function showListarScouts(str) {
+
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";   
+    document.getElementById("div_listardirigentes").innerHTML = "";  
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarscouts").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_scouts.php?q=" + str, true);
+    xmlhttp.send();
+}
 
 
+function showListarDirigentes(str) {
+
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";  
+    document.getElementById("div_listarscouts").innerHTML = ""; 
+     
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listardirigentes").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_dirigentes.php?q=" + str, true);
+    xmlhttp.send();
+}
 
  
 
