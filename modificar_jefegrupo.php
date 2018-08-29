@@ -17,7 +17,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="cedula" class="tamletra">Cédula</label>					 
-     <input type="text" name="cedula" id="cedula" class="form-control monte" placeholder="1717171717" disabled required="required" autofocus="autofocus">
+     <input type="text" name="cedula" id="cedula" class="form-control monte" placeholder="17171717157" disabled required="required" autofocus="autofocus">
            </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
@@ -105,7 +105,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn3" onclick="onlinecampos(this.value)">Modificar</button>
+      <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;
       <button type="button" class="btn btn-primary btn-block colorbtn">Guardar</button>
  </div> <!-- /widget-content -->
