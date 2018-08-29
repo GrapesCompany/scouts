@@ -111,11 +111,14 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
 
+
+ 
+
  <div class="span8 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
+      <button type="button" class="btn btn-primary btn-block colorbtn" onclick="ingresarJefeGrupo()">Registrar</button>
       
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->

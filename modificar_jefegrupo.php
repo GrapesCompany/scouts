@@ -90,7 +90,14 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
-
+ <div class="span4 hespan">	      		
+     <div class="widget">	      			
+       <div class="widget-content colorwidget">
+   <label for="celectronico" class="tamletra">Direccion</label>
+             <input type="email" id="celectronico" class="form-control monte" placeholder="example@correo.com" disabled required="required">
+   </div> <!-- /widget-content -->
+     </div> <!-- /widget -->
+ </div> <!-- /span4 -->
 
  <!-- <div class="span4 hespan">	      		
      <div class="widget">	      			
@@ -107,7 +114,7 @@
        <br>
       <button type="button" class="btn btn-primary btn-block colorbtn4" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;
-      <button type="button" class="btn btn-primary btn-block colorbtn">Guardar</button>
+      <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="ingresarJefeGrupo()">Guardar</button>
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
