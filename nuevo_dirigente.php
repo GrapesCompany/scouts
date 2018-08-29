@@ -114,6 +114,16 @@
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
 
+<div class="span4 hespan">	      		
+<div class="widget">	      			
+  <div class="widget-content colorwidget">
+<label for="uespecifica" class="tamletra">Unidad específica</label>
+      <input type="text" id="uespecifica" class="form-control monte" placeholder="Unidad específica" required="required" autofocus="autofocus">
+      
+</div> <!-- /widget-content -->
+</div> <!-- /widget -->
+</div> <!-- /span4 -->
+
    <div class="span4 hespan">	      		
    <div class="widget">	      			
      <div class="widget-content colorwidget">
@@ -125,14 +135,14 @@
  </div> <!-- /span4 -->
  
 
-  <div class="span4 hespan">	      		
+ <!-- <div class="span4 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget invisible">
      <label for="invisible" class="tamletra">Contraseña</label>
             <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
            
-  </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
+  </div>  
+     </div>  
  </div> <!-- /span4 -->
 
  <div class="span8 hespan">	      		

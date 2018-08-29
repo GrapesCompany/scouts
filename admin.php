@@ -102,10 +102,10 @@
 					</a>	
 				
 					<ul class="dropdown-menu">
-                    	<li><a href="icons.html">Unidad-Scout</a></li>
-						<li><a href="faq.html">Unidad-Dirigente</a></li>
-                        <li><a href="pricing.html">Scouts</a></li>
-                        <li><a href="login.html">Dirigentes</a></li>
+                    	<li><a href="#" onclick="showListarUScout(this.value)">Unidad-Scout</a></li>
+						<li><a href="#" onclick="showListarUDirigente(this.value)">Unidad-Dirigente</a></li>
+                        <li><a href="#">Scouts</a></li>
+                        <li><a href="#">Dirigentes</a></li>
                     </ul>    				
 				</li>
 			
@@ -135,7 +135,11 @@
 <!--Modificar Jefe de Grupo-->              
 <div id="div_modificarjefegrupo" class="container"></div> 
 
- 
+<!--Listar Unidad Scout-->              
+<div id="div_listaruscout" class="container"></div> 
+
+<!--Listar Unidad Dirigente-->              
+<div id="div_listarudirigente" class="container"></div> 
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
