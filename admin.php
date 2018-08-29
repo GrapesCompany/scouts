@@ -183,14 +183,14 @@
          
           <div class="modal-footer">
 		  
-		  <label for="invisible" class="tamletra aligfn">Contraseña Actual</label>
-		  <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
+		  <label for="catual" class="tamletra aligfn">Contraseña Actual</label>
+		  <input type="password" id="catual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
 		  <hr>
-		  <label for="invisible" class="tamletra aligfn">Contraseña Nueva</label>
-		  <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
+		  <label for="cnueva" class="tamletra aligfn">Contraseña Nueva</label>
+		  <input type="password" id="cnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
 		  
-		  <label for="invisible" class="tamletra aligfn">Repetir Contraseña Nueva </label>
-          <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
+		  <label for="rcnueva" class="tamletra aligfn">Repetir Contraseña Nueva </label>
+          <input type="password" id="rcnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
 		 
           <button class="btn btn-lg tambutton2 colorbtn3" href="#">Guardar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>

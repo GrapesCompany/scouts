@@ -105,7 +105,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn3" onclick="onlinecampos(this.value)">Modificar</button>
+      <button type="button" class="btn btn-primary btn-block colorbtn4" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;
       <button type="button" class="btn btn-primary btn-block colorbtn">Guardar</button>
  </div> <!-- /widget-content -->
