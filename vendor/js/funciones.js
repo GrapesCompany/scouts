@@ -251,7 +251,6 @@ function showListarDirigentes(str) {
     '&genero=' + document.getElementById('genero').value +
     '&fech_nac=' + document.getElementById('fech_nac').value +
     '&direccion=' + document.getElementById('direccion').value +
-    '&fec_elec=' + document.getElementById('fec_elec').value +
     '&uespecifica=' + document.getElementById('uespecifica').value +
   
 
@@ -261,12 +260,11 @@ function showListarDirigentes(str) {
 if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
     document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
     document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
-    document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value &&
-    document.getElementById('fec_elec').value  ) {
+    document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value  ) {
    
             $.ajax({
                 type: "POST",
-                url: "php/ingresarJefeGrupo.php",
+                url: "php/ingresarNuevoDirigente.php",
                 data: dataString,
                 success: function (data) {
                     showAgregarJefeGrupo("gh");

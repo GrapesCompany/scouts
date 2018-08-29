@@ -187,7 +187,7 @@
   <div class="widget">	      			
     <div class="widget-content colorwidget">
     <br>
-   <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
+   <button type="button" class="btn btn-primary  btn-block colorbtn"  onclick="ingresarNuevousuario()">Registrar</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
