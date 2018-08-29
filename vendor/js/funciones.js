@@ -69,6 +69,48 @@ function showAgregarDirigente(str) {
     xmlhttp.open("GET", "modificar_jefegrupo.php?q=" + str, true);
     xmlhttp.send();
 }
+
+function showListarUScout(str) {
+
+    document.getElementById("div_nuevodirigente").innerHTML = "";  
+    document.getElementById("div_nuevoscout").innerHTML = ""; 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_listarudirigente").innerHTML = ""; 
+      
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listaruscout").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_uscout.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showListarUDirigente(str) {
+
+    document.getElementById("div_nuevodirigente").innerHTML = "";  
+    document.getElementById("div_nuevoscout").innerHTML = ""; 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_listaruscout").innerHTML = ""; 
+      
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarudirigente").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_udirigente.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+
+
+
  
 
  /*__________________________________________Fin Administrador - Jefe de Grupo_________________________________________________________*/
