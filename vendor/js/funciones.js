@@ -2,9 +2,11 @@
 
 function showAgregarJefeGrupo(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
-    document.getElementById("div_modificarjefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -19,9 +21,11 @@ function showAgregarJefeGrupo(str) {
 
 function showAgregarDirigente(str) {
 
-    document.getElementById("div_nuevojefegrupo").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevoscout").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -36,9 +40,11 @@ function showAgregarDirigente(str) {
 
  function showAgregarScout(str) {
 
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
-    document.getElementById("div_nuevojefegrupo").innerHTML = "";  
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
     
  
      var xmlhttp = new XMLHttpRequest();
@@ -54,9 +60,11 @@ function showAgregarDirigente(str) {
 
  function showModificarJefeGrupo(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
       
 
     var xmlhttp = new XMLHttpRequest();
@@ -72,10 +80,11 @@ function showAgregarDirigente(str) {
 
 function showListarUScout(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
-    document.getElementById("div_listarudirigente").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listarudirigente").innerHTML = "";
       
 
     var xmlhttp = new XMLHttpRequest();
@@ -91,10 +100,12 @@ function showListarUScout(str) {
 
 function showListarUDirigente(str) {
 
-    document.getElementById("div_nuevodirigente").innerHTML = "";  
-    document.getElementById("div_nuevoscout").innerHTML = ""; 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
-    document.getElementById("div_listaruscout").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listaruscout").innerHTML = "";
+    
       
 
     var xmlhttp = new XMLHttpRequest();
