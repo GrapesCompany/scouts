@@ -13,8 +13,9 @@ $telefono=$_POST['telefono'];
 $fech_nac=$_POST['fech_nac'];
 $correo=$_POST['correo'];
 $inputPassword=$_POST['inputPassword'];
+$fec_elec=$_POST['fec_elec'];
+$info=$_POST['info'];
 
-$conexion=conectar();
 
 $conexion=conectar();
 $sql = "SELECT `CEDULA_TRA` FROM `jefe_grupo` WHERE `CEDULA_TRA`='$cedula'" ;
@@ -46,7 +47,7 @@ mysqli_query( $conexion, "INSERT INTO `jefe_grupo` (
     `CEDULA_TRA`, 
     `FECHA_ELECCION`, 
     `INFORMACION`) values
-    ('$cedula' , '' , '' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
+    ('$cedula' , '$fec_elec' , '$info' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
 
  cerrar($conexion);

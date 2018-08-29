@@ -16,6 +16,8 @@ $inputPassword=$_POST['inputPassword'];
 $unidad=$_POST['unidad'];
 $cargo=$_POST['cargo'];
 
+
+
 $conexion=conectar();
 
 $conexion=conectar();

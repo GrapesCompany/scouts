@@ -125,8 +125,8 @@
    <div class="span4 hespan">	      		
    <div class="widget">	      			
      <div class="widget-content colorwidget">
-     <textarea type="text" id="motivo" class="form-control monte3" placeholder="Información Adicional" rows="3"></textarea>
-     <label for="motivo"></label></div> <!-- /widget-content -->
+     <textarea type="text" id="info" class="form-control monte3" placeholder="Información Adicional" rows="3"></textarea>
+     <label for="info"></label></div> <!-- /widget-content -->
    </div> <!-- /widget -->
  </div> <!-- /span4 -->
 
