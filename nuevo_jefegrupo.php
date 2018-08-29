@@ -90,26 +90,26 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
+
  <div class="span4 hespan">	      		
+ <div class="widget">	      			
+   <div class="widget-content colorwidget">
+ <label for="direccion" class="tamletra">Dirección</label>
+  <input type="text" id="direccion" class="form-control monte" placeholder="Riobamba-Ecuador" required="required" autofocus="autofocus">     
+</div> <!-- /widget-content -->
+ </div> <!-- /widget -->
+</div> <!-- /span4 -->
+ 
+ 
+
+<div class="span4 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">
-   <label for="especialidad" class="tamletra">Contraseña</label>
-            <input type="password" id="especialidad" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
-           
+   <label for="contrasena" class="tamletra">Contraseña</label>
+            <input type="password" id="contrasena" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
- 
-
-  <div class="span4 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content colorwidget invisible">
-     <label for="invisible" class="tamletra">Contraseña</label>
-            <input type="password" id="invisible" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">
-           
-  </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
- </div> <!-- /span4 -->
 
  <div class="span8 hespan">	      		
      <div class="widget">	      			
