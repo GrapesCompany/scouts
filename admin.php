@@ -104,8 +104,8 @@
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showListarUScout(this.value)">Unidad-Scout</a></li>
 						<li><a href="#" onclick="showListarUDirigente(this.value)">Unidad-Dirigente</a></li>
-                        <li><a href="#">Scouts</a></li>
-                        <li><a href="#">Dirigentes</a></li>
+                        <li><a href="#" onclick="showListarScouts(this.value)">Scouts</a></li>
+                        <li><a href="#" onclick="showListarDirigentes(this.value)">Dirigentes</a></li>
                     </ul>    				
 				</li>
 			
@@ -140,6 +140,12 @@
 
 <!--Listar Unidad Dirigente-->              
 <div id="div_listarudirigente" class="container"></div> 
+
+<!--Listar Scouts-->              
+<div id="div_listarscouts" class="container"></div>
+
+<!--Listar Scouts-->              
+<div id="div_listardirigentes" class="container"></div>
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
