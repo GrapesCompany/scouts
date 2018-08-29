@@ -124,6 +124,17 @@
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
 
+
+<div class="span4 hespan">	      		
+<div class="widget">	      			
+  <div class="widget-content colorwidget">
+<label for="direccion" class="tamletra">Dirección</label>
+<input type="text" id="direccion" class="form-control monte" placeholder="Riobamba-Ecuador" required="required" autofocus="autofocus">   
+</div> <!-- /widget-content -->
+</div> <!-- /widget -->
+</div> <!-- /span4 -->
+
+
    <div class="span4 hespan">	      		
    <div class="widget">	      			
      <div class="widget-content colorwidget">
@@ -143,7 +154,7 @@
            
   </div>  
      </div>  
- </div> <!-- /span4 -->
+ </div>   /span4 -->
 
  <div class="span8 hespan">	      		
      <div class="widget">	      			
