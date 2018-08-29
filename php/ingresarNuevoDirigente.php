@@ -13,11 +13,13 @@ $telefono=$_POST['telefono'];
 $fech_nac=$_POST['fech_nac'];
 $correo=$_POST['correo'];
 $inputPassword=$_POST['inputPassword'];
+$unidad=$_POST['unidad'];
+$cargo=$_POST['cargo'];
 
 $conexion=conectar();
 
 $conexion=conectar();
-$sql = "SELECT `CEDULA_TRA` FROM `jefe_grupo` WHERE `CEDULA_TRA`='$cedula'" ;
+$sql = "SELECT `CEDULA_TRA` FROM `dirigente` WHERE `CEDULA_TRA`='$cedula'" ;
 
 $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
  
@@ -44,9 +46,10 @@ echo "El Auxiliar que desea registrar ya existe en la base de datos.  ";
 
 mysqli_query( $conexion, "INSERT INTO `jefe_grupo` (
     `CEDULA_TRA`, 
-    `FECHA_ELECCION`, 
-    `INFORMACION`) values
-    ('$cedula' , '' , '' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
+    `ID_GRUPO_SCOUT`, 
+    `UNIDAD`, 
+    `CARGO` ) values
+    ('$cedula' ,'$unidad', 'unidad espesifica' , '$cargo' )" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
 
  cerrar($conexion);

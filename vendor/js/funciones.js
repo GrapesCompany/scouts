@@ -98,22 +98,23 @@ function showAgregarDirigente(str) {
         '&apellido=' + document.getElementById('apellido').value +
         '&telefono=' + document.getElementById('telefono').value +
         '&edad=' + document.getElementById('edad').value +
-        '&inputPassword=' + document.getElementById('invisible').value +
+        '&inputPassword=' + document.getElementById('contrasena').value +
         '&genero=' + document.getElementById('genero').value +
         '&fech_nac=' + document.getElementById('fech_nac').value +
         '&direccion=' + document.getElementById('direccion').value +
         '&correo=' + document.getElementById('celectronico').value;
 
     if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
-        document.getElementById('telefono').value && document.getElementById('especialidad').value && document.getElementById('inputPassword').value &&
-        document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('correo').value) {
+        document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+        document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
+        document.getElementById('edad').value) {
        
                 $.ajax({
                     type: "POST",
-                    url: "php/ingresarMedico.php",
+                    url: "php/ingresarJefeGrupo.php",
                     data: dataString,
                     success: function (data) {
-                        showMedico("gh");
+                        showAgregarJefeGrupo("gh");
 
                         alert(data);
                         //recuperando las variables
@@ -128,4 +129,48 @@ function showAgregarDirigente(str) {
     } else {
         alert("Faltan parametros por llenar");
     }
+ }
+
+
+ function ingresarNuevoDirigente()
+ {
+    var dataString = 'cedula=' + document.getElementById('cedula').value +
+    '&nombre=' + document.getElementById('nombre').value +
+    '&apellido=' + document.getElementById('apellido').value +
+    '&telefono=' + document.getElementById('telefono').value +
+    '&unidad=' + document.getElementById('unidad').value +
+    '&cargo=' + document.getElementById('cargo').value +
+    '&edad=' + document.getElementById('edad').value +
+    '&inputPassword=' + document.getElementById('contrasena').value +
+    '&genero=' + document.getElementById('genero').value +
+    '&fech_nac=' + document.getElementById('fech_nac').value +
+    '&direccion=' + document.getElementById('direccion').value +
+    '&correo=' + document.getElementById('celectronico').value;
+
+if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
+    document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+    document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
+    document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value ) {
+   
+            $.ajax({
+                type: "POST",
+                url: "php/ingresarJefeGrupo.php",
+                data: dataString,
+                success: function (data) {
+                    showAgregarJefeGrupo("gh");
+
+                    alert(data);
+                    //recuperando las variables
+
+                }, error: function (errorThrown) {
+                    alert("Existe un error" + errorThrown);
+                }
+
+            });
+        
+    
+} else {
+    alert("Faltan parametros por llenar");
+}
+
  }
