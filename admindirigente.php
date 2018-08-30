@@ -45,7 +45,7 @@
 					<li class="dropdown">						
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-user"></i> 
-							Administrador
+							Dirigente
 							<b class="caret"></b>
 						</a>
 						
@@ -214,6 +214,7 @@
 
 <script src="./assets/js/guidely/guidely.min.js"></script>
 <script src="./vendor/js/funciones.js"></script>
+<script src="./vendor/js/validaciones.js"></script>
 
 <script>
 

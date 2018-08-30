@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['userJefeGrupo'])){
+ // $administrador=$_SESSION['userAdministrador'];
+}else
+{
+  header("Location: index2.php?denegado=peligro");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -222,7 +233,7 @@
 
 <script src="./assets/js/guidely/guidely.min.js"></script>
 <script src="./vendor/js/funciones.js"></script>
-
+<script src="./vendor/js/validaciones.js"></script>
 <script>
 
  

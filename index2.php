@@ -31,10 +31,10 @@
                     <div class="login" id="card">
                     	<div class="front signin_form"> 
                         <p class="tamtitulo">ADMINISTRACIÓN SAN FELIPE NERI</p>
-                          <form class="login-form">
+                          <form class="login-form" method='post' action='./login/verificar.php/?tipoP=administrador'>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="email" class="form-control" placeholder="Usuario:">
+                                      <input type="text" class="form-control" name="username" placeholder="Usuario:">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-user"></i>
                                       </span>
@@ -42,7 +42,7 @@
                               </div>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="password" class="form-control" placeholder="Contraseña:">
+                                      <input type="password" class="form-control" name="password" placeholder="Contraseña:">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-lock"></i>
                                       </span>
@@ -51,9 +51,9 @@
                             <br>
 
                             <div class="radio">
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" checked><a href="http://localhost/scouts/admin.php">Administrador</label></a> 
+                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="jefegrupo" checked><a href="http://localhost/scouts/admin.php">Administrador</label></a> 
                 &nbsp;&nbsp;&nbsp;
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/admindirigente.php">Dirigente</label></a>
+                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="dirigente"><a href="http://localhost/scouts/admindirigente.php">Dirigente</label></a>
                 &nbsp;&nbsp;&nbsp;           
                 <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/adminusuario.php">Usuario</label></a>
                 </div>
@@ -61,7 +61,23 @@
                                                    
                                <div class="form-group sign-btn">
                                   <input type="submit" class="btn" value="Entrar">
-                                  <p><a href="#" class="forgot evhover">Olvidé mi contraseña!</a></p>
+                                  <p>
+                                  <?php
+                                    if (isset($_GET['error'])) { ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        Datos no válidos
+                                    </div>
+                                    <?php } 
+                                    if(isset($_GET['salir'])){?>
+                                    <div class="alert alert-info" role="alert">
+                                        Gracias por usar nuestros servicios
+                                    </div>
+                                    <?php }
+                                    if(isset($_GET['denegado'])){?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Acceso denegado
+                    </div> <?php } ?>
+                                  </p>
                                </div>                             
                                <div class="col-sm-12 mx-auto text-center" style="margin: auto">
                                     <a href="https://www.facebook.com/">

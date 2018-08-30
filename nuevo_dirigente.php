@@ -17,7 +17,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="cedula" class="tamletra">Cédula</label>					 
-     <input type="text" name="cedula" id="cedula" class="form-control monte" placeholder="1717171717" required="required" autofocus="autofocus">
+     <input type="text" name="cedula" id="cedula" onkeyup="this.value=soloNumeros(this.value)" minlength="10"  class="form-control monte" placeholder="1717171717" required="required" autofocus="autofocus">
            </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
@@ -26,7 +26,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra">Nombre</label>
-  <input type="text" name="nombre" id="nombre" class="form-control monte" placeholder="Example" required="required">
+  <input type="text" name="nombre" id="nombre"  onkeyup="this.value=soloLetras(this.value)" class="form-control monte" placeholder="Example" required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -35,7 +35,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra">Apellido</label>
-              <input type="text" name="apellido" id="apellido" class="form-control monte" placeholder="Example" required="required">		      		
+              <input type="text" name="apellido" id="apellido"  onkeyup="this.value=soloLetras(this.value)" class="form-control monte" placeholder="Example" required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -53,7 +53,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra">Teléfono</label>
-            <input type="text" id="telefono" name="telefono" class="form-control monte" placeholder="Teléfono" required="required" autofocus="autofocus">
+            <input type="text" id="telefono" name="telefono" onkeyup="this.value=soloNumeros(this.value)" maxlength="10" class="form-control monte" placeholder="Teléfono" required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -62,7 +62,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
     <label for="edad" class="tamletra">Edad</label>
-            <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
+            <input type="text" id="edad" name="edad" onkeyup="this.value=soloNumeros(this.value)" maxlength="2" class="form-control monte" placeholder="18" required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -72,8 +72,8 @@
        <div class="widget-content colorwidget">				   
       <label for="genero" class="tamletra">Género</label>				
     <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Género" required="required" autofocus="autofocus">
-              <option value="1" class="monte">Masculino</option>
-              <option value="2">Femenino</option>                           
+              <option value="Masculino" class="monte">Masculino</option>
+              <option value="Femenino">Femenino</option>                           
         </select> 
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
@@ -93,8 +93,8 @@
    <div class="widget-content colorwidget">				   
   <label for="cargo" class="tamletra">Cargo</label>				
 <select type="text" id="cargo" name="cargo" class="form-control monte" placeholder="Cargo" required="required" autofocus="autofocus">
-          <option value="1">Jefe de Grupo</option>
-          <option value="2">Dirigente</option>                           
+          <option value="Jefe de Grupo">Jefe de Grupo</option>
+          <option value="Dirigente">Dirigente</option>                           
     </select> 
 </div> <!-- /widget-content -->
  </div> <!-- /widget -->
@@ -118,7 +118,7 @@
 <div class="widget">	      			
   <div class="widget-content colorwidget">
 <label for="uespecifica" class="tamletra">Unidad específica</label>
-      <input type="text" id="uespecifica" class="form-control monte" placeholder="Unidad específica" required="required" autofocus="autofocus">
+      <input type="text" id="uespecifica"  class="form-control monte" placeholder="Unidad específica" required="required" autofocus="autofocus">
       
 </div> <!-- /widget-content -->
 </div> <!-- /widget -->

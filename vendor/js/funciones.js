@@ -251,6 +251,11 @@ function showListarUJefesd(str) {
  function ingresarJefeGrupo()
  {
    
+    var verificarCedula = document.getElementById('cedula').value;
+    var correito = document.getElementById('celectronico').value;
+
+    var cedulaVerificada = validarCedula(verificarCedula);
+    var valcorreo = validateMail(correito);
 
     var dataString = 'cedula=' + document.getElementById('cedula').value +
         '&nombre=' + document.getElementById('nombre').value +
@@ -269,7 +274,8 @@ function showListarUJefesd(str) {
         document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
         document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
         document.getElementById('edad').value) {
-       
+            if (cedulaVerificada == true) {
+                if (valcorreo == true) {
                 $.ajax({
                     type: "POST",
                     url: "php/ingresarJefeGrupo.php",
@@ -286,7 +292,12 @@ function showListarUJefesd(str) {
 
                 });
             
-        
+            } else {
+                alert("El correo electronico ingresado es incorrecto");
+            }
+        } else {
+            alert("La cédula ingresada es incorrecta");
+        }
     } else {
         alert("Faltan parametros por llenar");
     }
@@ -295,6 +306,14 @@ function showListarUJefesd(str) {
 
  function ingresarNuevoDirigente()
  {
+
+    var verificarCedula = document.getElementById('cedula').value;
+    var correito = document.getElementById('celectronico').value;
+
+    var cedulaVerificada = validarCedula(verificarCedula);
+    var valcorreo = validateMail(correito);
+
+
     var dataString = 'cedula=' + document.getElementById('cedula').value +
     '&nombre=' + document.getElementById('nombre').value +
     '&apellido=' + document.getElementById('apellido').value +
@@ -316,7 +335,8 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
     document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
     document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value  ) {
-   
+    if (cedulaVerificada == true) {
+                if (valcorreo == true) {
             $.ajax({
                 type: "POST",
                 url: "php/ingresarNuevoDirigente.php",
@@ -332,7 +352,12 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
                 }
 
             });
-        
+        } else {
+            alert("El correo electronico ingresado es incorrecto");
+        }
+    } else {
+        alert("La cédula ingresada es incorrecta");
+    }
     
 } else {
     alert("Faltan parametros por llenar");
@@ -344,6 +369,15 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
 
  function ingresarNuevousuario()
  {
+
+    var verificarCedula = document.getElementById('cedula').value;
+    var correito = document.getElementById('celectronico').value;
+
+    var verificarCedular =document.getElementById('cedular').value;
+    var cedulaVerificadar = validarCedula(verificarCedular);
+    var cedulaVerificada = validarCedula(verificarCedula);
+    var valcorreo = validateMail(correito);
+
     var dataString = 'cedula=' + document.getElementById('cedula').value +
     '&nombre=' + document.getElementById('nombre').value +
     '&apellido=' + document.getElementById('apellido').value +
@@ -368,7 +402,8 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
     document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
     document.getElementById('edad').value && document.getElementById('unidad').value   ) {
-   
+        if (cedulaVerificada == true && cedulaVerificadar==true) {
+            if (valcorreo == true) {
             $.ajax({
                 type: "POST",
                 url: "php/ingresarNuevoScout.php",
@@ -384,6 +419,12 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
                 }
 
             });
+        } else {
+            alert("El correo electronico ingresado es incorrecto");
+        }
+    } else {
+        alert("La cédula ingresada es incorrecta");
+    }
         
     
 } else {
@@ -395,3 +436,69 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
 
 
  
+
+
+ function ingresarNuevousuariod()
+ {
+    var verificarCedula = document.getElementById('cedula').value;
+    var correito = document.getElementById('celectronico').value;
+
+    var verificarCedular =document.getElementById('cedular').value;
+    var cedulaVerificadar = validarCedula(verificarCedular);
+    var cedulaVerificada = validarCedula(verificarCedula);
+    var valcorreo = validateMail(correito);
+
+    var dataString = 'cedula=' + document.getElementById('cedula').value +
+    '&nombre=' + document.getElementById('nombre').value +
+    '&apellido=' + document.getElementById('apellido').value +
+    '&telefono=' + document.getElementById('telefono').value +
+    '&unidad=' + document.getElementById('unidad').value +
+
+    '&edad=' + document.getElementById('edad').value +
+    '&inputPassword=' + document.getElementById('contrasena').value +
+    '&genero=' + document.getElementById('genero').value +
+    '&fech_nac=' + document.getElementById('fech_nac').value +
+    '&direccion=' + document.getElementById('direccion').value +
+    '&uespecifica=' + document.getElementById('uespecifica').value +
+    '&correo=' + document.getElementById('celectronico').value+
+    
+    
+    '&cedular=' + document.getElementById('cedular').value+
+    '&nombrer=' + document.getElementById('nombrer').value+
+    '&direccionr=' + document.getElementById('direccionr').value+
+    '&telefonor=' + document.getElementById('telefonor').value;
+     
+if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
+    document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+    document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
+    document.getElementById('edad').value && document.getElementById('unidad').value   ) {
+   if (cedulaVerificada == true && cedulaVerificadar==true) {
+            if (valcorreo == true) {
+            $.ajax({
+                type: "POST",
+                url: "php/ingresarNuevoScout.php",
+                data: dataString,
+                success: function (data) {
+                    showAgregarScoutd("gh");
+
+                    alert(data);
+                    //recuperando las variables
+
+                }, error: function (errorThrown) {
+                    alert("Existe un error" + errorThrown);
+                }
+
+            });
+        } else {
+            alert("El correo electronico ingresado es incorrecto");
+        }
+    } else {
+        alert("La cédula ingresada es incorrecta");
+    }
+    
+} else {
+    alert("Faltan parametros por llenar");
+}
+
+ }
+
