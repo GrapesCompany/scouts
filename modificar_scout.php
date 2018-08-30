@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Mi Perfil Nuevo Scout</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Mi Perfil</h2>
          
           <hr>
 
@@ -124,14 +124,7 @@
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
 
-   <div class="span4 hespan">	      		
-   <div class="widget">	      			
-     <div class="widget-content colorwidget">
- <label for="contrasena" class="tamletra">Contraseña</label>
-          <input type="password" id="contrasena" class="form-control monte" placeholder="******" disabled required="required" autofocus="autofocus">      
-</div> <!-- /widget-content -->
-   </div> <!-- /widget -->
- </div> <!-- /span4 -->
+  
  
 
  <!-- <div class="span4 hespan">	      		
