@@ -182,6 +182,7 @@ function showAgregarScoutd(str) {
 
     document.getElementById("div_listarscoutsd").innerHTML = ""; 
     document.getElementById("div_listarujefesd").innerHTML = "";
+    document.getElementById("div_modificardirigente").innerHTML = ""; 
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -198,6 +199,7 @@ function showAgregarScoutd(str) {
 
     document.getElementById("div_nuevoscoutd").innerHTML = ""; 
     document.getElementById("div_listarujefesd").innerHTML = "";   
+    document.getElementById("div_modificardirigente").innerHTML = ""; 
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -216,6 +218,7 @@ function showListarUJefesd(str) {
 
     document.getElementById("div_nuevoscoutd").innerHTML = ""; 
     document.getElementById("div_listarscoutsd").innerHTML = ""; 
+    document.getElementById("div_modificardirigente").innerHTML = ""; 
            
 
     var xmlhttp = new XMLHttpRequest();
@@ -226,6 +229,24 @@ function showListarUJefesd(str) {
     }
 
     xmlhttp.open("GET", "listar_ujefesd.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showModificarDirigente(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarscoutsd").innerHTML = "";  
+    document.getElementById("div_listarujefesd").innerHTML = "";
+     
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_modificardirigente").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "modificar_dirigente.php?q=" + str, true);
     xmlhttp.send();
 }
 

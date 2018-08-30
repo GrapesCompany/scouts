@@ -50,7 +50,7 @@
 						</a>
 						
 						<ul class="dropdown-menu">
-							<li><a href="#" onclick="showModificarJefeGrupo(this.value)">Perfil</a></li>
+							<li><a href="#" onclick="showModificarDirigente(this.value)">Perfil</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
 
@@ -128,16 +128,10 @@
 <!--Listar Unidad Dirigente-->              
 <div id="div_listarujefesd" class="container"></div> 
 
+<!--Modificar Dirigente-->              
+<div id="div_modificardirigente" class="container"></div> 
 
-
-<!--Modificar Jefe de Grupo-->              
-<div id="div_modificarjefegrupo" class="container"></div> 
-
-<!--Listar Unidad Scout-->              
-<div id="div_listaruscout" class="container"></div> 
-
-<!--Listar Dirigentes-->              
-<div id="div_listardirigentes" class="container"></div>
+ 
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 

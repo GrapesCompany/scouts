@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Mi Perfil Dirigente</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Mi Perfil</h2>
          
           <hr>
 
@@ -160,11 +160,12 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-      <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
-      
+      <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>
+      &nbsp;&nbsp;
+      <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="ingresarJefeGrupo()">Guardar</button>
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
- </div> <!-- /span4 -->
+ </div> <!-- /span8 -->
 
 
 </div> <!-- /container -->
