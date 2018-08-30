@@ -28,7 +28,7 @@ $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifi
  
 if(mysqli_fetch_array($result))
 {
-echo "El Auxiliar que desea registrar ya existe en la base de datos.  ";
+echo "El Dirigente que desea registrar ya existe en la base de datos.  ";
 }else{
  
  mysqli_query( $conexion, "INSERT INTO `trabajador` (

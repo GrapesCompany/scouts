@@ -176,10 +176,9 @@ function showListarDirigentes(str) {
  
 
  /*__________________________________________Fin Administrador - Jefe de Grupo_________________________________________________________*/
+/*__________________________________________Inicio Administrador - Dirigente__________________________________________________________*/
 
- /*__________________________________________Inicio Administrador - Dirigente__________________________________________________________*/
-
- function showAgregarScoutd(str) {
+function showAgregarScoutd(str) {
 
     document.getElementById("div_listarscoutsd").innerHTML = ""; 
     document.getElementById("div_listarujefesd").innerHTML = "";
@@ -233,7 +232,6 @@ function showListarUJefesd(str) {
 
 
  /*__________________________________________Fin Administrador - Dirigente_____________________________________________________________*/
-
 
  function onlinecampos()
  {
@@ -324,7 +322,59 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
                 url: "php/ingresarNuevoDirigente.php",
                 data: dataString,
                 success: function (data) {
-                    showAgregarJefeGrupo("gh");
+                    showAgregarDirigente("gh");
+
+                    alert(data);
+                    //recuperando las variables
+
+                }, error: function (errorThrown) {
+                    alert("Existe un error" + errorThrown);
+                }
+
+            });
+        
+    
+} else {
+    alert("Faltan parametros por llenar");
+}
+
+ }
+
+
+
+ function ingresarNuevousuario()
+ {
+    var dataString = 'cedula=' + document.getElementById('cedula').value +
+    '&nombre=' + document.getElementById('nombre').value +
+    '&apellido=' + document.getElementById('apellido').value +
+    '&telefono=' + document.getElementById('telefono').value +
+    '&unidad=' + document.getElementById('unidad').value +
+    '&cargo=' + document.getElementById('cargo').value +
+    '&edad=' + document.getElementById('edad').value +
+    '&inputPassword=' + document.getElementById('contrasena').value +
+    '&genero=' + document.getElementById('genero').value +
+    '&fech_nac=' + document.getElementById('fech_nac').value +
+    '&direccion=' + document.getElementById('direccion').value +
+    '&uespecifica=' + document.getElementById('uespecifica').value +
+    '&correo=' + document.getElementById('celectronico').value+
+    
+    
+    '&cedular=' + document.getElementById('cedular').value+
+    '&nombrer=' + document.getElementById('nombrer').value+
+    '&direccionr=' + document.getElementById('direccionr').value+
+    '&telefonor=' + document.getElementById('telefonor').value;
+     
+if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
+    document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+    document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
+    document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value   ) {
+   
+            $.ajax({
+                type: "POST",
+                url: "php/ingresarNuevoScout.php",
+                data: dataString,
+                success: function (data) {
+                    showAgregarScout("gh");
 
                     alert(data);
                     //recuperando las variables
