@@ -3,7 +3,7 @@
 
 session_start();
 if(isset($_SESSION['userDirigente'])){
-  $jefegrupo=$_SESSION['userDirigente'];
+  $dirigente=$_SESSION['userDirigente'];
 }else
 {
   header("Location: ../index2.php");
@@ -11,18 +11,18 @@ if(isset($_SESSION['userDirigente'])){
 
 
 
-$cedulaD=$jefegrupo[0]['cedulaD'];
-$nombreD=$jefegrupo[0]['nombreD'];
-$apellidoD=$jefegrupo[0]['apellidoD'];
-$telefonoD=$jefegrupo[0]['telefonoD'];
-$edadD=$jefegrupo[0]['edadD'];
-$generoD=$jefegrupo[0]['generoD'];
-$emailD=$jefegrupo[0]['emailD'];
-$fechNacD=$jefegrupo[0]['fechNacD'];
-$direccionD=$jefegrupo[0]['direccionD'];
-$grupoD=$jefegrupo[0]['grupoD'];
-$unidadD=$jefegrupo[0]['unidadD'];
-$cargoD=$jefegrupo[0]['cargoD'];
+$cedulaD=$dirigente[0]['cedulaD'];
+$nombreD=$dirigente[0]['nombreD'];
+$apellidoD=$dirigente[0]['apellidoD'];
+$telefonoD=$dirigente[0]['telefonoD'];
+$edadD=$dirigente[0]['edadD'];
+$generoD=$dirigente[0]['generoD'];
+$emailD=$dirigente[0]['emailD'];
+$fechNacD=$dirigente[0]['fechNacD'];
+$direccionD=$dirigente[0]['direccionD'];
+$grupoD=$dirigente[0]['grupoD'];
+$unidadD=$dirigente[0]['unidadD'];
+$cargoD=$dirigente[0]['cargoD'];
 
 
 echo '		<div class="row">	      	
@@ -52,7 +52,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra">Nombre</label>
-  <input type="text" name="nombre" id="nombre"  value="'; echo $nombreD; echo'" class="form-control monte" placeholder="Example" disabled required="required">
+  <input type="text" name="nombre" id="nombre" onkeyup="this.value=soloLetras(this.value)"  value="'; echo $nombreD; echo'" class="form-control monte" placeholder="Example" disabled required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -61,7 +61,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra">Apellido</label>
-              <input type="text" name="apellido" id="apellido" value="'; echo $apellidoD;echo'" class="form-control monte" placeholder="Example" disabled required="required">		      		
+              <input type="text" name="apellido" id="apellido" onkeyup="this.value=soloLetras(this.value)"  value="'; echo $apellidoD;echo'" class="form-control monte" placeholder="Example" disabled required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -79,7 +79,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra">Teléfono</label>
-            <input type="text" id="telefono" name="telefono" value="'; echo $telefonoD;echo'" class="form-control monte" placeholder="Teléfono" disabled required="required" autofocus="autofocus">
+            <input type="text" id="telefono" name="telefono"  onkeyup="this.value=soloNumeros(this.value)" maxlength="10" value="'; echo $telefonoD;echo'" class="form-control monte" placeholder="Teléfono" disabled required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -88,7 +88,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">
     <label for="edad" class="tamletra">Edad</label>
-            <input type="text" id="edad" name="edad"  value="'; echo $edadD;echo'"  class="form-control monte" placeholder="18" disabled required="required">
+            <input type="text" id="edad" name="edad"  nkeyup="this.value=soloNumeros(this.value)" maxlength="2"  value="'; echo $edadD;echo'"  class="form-control monte" placeholder="18" disabled required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -98,8 +98,8 @@ echo '		<div class="row">
        <div class="widget-content colorwidget">				   
       <label for="genero" class="tamletra">Género</label>				
     <select type="text" id="genero" name="genero" class="form-control monte"  value="'; echo $generoD;echo'" placeholder="Género" disabled required="required" autofocus="autofocus">
-              <option value="1" class="monte">Masculino</option>
-              <option value="2">Femenino</option>                           
+              <option value="Masculino" class="monte">Masculino</option>
+              <option value="Femenino">Femenino</option>                           
         </select> 
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
@@ -119,8 +119,8 @@ echo '		<div class="row">
    <div class="widget-content colorwidget">				   
   <label for="cargo" class="tamletra">Cargo</label>				
 <select type="text" id="cargo" name="cargo" value="'; echo $cargoD;echo'"  class="form-control monte" placeholder="Cargo" required="required" disabled autofocus="autofocus">
-          <option value="1">Jefe de Grupo</option>
-          <option value="2">Dirigente</option>                           
+          <option value="Jefe de Grupo">Jefe de Grupo</option>
+          <option value="Dirigente">Dirigente</option>                           
     </select> 
 </div> <!-- /widget-content -->
  </div> <!-- /widget -->
@@ -177,7 +177,7 @@ echo '		<div class="row">
        <br>
       <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecamposdirigente(this.value)">Modificar</button>
       &nbsp;&nbsp;
-      <button type="button" class="btn btn-primary btn-block colorbtn">Guardar</button>
+      <button type="button"  onclick="modificarDirigente()" class="btn btn-primary btn-block colorbtn">Guardar</button>
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span8 -->

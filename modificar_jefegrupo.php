@@ -67,7 +67,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra">Nombre</label>
-  <input type="text" name="nombre" id="nombre" value="'; echo $nombreJG;echo'"class="form-control monte" placeholder="Example" disabled required="required">
+  <input type="text" name="nombre" id="nombre"  onkeyup="this.value=soloLetras(this.value)" value="'; echo $nombreJG;echo'"class="form-control monte" placeholder="Example" disabled required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -76,7 +76,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra">Apellido</label>
-              <input type="text" name="apellido" id="apellido" value="'; echo $apellidoJG;echo'" class="form-control monte" placeholder="Example" disabled required="required">		      		
+              <input type="text" name="apellido" id="apellido" onkeyup="this.value=soloLetras(this.value)" value="'; echo $apellidoJG;echo'" class="form-control monte" placeholder="Example" disabled required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -94,7 +94,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra">Teléfono</label>
-            <input type="text" id="telefono" name="telefono" value="'; echo $telefonoJG;echo'" class="form-control monte" placeholder="Teléfono" disabled required="required" autofocus="autofocus">
+            <input type="text" id="telefono" name="telefono"  onkeyup="this.value=soloNumeros(this.value)" maxlength="10" value="'; echo $telefonoJG;echo'" class="form-control monte" placeholder="Teléfono" disabled required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -103,7 +103,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">
     <label for="edad" class="tamletra">Edad</label>
-            <input type="text" id="edad" name="edad" value="'; echo $edadJG;echo'" class="form-control monte" placeholder="18" disabled required="required">
+            <input type="text" id="edad" name="edad"  nkeyup="this.value=soloNumeros(this.value)" maxlength="2" value="'; echo $edadJG;echo'" class="form-control monte" placeholder="18" disabled required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->

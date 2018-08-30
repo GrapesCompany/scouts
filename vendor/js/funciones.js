@@ -310,9 +310,9 @@ function showListarScoutse(str) {
      document.getElementById("celectronico").removeAttribute("disabled");
      //document.getElementById("cargo").removeAttribute("disabled");
      //document.getElementById("unidad").removeAttribute("disabled");
-     //document.getElementById("uespecifica").removeAttribute("disabled");
+     document.getElementById("uespecifica").removeAttribute("disabled");
      document.getElementById("direccion").removeAttribute("disabled");
-     document.getElementById("especialidad").removeAttribute("disabled");
+     //document.getElementById("especialidad").removeAttribute("disabled");
  
  }
 
@@ -654,28 +654,25 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     var dataString = 'nombre=' + document.getElementById('nombre').value +
     '&apellido=' + document.getElementById('apellido').value +
     '&telefono=' + document.getElementById('telefono').value +
-    '&unidad=' + document.getElementById('unidad').value +
-    '&cargo=' + document.getElementById('cargo').value +
-    '&edad=' + document.getElementById('edad').value +
-    '&inputPassword=' + document.getElementById('contrasena').value +
-    '&genero=' + document.getElementById('genero').value +
+         '&edad=' + document.getElementById('edad').value +
+     '&genero=' + document.getElementById('genero').value +
     '&fech_nac=' + document.getElementById('fech_nac').value +
     '&direccion=' + document.getElementById('direccion').value +
     '&uespecifica=' + document.getElementById('uespecifica').value +
     '&correo=' + document.getElementById('celectronico').value;
      
 if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
-    document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+    document.getElementById('telefono').value && document.getElementById('genero').value  &&
     document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
     document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value  ) {
-    if (cedulaVerificada == true) {
+   
                 if (valcorreo == true) {
             $.ajax({
                 type: "POST",
-                url: "php/ingresarNuevoDirigente.php",
+                url: "php/modificarMiCuentaDirigente.php",
                 data: dataString,
                 success: function (data) {
-                    showAgregarDirigente("gh");
+                    showModificarDirigente("gh");
 
                     alert(data);
                     //recuperando las variables
@@ -688,9 +685,7 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
         } else {
             alert("El correo electronico ingresado es incorrecto");
         }
-    } else {
-        alert("La cédula ingresada es incorrecta");
-    }
+    
     
 } else {
     alert("Faltan parametros por llenar");
