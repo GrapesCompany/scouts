@@ -119,13 +119,13 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 					<li class="  dropdown">					
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-list-alt"></i>
+						<i class="icon-bar-chart"></i>
 						<span>Reportes</span>
 						<b class="caret"></b>
 					</a>	
 				
 					<ul class="dropdown-menu">
-                        <li><a href="#" onclick="(this.value)">Por género</a></li>
+                        <li><a href="#" onclick="showReporteGenero(this.value)">Por género</a></li>
                      </ul>    				
 				</li>
 			
@@ -160,6 +160,10 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 <!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
+
+<!--Reporte por Genero-->              
+<div id="div_reportegenero" class="container"></div>
+
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
