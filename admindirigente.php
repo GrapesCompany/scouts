@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['userDirigente'])){
+ // $administrador=$_SESSION['userAdministrador'];
+}else
+{
+  header("Location: index2.php?denegado=peligro");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -188,7 +198,7 @@
 		  <label for="rcnueva" class="tamletra aligfn">Repetir Contraseña Nueva </label>
           <input type="password" id="rcnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
 		 
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Guardar</button>
+          <button class="btn btn-lg tambutton2 colorbtn3" onclick="cambiarContrasenaDirigente()" href="#">Guardar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>
             
           </div>

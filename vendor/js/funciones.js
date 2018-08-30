@@ -691,3 +691,66 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     alert("Faltan parametros por llenar");
 }
  }
+
+
+ function cambiarContrasenaJefeGrupo() {
+
+    
+    var dataString = 'cactual=' + document.getElementById('cactual').value +
+        '&cnueva=' + document.getElementById('cnueva').value +
+        '&rcnueva=' + document.getElementById('rcnueva').value;
+    if (document.getElementById('cnueva').value != document.getElementById('rcnueva').value) {
+        alert("Las contraseñas no coinciden");
+    } else {
+        $.ajax({
+            
+            type: "POST",
+            url: "php/modificarContrasenaJefeGrupo.php",
+            data: dataString,
+            success: function (data) {
+             
+                alert(data);
+                //recuperando las variables
+               
+            }, error: function (errorThrown) {
+                alert("Existe un error" + errorThrown);
+            }
+
+        });
+    }
+
+
+
+}
+
+
+function cambiarContrasenaDirigente() {
+
+    
+    var dataString = 'cactual=' + document.getElementById('cactual').value +
+        '&cnueva=' + document.getElementById('cnueva').value +
+        '&rcnueva=' + document.getElementById('rcnueva').value;
+    if (document.getElementById('cnueva').value != document.getElementById('rcnueva').value) {
+        alert("Las contraseñas no coinciden");
+    } else {
+        $.ajax({
+            
+            type: "POST",
+            url: "php/modificarContrasenaDirigente.php",
+            data: dataString,
+            success: function (data) {
+             
+                alert(data);
+                //recuperando las variables
+               
+            }, error: function (errorThrown) {
+                alert("Existe un error" + errorThrown);
+            }
+
+        });
+    }
+
+
+
+}
+
