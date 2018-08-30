@@ -144,7 +144,7 @@
 <!--Listar Scouts-->              
 <div id="div_listarscouts" class="container"></div>
 
-<!--Listar Scouts-->              
+<!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
 
 <!-- __________________________________________________________________________________________________________________________________ -->

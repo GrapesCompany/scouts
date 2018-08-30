@@ -85,6 +85,7 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
+  
 
 <div class="span4 hespan">	      		
 <div class="widget">	      			
@@ -116,9 +117,9 @@
      <label for="invisible" class="tamletra">Invisible</label>
             <input type="password" id="invisible" class="form-control monte" placeholder="invisible" required="required" autofocus="autofocus"> 
          
-            </div>   
+            </div>    
      </div>  
- </div>  -->
+ </div>  /span4 -->
 
 
 
@@ -176,7 +177,7 @@
   <div class="widget">	      			
     <div class="widget-content colorwidget">
     <br>
-   <button type="button" class="btn btn-primary  btn-block colorbtn"  onclick="ingresarNuevousuario()">Registrar</button>
+   <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
