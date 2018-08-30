@@ -231,7 +231,7 @@ function showModificarDirigente(str) {
      document.getElementById("edad").removeAttribute("disabled");
      document.getElementById("genero").removeAttribute("disabled");
      document.getElementById("celectronico").removeAttribute("disabled");
-     document.getElementById("direccionj").removeAttribute("disabled");
+     document.getElementById("direccion").removeAttribute("disabled");
     
  
  }
