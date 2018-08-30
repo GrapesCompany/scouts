@@ -53,16 +53,11 @@
 							<li><a href="#" onclick="showModificarScout(this.value)">Perfil</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
-
-
 							
 						</ul>						
 					</li>
 				</ul>
 			
-				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Buscar...">
-				</form>
 				
 			</div><!--/.nav-collapse -->	
 	
@@ -73,11 +68,8 @@
 </div> <!-- /navbar -->
     
 <div class="subnavbar">
-
-	<div class="subnavbar-inner">
-	
+	<div class="subnavbar-inner">	
 		<div class="container">
-
 			<ul class="mainnav">
 
 				<li class="  dropdown">					
@@ -85,8 +77,7 @@
 						<i class="icon-list-alt"></i>
 						<span>Listar</span>
 						<b class="caret"></b>
-					</a>	
-				
+					</a>
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showListarUJefese(this.value)">Jefe de Grupo</a></li>
                         <li><a href="#" onclick="showListarScoutse(this.value)">Scout</a></li>
@@ -117,6 +108,11 @@
 <!--Modificar Scout-->              
 <div id="div_modificarscout" class="container"></div> 
 
+<!--Listado Scout-->              
+<div id="div_listarscoutssc" class="container"></div> 
+
+<!--Listado Jefe de Grupo-->              
+<div id="div_listarjefegsc" class="container"></div>
  
 
 <!-- __________________________________________________________________________________________________________________________________ -->
