@@ -288,6 +288,26 @@ function showModificarDirigente(str) {
  
  }
 
+ function onlinecamposdirigente()
+ {
+     document.getElementById("cedula").removeAttribute("disabled");
+     document.getElementById("nombre").removeAttribute("disabled");
+     document.getElementById("apellido").removeAttribute("disabled");
+     document.getElementById("fech_nac").removeAttribute("disabled");
+     document.getElementById("telefono").removeAttribute("disabled");
+     document.getElementById("edad").removeAttribute("disabled");
+     document.getElementById("genero").removeAttribute("disabled");
+     document.getElementById("celectronico").removeAttribute("disabled");
+     document.getElementById("cargo").removeAttribute("disabled");
+     document.getElementById("unidad").removeAttribute("disabled");
+     document.getElementById("uespecifica").removeAttribute("disabled");
+     document.getElementById("direccion").removeAttribute("disabled");
+     document.getElementById("especialidad").removeAttribute("disabled");
+ 
+ }
+
+ 
+
 
  function ingresarJefeGrupo()
  {
