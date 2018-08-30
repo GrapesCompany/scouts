@@ -470,9 +470,11 @@ function showListadoJefegc(str) {
      document.getElementById("celectronico").removeAttribute("disabled");
      document.getElementById("direccion").removeAttribute("disabled");     
      //document.getElementById("unidad").removeAttribute("disabled");
-     //document.getElementById("uespecifica").removeAttribute("disabled");
-     document.getElementById("contrasena").removeAttribute("disabled");
+     document.getElementById("uespecifica").removeAttribute("disabled");
+      
 
+     document.getElementById("cedular").removeAttribute("disabled");
+     document.getElementById("nombrer").removeAttribute("disabled");
      document.getElementById("direccionr").removeAttribute("disabled");
      document.getElementById("telefonor").removeAttribute("disabled");     
  

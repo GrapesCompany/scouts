@@ -174,27 +174,18 @@ if(isset($_SESSION['userJefeGrupo'])){
 <!--Listado de Dirigentes-->              
 <div id="div_listadodirigentes" class="container"></div>
 
-<div>
-	
 
 <?php
  
  $dataPoints = array( 
-   array("label"=>"Chrome", "y"=>64.02),
-   array("label"=>"Firefox", "y"=>12.55),
-   array("label"=>"IE", "y"=>8.47),
-   array("label"=>"Safari", "y"=>6.08),
-   array("label"=>"Edge", "y"=>4.29),
-   array("label"=>"Others", "y"=>4.59)
+	 array("label"=>"Masculino", "y"=>60),
+	 array("label"=>"Femenino", "y"=>40),
  )
-  
+	
  ?>
 
- <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+  <div id="chartContainer" style="height: 400pt; width: 100%;"></div>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-</div>
-
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
