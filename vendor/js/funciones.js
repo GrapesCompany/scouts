@@ -569,3 +569,53 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
 
  }
 
+
+ function modificarMiCuentaJefeGrupo()
+ {
+    
+  
+    var correito = document.getElementById('celectronico').value;
+
+    var valcorreo = validateMail(correito);
+
+    var dataString = 'nombre=' + document.getElementById('nombre').value +
+        '&apellido=' + document.getElementById('apellido').value +
+        '&telefono=' + document.getElementById('telefono').value +
+        '&edad=' + document.getElementById('edad').value +
+        '&genero=' + document.getElementById('genero').value +
+        '&fech_nac=' + document.getElementById('fech_nac').value +
+        '&direccion=' + document.getElementById('direccion').value +
+        '&fec_elec=' + document.getElementById('fech_eleccion').value +
+          '&info=' + document.getElementById('info').value +
+        '&correo=' + document.getElementById('celectronico').value;
+    
+    if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
+        document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
+        document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
+        document.getElementById('edad').value) {
+            if (cedulaVerificada == true) {
+                
+                $.ajax({
+                    type: "POST",
+                    url: "php/modificarMiCuentaJefeGrupo.php",
+                    data: dataString,
+                    success: function (data) {
+                        showModificarJefeGrupo("gh");
+
+                        alert(data);
+                        //recuperando las variables
+
+                    }, error: function (errorThrown) {
+                        alert("Existe un error" + errorThrown);
+                    }
+
+                });
+            
+            } else {
+                alert("El correo electronico ingresado es incorrecto");
+            }
+        
+    } else {
+        alert("Faltan parametros por llenar");
+    }
+ }
