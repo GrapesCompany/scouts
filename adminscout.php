@@ -1,20 +1,9 @@
-<?php
-session_start();
-if(isset($_SESSION['userJefeGrupo'])){
- // $administrador=$_SESSION['userAdministrador'];
-}else
-{
-  header("Location: index2.php?denegado=peligro");
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   
 <head>
     <meta charset="utf-8">
-    <title>SCOUT Administración</title>
+    <title>SCOUT Usuario</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">    
@@ -47,7 +36,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 			</a>
 			
 			<a class="brand" href="index2.php">
-				SCOUT SAN FELIPE NERI - ADMINISTRACIÓN			
+				SCOUT SAN FELIPE NERI - SCOUT			
 			</a>		
 			
 			<div class="nav-collapse">
@@ -56,12 +45,12 @@ if(isset($_SESSION['userJefeGrupo'])){
 					<li class="dropdown">						
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-user"></i> 
-							Administrador
+							Scout
 							<b class="caret"></b>
 						</a>
 						
 						<ul class="dropdown-menu">
-							<li><a href="#" onclick="showModificarJefeGrupo(this.value)">Perfil</a></li>
+							<li><a href="#" onclick="showModificarScout(this.value)">Perfil</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
 
@@ -90,20 +79,6 @@ if(isset($_SESSION['userJefeGrupo'])){
 		<div class="container">
 
 			<ul class="mainnav">
-				
-				<li class="  dropdown">					
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-user"></i>
-						<span>Nuevo</span>
-						<b class="caret"></b>
-					</a>	
-				
-					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showAgregarJefeGrupo(this.value)">Jefe de Grupo</a></li>
-						<li><a href="#" onclick="showAgregarDirigente(this.value)">Dirigente</a></li>
-                        <li><a href="#" onclick="showAgregarScout(this.value)">Scout</a></li>
-                    </ul>    				
-				</li>
 
 				<li class="  dropdown">					
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
@@ -113,8 +88,8 @@ if(isset($_SESSION['userJefeGrupo'])){
 					</a>	
 				
 					<ul class="dropdown-menu">
-                        <li><a href="#" onclick="showListarScouts(this.value)">Scouts</a></li>
-                        <li><a href="#" onclick="showListarDirigentes(this.value)">Dirigentes</a></li>
+                    	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>
+                        <li><a href="#" onclick="showListarScoutsd(this.value)">Scouts - Unidad</a></li>
                     </ul>    				
 				</li>
 			
@@ -132,23 +107,17 @@ if(isset($_SESSION['userJefeGrupo'])){
 	    <div class="container">
 <!-- __________________________________________________________________________________________________________________________________ -->
 
-<!--Agregar Jefe de Grupo-->              
-<div id="div_nuevojefegrupo" class="container"></div>
-
-<!--Agregar Dirigente-->              
-<div id="div_nuevodirigente" class="container"></div> 
-
-<!--Agregar Scout-->              
-<div id="div_nuevoscout" class="container"></div> 
-
-<!--Modificar Jefe de Grupo-->              
-<div id="div_modificarjefegrupo" class="container"></div> 
-
+ 
 <!--Listar Scouts-->              
-<div id="div_listarscouts" class="container"></div>
+<div id="div_listarscoutsd" class="container"></div>
 
-<!--Listar Dirigentes-->              
-<div id="div_listardirigentes" class="container"></div>
+<!--Listar Unidad Dirigente-->              
+<div id="div_listarujefesd" class="container"></div> 
+
+<!--Modificar Scout-->              
+<div id="div_modificarscout" class="container"></div> 
+
+ 
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -196,8 +165,8 @@ if(isset($_SESSION['userJefeGrupo'])){
          
           <div class="modal-footer">
 		  
-		  <label for="catual" class="tamletra aligfn">Contraseña Actual</label>
-		  <input type="password" id="catual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
+		  <label for="cactual" class="tamletra aligfn">Contraseña Actual</label>
+		  <input type="password" id="cactual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
 		  <hr>
 		  <label for="cnueva" class="tamletra aligfn">Contraseña Nueva</label>
 		  <input type="password" id="cnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
@@ -225,7 +194,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 <script src="./assets/js/guidely/guidely.min.js"></script>
 <script src="./vendor/js/funciones.js"></script>
-<script src="./vendor/js/validaciones.js"></script>
+
 <script>
 
  

@@ -149,7 +149,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
       <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="ingresarJefeGrupo()">Guardar</button>
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
- </div> <!-- /span4 -->
+ </div> <!-- /span8 -->
 
 
 </div> <!-- /container -->

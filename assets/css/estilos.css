@@ -92,6 +92,24 @@ padding-bottom: 0px;
     background-color: #9e48c0c0 !important;
   }
 
+  .coloricono{ 
+    color: #59057b;
+    background-color:transparent;
+    height:40px;
+   
+    font-size: 12pt;
+  }
+
+  .coloricono:hover{     
+    background-color: #9e48c048 !important;
+    
+  }
+
+  .coloricono:focus{     
+    background-color: #9e48c048 !important;
+    border-color: 2px solid yellow !important;
+  }
+
   .colorbtn3{ 
     color: white;
     background-color: #5a057b9c;
@@ -171,5 +189,15 @@ padding-bottom: 0px;
     text-align: left;
 }
 
+.paddibutton{
+    padding-bottom: 0px !important;
+    
+        border-color: transparent;
+        padding-top: 0px;
+        padding-left: 0px;
+        
+}
+
+ 
 
 

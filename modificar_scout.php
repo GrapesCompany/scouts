@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Nuevo Scout</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Mi Perfil Nuevo Scout</h2>
          
           <hr>
 
@@ -17,7 +17,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="cedula" class="tamletra">Cédula</label>					 
-     <input type="text" name="cedula" id="cedula"  onkeyup="this.value=soloNumeros(this.value)" minlength="10" maxlength="10" class="form-control monte" placeholder="1717171717" required="required" autofocus="autofocus">
+     <input type="text" name="cedula" id="cedula" class="form-control monte" placeholder="1717171717" required="required" autofocus="autofocus">
            </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
@@ -26,7 +26,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra">Nombre</label>
-  <input type="text" name="nombre" id="nombre" onkeyup="this.value=soloLetras(this.value)" class="form-control monte" placeholder="Example" required="required">
+  <input type="text" name="nombre" id="nombre" class="form-control monte" placeholder="Example" required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -35,7 +35,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra">Apellido</label>
-              <input type="text" name="apellido" id="apellido"  onkeyup="this.value=soloLetras(this.value)" class="form-control monte" placeholder="Example" required="required">		      		
+              <input type="text" name="apellido" id="apellido" class="form-control monte" placeholder="Example" required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -54,8 +54,8 @@
    <div class="widget-content colorwidget">
    <label for="genero" class="tamletra">Genero</label>				
    <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Genero" required="required" autofocus="autofocus">
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>                                   
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>                                   
       </select> 
 </div> <!-- /widget-content -->
  </div> <!-- /widget -->
@@ -65,7 +65,7 @@
  <div class="widget">	      			
    <div class="widget-content colorwidget">
 <label for="edad" class="tamletra">Edad</label>
-        <input type="text" id="edad" name="edad"  onkeyup="this.value=soloNumeros(this.value)" maxlength="2"class="form-control monte" placeholder="18" required="required">
+        <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
 </div> <!-- /widget-content -->
  </div> <!-- /widget -->
 </div> <!-- /span4 -->
@@ -74,7 +74,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra">Teléfono</label>
-            <input type="text" id="telefono" name="telefono"  onkeyup="this.value=soloNumeros(this.value)" maxlength="10" class="form-control monte" placeholder="Teléfono" required="required" autofocus="autofocus">
+            <input type="text" id="telefono" name="telefono" class="form-control monte" placeholder="Teléfono" required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -158,7 +158,7 @@
             <div class="widget">	      			
               <div class="widget-content colorwidget">
           <label for="cedular" class="tamletra">Cédula</label>
-                   <input type="text" id="cedular"  onkeyup="this.value=soloNumeros(this.value)" minlength="10" maxlength="10" class="form-control monte2" placeholder="1717171717" required="required" autofocus="autofocus">      
+                   <input type="text" id="cedular" class="form-control monte2" placeholder="1717171717" required="required" autofocus="autofocus">      
          </div> <!-- /widget-content -->
             </div> <!-- /widget -->
           </div> <!-- /span4 -->
@@ -166,8 +166,8 @@
           <div class="span4 hespan2">	      		
             <div class="widget">	      			
               <div class="widget-content colorwidget">
-          <label for="nombrer" class="tamletra">Nombres Completos</label>
-                   <input type="text" id="nombrer" onkeyup="this.value=soloLetras(this.value)" class="form-control monte2" placeholder="Example" required="required" autofocus="autofocus">      
+          <label for="nombrer" class="tamletra">Nombre</label>
+                   <input type="text" id="nombrer" class="form-control monte2" placeholder="Example" required="required" autofocus="autofocus">      
          </div> <!-- /widget-content -->
             </div> <!-- /widget -->
           </div> <!-- /span4 -->
@@ -185,7 +185,7 @@
         <div class="widget">	      			
           <div class="widget-content colorwidget">
       <label for="telefonor" class="tamletra">Telefóno</label>
-               <input type="text" id="telefonor" onkeyup="this.value=soloNumeros(this.value)" maxlength="10"  class="form-control monte2" placeholder="0999988888" required="required" autofocus="autofocus">      
+               <input type="text" id="telefonor" class="form-control monte2" placeholder="0999988888" required="required" autofocus="autofocus">      
      </div> <!-- /widget-content -->
         </div> <!-- /widget -->
       </div> <!-- /span4 -->
@@ -200,7 +200,7 @@
   <div class="widget">	      			
     <div class="widget-content colorwidget">
     <br>
-   <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="ingresarNuevousuariod()" >Registrar</button>
+   <button type="button" class="btn btn-primary  btn-block colorbtn"  onclick="ingresarNuevousuario()" >Registrar</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
