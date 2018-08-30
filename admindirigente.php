@@ -45,7 +45,7 @@
 					<li class="dropdown">						
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-user"></i> 
-							Administrador
+							Dirigente
 							<b class="caret"></b>
 						</a>
 						

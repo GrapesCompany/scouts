@@ -1,5 +1,5 @@
 <?php
- $pep ='	<div class="row">	      	
+ $pep ='<div class="row">	      	
 		  	  
  <div class="span10">
      
@@ -48,6 +48,27 @@
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
+
+ <div class="span4 hespan">	      		
+ <div class="widget">	      			
+   <div class="widget-content colorwidget">
+   <label for="genero" class="tamletra">Genero</label>				
+   <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Genero" required="required" autofocus="autofocus">
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>                                   
+      </select> 
+</div> <!-- /widget-content -->
+ </div> <!-- /widget -->
+</div> <!-- /span4 -->
+
+ <div class="span4 hespan">	      		
+ <div class="widget">	      			
+   <div class="widget-content colorwidget">
+<label for="edad" class="tamletra">Edad</label>
+        <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
+</div> <!-- /widget-content -->
+ </div> <!-- /widget -->
+</div> <!-- /span4 -->
  
  <div class="span4 hespan">	      		
      <div class="widget">	      			
@@ -58,14 +79,7 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
- <div class="span4 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content colorwidget">
-    <label for="edad" class="tamletra">Edad</label>
-            <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
- </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
- </div> <!-- /span4 -->
+
  
  <div class="span4 hespan">	      		
      <div class="widget">	      			
@@ -113,8 +127,8 @@
    <div class="span4 hespan">	      		
    <div class="widget">	      			
      <div class="widget-content colorwidget">
- <label for="especialidad" class="tamletra">Contraseña</label>
-          <input type="password" id="especialidad" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">      
+ <label for="contrasena" class="tamletra">Contraseña</label>
+          <input type="password" id="contrasena" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">      
 </div> <!-- /widget-content -->
    </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -186,7 +200,7 @@
   <div class="widget">	      			
     <div class="widget-content colorwidget">
     <br>
-   <button type="button" class="btn btn-primary btn-block colorbtn">Registrar</button>
+   <button type="button" class="btn btn-primary  btn-block colorbtn"  onclick="ingresarNuevousuario()" >Registrar</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
