@@ -28,7 +28,9 @@ if(isset($_SESSION['userJefeGrupo'])){
     <link href="./assets/css/style.css" rel="stylesheet">
 	<link href="./assets/css/estilos.css" rel="stylesheet">    
     
-    <link href="./assets/js/guidely/guidely.css" rel="stylesheet"> 
+		<link href="./assets/js/guidely/guidely.css" rel="stylesheet"> 
+		
+		<link href="./assets/css/pages/reports.css" rel="stylesheet">
 
  
   </head>
@@ -137,7 +139,9 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 </div> <!-- /subnavbar -->
     
-    
+		
+
+
 <div class="main">	
 	<div class="main-inner">
 	    <div class="container">
@@ -164,6 +168,33 @@ if(isset($_SESSION['userJefeGrupo'])){
 <!--Reporte por Genero-->              
 <div id="div_reportegenero" class="container"></div>
 
+<!--Listado de Scouts-->              
+<div id="div_listadoscouts" class="container"></div>
+
+<!--Listado de Dirigentes-->              
+<div id="div_listadodirigentes" class="container"></div>
+
+<div>
+	
+
+<?php
+ 
+ $dataPoints = array( 
+   array("label"=>"Chrome", "y"=>64.02),
+   array("label"=>"Firefox", "y"=>12.55),
+   array("label"=>"IE", "y"=>8.47),
+   array("label"=>"Safari", "y"=>6.08),
+   array("label"=>"Edge", "y"=>4.29),
+   array("label"=>"Others", "y"=>4.59)
+ )
+  
+ ?>
+
+ <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</div>
+
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -171,7 +202,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 	</div> <!-- /main-inner -->	    
 </div> <!-- /main -->
     
-    
+
     <!-- Seccion Salir-->
     <div class="modal fade colorbtn2" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -230,6 +261,73 @@ if(isset($_SESSION['userJefeGrupo'])){
     </div>
 
 
+    <!-- Seccion Cambiar Scout de Unidad-->
+    <div class="modal fade colorbtn2" id="CambiarScoutAd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar al Scout de Unidad?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+          </div>
+          <div class="modal-footer"> 
+		  <p class="altra"></p>
+	 	   <label for="unidadac" class="tamletra aligfn">Unidad Actual:</label>
+          <input type="text" id="unidadac" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+		   <hr>
+		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
+    	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+         <option value="1">Manada</option>
+         <option value="2">Tropa</option>  
+         <option value="3">Caminante</option>
+         <option value="4">Rover</option>
+  		 </select> 
+		   <p class="altra"></p><br>
+          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          </div>
+
+        </div>
+      </div>
+	</div>
+
+
+	    <!-- Seccion Cambiar Dirigentes de Unidad-->
+		<div class="modal fade colorbtn2" id="CambiarDirigenteAd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar al Dirigente de Unidad?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+          </div>
+          <div class="modal-footer"> 
+		  <p class="altra"></p>
+	 	   <label for="unidada" class="tamletra aligfn">Unidad Actual:</label>
+          <input type="text" id="unidada" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+		   <hr>
+		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
+    	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+         <option value="1">Manada</option>
+         <option value="2">Tropa</option>  
+         <option value="3">Caminante</option>
+         <option value="4">Rover</option>
+  		 </select> 
+		   <p class="altra"></p><br>
+          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          </div>
+
+        </div>
+      </div>
+	</div>
+
 
 <!-- Le javascript
 ================================================== -->
@@ -238,11 +336,40 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 <script src="./assets/js/bootstrap.js"></script>
 <script src="./assets/js/base.js"></script>
+<script src="./assets/js/excanvas.min.js"></script>
+<script src="./assets/js/chart.min.js"></script>
 
 <script src="./assets/js/guidely/guidely.min.js"></script>
 <script src="./vendor/js/funciones.js"></script>
 <script src="./vendor/js/validaciones.js"></script>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+ 
+
 <script>
+window.onload = function() {
+ 
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "Noviembre 2017"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0.00\"%\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+ 
+}
+</script>
 
  
   </body>

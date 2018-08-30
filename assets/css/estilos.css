@@ -40,6 +40,28 @@
     font-size: 12pt;
 }
 
+.monte7{
+    width: 350px;
+    height: 30px;
+    font-size: 12pt;
+    position: absolute;
+    right: 40px;
+    bottom: 120px;
+}
+
+.monte8{
+    width: 360px !important;
+    height: 40px !important;
+    font-size: 12pt;
+    position: absolute;
+    right: 40px;
+    bottom: 65px;
+}
+
+.altra{
+    height:3px !important;
+}
+
 .monte3{
     width: 100%;
     
@@ -196,6 +218,16 @@ padding-bottom: 0px;
         padding-top: 0px;
         padding-left: 0px;
         
+}
+
+.colorbtnlist{
+        color: white !important;
+        text-decoration: none !important;
+}
+
+.fondocolo{
+background-color: red !important;
+width: 50% !important;
 }
 
  
