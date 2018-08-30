@@ -26,8 +26,7 @@ if(isset($_SESSION['userJefeGrupo'])){
     <link href="./assets/css/font-awesome.css" rel="stylesheet">
     
     <link href="./assets/css/style.css" rel="stylesheet">
-	<link href="./assets/css/estilos.css" rel="stylesheet">
-    
+	<link href="./assets/css/estilos.css" rel="stylesheet">    
     
     <link href="./assets/js/guidely/guidely.css" rel="stylesheet"> 
 
@@ -96,7 +95,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 						<i class="icon-user"></i>
 						<span>Nuevo</span>
 						<b class="caret"></b>
-					</a>	
+					</a>
 				
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showAgregarJefeGrupo(this.value)">Jefe de Grupo</a></li>
@@ -116,6 +115,18 @@ if(isset($_SESSION['userJefeGrupo'])){
                         <li><a href="#" onclick="showListarScouts(this.value)">Scouts</a></li>
                         <li><a href="#" onclick="showListarDirigentes(this.value)">Dirigentes</a></li>
                     </ul>    				
+				</li>
+
+					<li class="  dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-list-alt"></i>
+						<span>Reportes</span>
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+                        <li><a href="#" onclick="(this.value)">Por género</a></li>
+                     </ul>    				
 				</li>
 			
 			</ul>
