@@ -51,7 +51,7 @@
       <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;-->
       
-      <button type="button" class="btn btn-primary btn-block coloricono"><i class="icon-search icon-2x"></i></button>
+      <button type="button" class="btn btn-primary btn-block coloricono" onclick="showListadoDirigentes(this.value)"><i class="icon-search icon-2x"></i></button>
  </div>  
      </div>  
  </div> <!-- /span4 -->

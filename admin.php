@@ -167,6 +167,9 @@ if(isset($_SESSION['userJefeGrupo'])){
 <!--Listado de Scouts-->              
 <div id="div_listadoscouts" class="container"></div>
 
+<!--Listado de Dirigentes-->              
+<div id="div_listadodirigentes" class="container"></div>
+
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -243,11 +246,41 @@ if(isset($_SESSION['userJefeGrupo'])){
               <span aria-hidden="true">×</span>
             </button>
 			</h5>
-           
+          </div>
+          <div class="modal-footer"> 
+		  <p class="altra"></p>
+	 	   <label for="unidada" class="tamletra aligfn">Unidad Actual:</label>
+          <input type="text" id="unidada" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+		   <hr>
+		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
+    	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+         <option value="1">Manada</option>
+         <option value="2">Tropa</option>  
+         <option value="3">Caminante</option>
+         <option value="4">Rover</option>
+  		 </select> 
+		   <p class="altra"></p><br>
+          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
           </div>
 
-	 
-         
+        </div>
+      </div>
+	</div>
+
+
+	    <!-- Seccion Cambiar Dirigentes de Unidad-->
+		<div class="modal fade colorbtn2" id="CambiarDirigenteAd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar al Dirigente de Unidad?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+          </div>
           <div class="modal-footer"> 
 		  <p class="altra"></p>
 	 	   <label for="unidada" class="tamletra aligfn">Unidad Actual:</label>

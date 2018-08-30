@@ -9,6 +9,7 @@ function showAgregarJefeGrupo(str) {
     document.getElementById("div_listardirigentes").innerHTML = ""; 
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -30,6 +31,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_listardirigentes").innerHTML = ""; 
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
 
 
      var xmlhttp = new XMLHttpRequest();
@@ -52,6 +54,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_listardirigentes").innerHTML = ""; 
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -73,6 +76,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_listardirigentes").innerHTML = "";  
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -95,7 +99,8 @@ function showListarScouts(str) {
     document.getElementById("div_modificarjefegrupo").innerHTML = "";       
     document.getElementById("div_listardirigentes").innerHTML = "";  
     document.getElementById("div_reportegenero").innerHTML = "";  
-    document.getElementById("div_listadoscouts").innerHTML = "";   
+    document.getElementById("div_listadoscouts").innerHTML = ""; 
+    document.getElementById("div_listadodirigentes").innerHTML = "";  
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -117,7 +122,8 @@ function showListarDirigentes(str) {
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_reportegenero").innerHTML = ""; 
-    document.getElementById("div_listadoscouts").innerHTML = "";     
+    document.getElementById("div_listadoscouts").innerHTML = ""; 
+    document.getElementById("div_listadodirigentes").innerHTML = "";    
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -140,6 +146,7 @@ function showReporteGenero(str) {
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_listardirigentes").innerHTML = "";
     document.getElementById("div_listadoscouts").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -161,6 +168,7 @@ function showListadoScouts(str) {
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_listardirigentes").innerHTML = "";
     document.getElementById("div_reportegenero").innerHTML = "";
+    document.getElementById("div_listadodirigentes").innerHTML = "";
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -171,6 +179,29 @@ function showListadoScouts(str) {
     }
 
     xmlhttp.open("GET", "listado_scouts.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showListadoDirigentes(str) {
+
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = ""; 
+    document.getElementById("div_listardirigentes").innerHTML = "";
+    document.getElementById("div_reportegenero").innerHTML = "";
+    document.getElementById("div_listadoscouts").innerHTML = "";    
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listadodirigentes").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listado_dirigentes.php?q=" + str, true);
     xmlhttp.send();
 }
  
