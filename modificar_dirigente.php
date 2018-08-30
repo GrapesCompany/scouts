@@ -135,15 +135,6 @@
 </div> <!-- /span4 -->
 
 
-   <div class="span4 hespan">	      		
-   <div class="widget">	      			
-     <div class="widget-content colorwidget">
- <label for="especialidad" class="tamletra">Contraseña</label>
-          <input type="password" id="especialidad" class="form-control monte" placeholder="******" required="required" disabled autofocus="autofocus">
-         
-</div> <!-- /widget-content -->
-   </div> <!-- /widget -->
- </div> <!-- /span4 -->
  
 
  <!-- <div class="span4 hespan">	      		
