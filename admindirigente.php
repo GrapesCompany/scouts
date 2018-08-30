@@ -101,7 +101,7 @@
 				
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>
-                        <li><a href="#" onclick="showListarScoutsd(this.value)">Scouts - Unidad</a></li>
+                        <li><a href="#" onclick="showListarScoutsd(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 			

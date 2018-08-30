@@ -88,8 +88,8 @@
 					</a>	
 				
 					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>
-                        <li><a href="#" onclick="showListarScoutsd(this.value)">Scouts - Unidad</a></li>
+                    	<li><a href="#" onclick="showListarUJefese(this.value)">Jefe de Grupo</a></li>
+                        <li><a href="#" onclick="showListarScoutse(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 			
@@ -109,10 +109,10 @@
 
  
 <!--Listar Scouts-->              
-<div id="div_listarscoutsd" class="container"></div>
+<div id="div_listarscoutse" class="container"></div>
 
 <!--Listar Unidad Dirigente-->              
-<div id="div_listarujefesd" class="container"></div> 
+<div id="div_listarujefese" class="container"></div> 
 
 <!--Modificar Scout-->              
 <div id="div_modificarscout" class="container"></div> 

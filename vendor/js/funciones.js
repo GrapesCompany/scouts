@@ -202,9 +202,46 @@ function showModificarDirigente(str) {
  /*__________________________________________Fin Administrador - Dirigente_____________________________________________________________*/
  /*__________________________________________Inicio Administrador - Scout______________________________________________________________*/
 
+ function showListarUJefese(str) {
+    
+    document.getElementById("div_modificarscout").innerHTML = "";
+    document.getElementById("div_listarscoutse").innerHTML = "";
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarujefese").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_ujefese.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showListarScoutse(str) {
+    
+    document.getElementById("div_modificarscout").innerHTML = "";
+    document.getElementById("div_listarujefese").innerHTML = "";
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarscoutse").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_scoutse.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+
+
 
  function showModificarScout(str) {
 
+    document.getElementById("div_listarujefese").innerHTML = "";
+    document.getElementById("div_listarscoutse").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -216,6 +253,8 @@ function showModificarDirigente(str) {
     xmlhttp.open("GET", "modificar_scout.php?q=" + str, true);
     xmlhttp.send();
 }
+
+
 
  /*__________________________________________Fin Administrador - Scout________________________________________________________________*/
 
@@ -237,7 +276,7 @@ function showModificarDirigente(str) {
 
  function onlinecamposdirigente()
  {
-     document.getElementById("cedula").removeAttribute("disabled");
+     //document.getElementById("cedula").removeAttribute("disabled");
      document.getElementById("nombre").removeAttribute("disabled");
      document.getElementById("apellido").removeAttribute("disabled");
      document.getElementById("fech_nac").removeAttribute("disabled");
@@ -245,11 +284,31 @@ function showModificarDirigente(str) {
      document.getElementById("edad").removeAttribute("disabled");
      document.getElementById("genero").removeAttribute("disabled");
      document.getElementById("celectronico").removeAttribute("disabled");
-     document.getElementById("cargo").removeAttribute("disabled");
-     document.getElementById("unidad").removeAttribute("disabled");
-     document.getElementById("uespecifica").removeAttribute("disabled");
+     //document.getElementById("cargo").removeAttribute("disabled");
+     //document.getElementById("unidad").removeAttribute("disabled");
+     //document.getElementById("uespecifica").removeAttribute("disabled");
      document.getElementById("direccion").removeAttribute("disabled");
      document.getElementById("especialidad").removeAttribute("disabled");
+ 
+ }
+
+ function onlinecamposscout()
+ {
+     
+     document.getElementById("nombre").removeAttribute("disabled");
+     document.getElementById("apellido").removeAttribute("disabled");     
+     document.getElementById("fech_nac").removeAttribute("disabled");
+     document.getElementById("genero").removeAttribute("disabled");
+     document.getElementById("telefono").removeAttribute("disabled");
+     document.getElementById("edad").removeAttribute("disabled");     
+     document.getElementById("celectronico").removeAttribute("disabled");
+     document.getElementById("direccion").removeAttribute("disabled");     
+     //document.getElementById("unidad").removeAttribute("disabled");
+     //document.getElementById("uespecifica").removeAttribute("disabled");
+     document.getElementById("contrasena").removeAttribute("disabled");
+
+     document.getElementById("direccionr").removeAttribute("disabled");
+     document.getElementById("telefonor").removeAttribute("disabled");     
  
  }
 
