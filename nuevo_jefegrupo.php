@@ -74,9 +74,7 @@
     <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Género" required="required" autofocus="autofocus">
               <option value="1" class="monte">Masculino</option>
               <option value="2">Femenino</option>                           
-        </select>
- 
- 
+        </select> 
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->

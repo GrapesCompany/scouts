@@ -93,8 +93,8 @@
  <div class="span4 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">
-   <label for="celectronico" class="tamletra">Direccion</label>
-             <input type="email" id="celectronico" class="form-control monte" placeholder="example@correo.com" disabled required="required">
+   <label for="direccionj" class="tamletra">Dirección</label>
+             <input type="text" id="direccionj" class="form-control monte" placeholder="Riobamba - Ecuador" disabled required="required">
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
