@@ -143,7 +143,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
  <div class="span8 hespan">	      		
  <div class="widget">	      			
    <div class="widget-content colorwidget">
-   <textarea type="text" id="info" class="form-control monte3" placeholder="Información Adicional" disabled rows="3"></textarea>
+   <textarea type="text" id="info"   class="form-control monte3" placeholder="Información Adicional" disabled rows="3">';  echo $informacionJG; echo' </textarea>
    <label for="info"></label></div> <!-- /widget-content -->
   
  </div> <!-- /widget -->
@@ -166,7 +166,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
        <br> 
       <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;
-      <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="ingresarJefeGrupo()">Guardar</button>
+      <button type="button" class="btn btn-primary btn-block colorbtn"  onclick="modificarMiCuentaJefeGrupo()">Guardar</button>
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span8 -->

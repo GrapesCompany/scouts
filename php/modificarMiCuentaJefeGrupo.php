@@ -1,9 +1,9 @@
 
 <?php
-
+include '../conexion.php';
 session_start();
 if(isset($_SESSION['userJefeGrupo'])){
- // $administrador=$_SESSION['userAdministrador'];
+ $jefegrupo=$_SESSION['userJefeGrupo'];
 }else
 {
   header("Location: index2.php?denegado=peligro");
@@ -27,7 +27,7 @@ $_SESSION['userJefeGrupo'][0]['telefonoJG']=$telefono;
 $_SESSION['userJefeGrupo'][0]['fechaNacJG']=$fech_nac;
 $_SESSION['userJefeGrupo'][0]['correoJG']=$correo;
 
-$cedulaJefeGrupo=$auxiliar[0]['cedulaJG'];
+$cedulaJefeGrupo=$jefegrupo[0]['cedulaJG'];
 
 $conexion=conectar();
     mysqli_query( $conexion, "UPDATE  `trabajador` SET `NOMBRE_TRA`='$nombre',`APELLIDO_TRA`='$apellido', `TELEFONO`='$telefono',
