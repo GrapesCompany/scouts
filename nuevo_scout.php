@@ -48,6 +48,27 @@
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
+
+ <div class="span4 hespan">	      		
+ <div class="widget">	      			
+   <div class="widget-content colorwidget">
+   <label for="genero" class="tamletra">Genero</label>				
+   <select type="text" id="genero" name="genero" class="form-control monte" placeholder="Genero" required="required" autofocus="autofocus">
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>                                   
+      </select> 
+</div> <!-- /widget-content -->
+ </div> <!-- /widget -->
+</div> <!-- /span4 -->
+
+ <div class="span4 hespan">	      		
+ <div class="widget">	      			
+   <div class="widget-content colorwidget">
+<label for="edad" class="tamletra">Edad</label>
+        <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
+</div> <!-- /widget-content -->
+ </div> <!-- /widget -->
+</div> <!-- /span4 -->
  
  <div class="span4 hespan">	      		
      <div class="widget">	      			
@@ -58,14 +79,7 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
- <div class="span4 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content colorwidget">
-    <label for="edad" class="tamletra">Edad</label>
-            <input type="text" id="edad" name="edad" class="form-control monte" placeholder="18" required="required">
- </div> <!-- /widget-content -->
-     </div> <!-- /widget -->
- </div> <!-- /span4 -->
+
  
  <div class="span4 hespan">	      		
      <div class="widget">	      			
@@ -96,6 +110,16 @@
          <option value="3">Caminante</option>
          <option value="4">Rover</option>                           
    </select> 
+</div> <!-- /widget-content -->
+</div> <!-- /widget -->
+</div> <!-- /span4 -->
+
+<div class="span4 hespan">	      		
+<div class="widget">	      			
+  <div class="widget-content colorwidget">
+<label for="uespecifica" class="tamletra">Unidad específica</label>
+      <input type="text" id="uespecifica" class="form-control monte" placeholder="Unidad específica" required="required" autofocus="autofocus">
+      
 </div> <!-- /widget-content -->
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
