@@ -214,6 +214,8 @@ function showAgregarScoutd(str) {
     document.getElementById("div_listarscoutsd").innerHTML = ""; 
     document.getElementById("div_listarujefesd").innerHTML = "";
     document.getElementById("div_modificardirigente").innerHTML = ""; 
+    document.getElementById("div_listadoscoutsd").innerHTML = "";
+    document.getElementById("div_listadojefegd").innerHTML = "";
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -231,6 +233,8 @@ function showAgregarScoutd(str) {
     document.getElementById("div_nuevoscoutd").innerHTML = ""; 
     document.getElementById("div_listarujefesd").innerHTML = "";   
     document.getElementById("div_modificardirigente").innerHTML = ""; 
+    document.getElementById("div_listadoscoutsd").innerHTML = "";
+    document.getElementById("div_listadojefegd").innerHTML = "";
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -250,6 +254,8 @@ function showListarUJefesd(str) {
     document.getElementById("div_nuevoscoutd").innerHTML = ""; 
     document.getElementById("div_listarscoutsd").innerHTML = ""; 
     document.getElementById("div_modificardirigente").innerHTML = ""; 
+    document.getElementById("div_listadoscoutsd").innerHTML = "";
+    document.getElementById("div_listadojefegd").innerHTML = "";
            
 
     var xmlhttp = new XMLHttpRequest();
@@ -268,6 +274,8 @@ function showModificarDirigente(str) {
     document.getElementById("div_nuevoscoutd").innerHTML = ""; 
     document.getElementById("div_listarscoutsd").innerHTML = "";  
     document.getElementById("div_listarujefesd").innerHTML = "";
+    document.getElementById("div_listadoscoutsd").innerHTML = "";
+    document.getElementById("div_listadojefegd").innerHTML = "";
      
 
     var xmlhttp = new XMLHttpRequest();
@@ -282,6 +290,43 @@ function showModificarDirigente(str) {
 }
 
 
+function showListadoScoutsd(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarscoutsd").innerHTML = "";  
+    document.getElementById("div_listarujefesd").innerHTML = "";
+    document.getElementById("div_modificardirigente").innerHTML = "";  
+    document.getElementById("div_listadojefegd").innerHTML = "";  
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listadoscoutsd").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listado_scoutsd.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showListadoJefeGd(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarscoutsd").innerHTML = "";  
+    document.getElementById("div_listarujefesd").innerHTML = "";
+    document.getElementById("div_modificardirigente").innerHTML = "";  
+    document.getElementById("div_listadoscoutsd").innerHTML = "";    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listadojefegd").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listado_jefegd.php?q=" + str, true);
+    xmlhttp.send();
+}
 
  /*__________________________________________Fin Administrador - Dirigente_____________________________________________________________*/
  /*__________________________________________Inicio Administrador - Scout______________________________________________________________*/
