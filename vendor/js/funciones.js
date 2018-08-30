@@ -5,8 +5,6 @@ function showAgregarJefeGrupo(str) {
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
-     
-     
     document.getElementById("div_listarscouts").innerHTML = "";
     document.getElementById("div_listardirigentes").innerHTML = ""; 
 
@@ -26,8 +24,6 @@ function showAgregarDirigente(str) {
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevoscout").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
-    
-     
     document.getElementById("div_listarscouts").innerHTML = "";
     document.getElementById("div_listardirigentes").innerHTML = ""; 
 
@@ -48,8 +44,6 @@ function showAgregarDirigente(str) {
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
-    
-     
     document.getElementById("div_listarscouts").innerHTML = "";
     document.getElementById("div_listardirigentes").innerHTML = ""; 
  
@@ -69,8 +63,6 @@ function showAgregarDirigente(str) {
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
-     
-     
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_listardirigentes").innerHTML = "";  
 
@@ -85,18 +77,14 @@ function showAgregarDirigente(str) {
     xmlhttp.send();
 }
 
- 
 
- 
 
 function showListarScouts(str) {
 
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
-    document.getElementById("div_modificarjefegrupo").innerHTML = "";
-    
-       
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";       
     document.getElementById("div_listardirigentes").innerHTML = "";  
     
 
@@ -118,8 +106,6 @@ function showListarDirigentes(str) {
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
     document.getElementById("div_modificarjefegrupo").innerHTML = "";
-     
-     
     document.getElementById("div_listarscouts").innerHTML = ""; 
      
 
