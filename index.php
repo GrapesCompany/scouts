@@ -34,7 +34,7 @@
                           <form class="login-form">
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="email" class="form-control" placeholder="Usuario:">
+                                      <input type="text" class="form-control" placeholder="Usuario:">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-user"></i>
                                       </span>

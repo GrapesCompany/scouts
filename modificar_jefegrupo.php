@@ -49,7 +49,16 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="cedula" class="tamletra">Cédula</label>					 
-     <input type="text" name="cedula" id="cedula" value="'; echo $cedulaJG;echo'"class="form-control monte" placeholder="17171717157" disabled required="required" autofocus="autofocus">
+     <input type="text" name="cedula" id="cedula" value="'; echo $cedulaJG;echo'"class="form-control monte" placeholder="1717171717" disabled required="required" autofocus="autofocus">
+           </div> <!-- /widget-content -->
+     </div> <!-- /widget -->
+   </div> <!-- /span4 -->
+
+   <div class="span4 hespan">	      		
+     <div class="widget">	      			
+       <div class="widget-content colorwidget">
+     <label for="fech_eleccion" class="tamletra">Fecha de Elección</label>					 
+     <input type="text" name="fech_eleccion" id="fech_eleccion" class="form-control monte" placeholder="01/01/2018" disabled required="required" autofocus="autofocus">
            </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
@@ -126,7 +135,7 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="direccion" class="tamletra">Direccion</label>
-             <input type="email" id="direccion" value="'; echo $direccionJG;echo'"  class="form-control monte" placeholder="example@correo.com" disabled required="required">
+             <input type="text" id="direccion" value="'; echo $direccionJG;echo'"  class="form-control monte" placeholder="Riobamba-Ecuador" disabled required="required">
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
