@@ -1,6 +1,8 @@
 <?php
 
+
  $pep ='
+
 
  <div class="row">	    	  
  <div class="span10">     
@@ -16,7 +18,13 @@
 <div class="widget">	      			
   <div class="widget-content">		
   
-  
+  <div class="container">
+
+
+ <div id="chartContainer" style="height: auto; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</div>
   
 
 
