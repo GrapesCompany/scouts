@@ -88,9 +88,7 @@
 					</a>	
 				
 					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showAgregarJefeGrupo(this.value)">Jefe de Grupo</a></li>
-						<li><a href="#" onclick="showAgregarDirigente(this.value)">Dirigente</a></li>
-                        <li><a href="#" onclick="showAgregarScout(this.value)">Scout</a></li>
+                        <li><a href="#" onclick="showAgregarScoutd(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 
@@ -102,10 +100,8 @@
 					</a>	
 				
 					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showListarUScout(this.value)">Unidad-Scout</a></li>
-						<li><a href="#" onclick="showListarUDirigente(this.value)">Unidad-Dirigente</a></li>
-                        <li><a href="#" onclick="showListarScouts(this.value)">Scouts</a></li>
-                        <li><a href="#" onclick="showListarDirigentes(this.value)">Dirigentes</a></li>
+                    	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>
+                        <li><a href="#" onclick="showListarScoutsd(this.value)">Scouts - Unidad</a></li>
                     </ul>    				
 				</li>
 			
@@ -123,14 +119,16 @@
 	    <div class="container">
 <!-- __________________________________________________________________________________________________________________________________ -->
 
-<!--Agregar Jefe de Grupo-->              
-<div id="div_nuevojefegrupo" class="container"></div>
-
-<!--Agregar Dirigente-->              
-<div id="div_nuevodirigente" class="container"></div> 
-
 <!--Agregar Scout-->              
-<div id="div_nuevoscout" class="container"></div> 
+<div id="div_nuevoscoutd" class="container"></div> 
+
+<!--Listar Scouts-->              
+<div id="div_listarscoutsd" class="container"></div>
+
+<!--Listar Unidad Dirigente-->              
+<div id="div_listarujefesd" class="container"></div> 
+
+
 
 <!--Modificar Jefe de Grupo-->              
 <div id="div_modificarjefegrupo" class="container"></div> 
@@ -138,13 +136,7 @@
 <!--Listar Unidad Scout-->              
 <div id="div_listaruscout" class="container"></div> 
 
-<!--Listar Unidad Dirigente-->              
-<div id="div_listarudirigente" class="container"></div> 
-
-<!--Listar Scouts-->              
-<div id="div_listarscouts" class="container"></div>
-
-<!--Listar Scouts-->              
+<!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
 
 <!-- __________________________________________________________________________________________________________________________________ -->

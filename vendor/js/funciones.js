@@ -177,6 +177,63 @@ function showListarDirigentes(str) {
 
  /*__________________________________________Fin Administrador - Jefe de Grupo_________________________________________________________*/
 
+ /*__________________________________________Inicio Administrador - Dirigente__________________________________________________________*/
+
+ function showAgregarScoutd(str) {
+
+    document.getElementById("div_listarscoutsd").innerHTML = ""; 
+    document.getElementById("div_listarujefesd").innerHTML = "";
+ 
+     var xmlhttp = new XMLHttpRequest();
+     xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+             document.getElementById("div_nuevoscoutd").innerHTML = this.responseText;
+         }
+     }
+ 
+     xmlhttp.open("GET", "nuevo_scoutd.php?q=" + str, true);
+     xmlhttp.send();
+ }
+
+ function showListarScoutsd(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarujefesd").innerHTML = "";   
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarscoutsd").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_scoutsd.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+
+function showListarUJefesd(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarscoutsd").innerHTML = ""; 
+           
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_listarujefesd").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "listar_ujefesd.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+
+
+ /*__________________________________________Fin Administrador - Dirigente_____________________________________________________________*/
+
 
  function onlinecampos()
  {
