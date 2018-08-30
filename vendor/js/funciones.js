@@ -253,6 +253,26 @@ function showModificarDirigente(str) {
 
 
  /*__________________________________________Fin Administrador - Dirigente_____________________________________________________________*/
+ /*__________________________________________Inicio Administrador - Scout______________________________________________________________*/
+
+
+ function showModificarScout(str) {
+
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_modificarscout").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "modificar_scout.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+ /*__________________________________________Fin Administrador - Scout________________________________________________________________*/
+
+
 
  function onlinecampos()
  {

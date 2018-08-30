@@ -55,7 +55,7 @@
                 &nbsp;&nbsp;&nbsp;
                 <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/admindirigente.php">Dirigente</label></a>
                 &nbsp;&nbsp;&nbsp;           
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/adminusuario.php">Usuario</label></a>
+                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/adminscout.php">Usuario</label></a>
                 </div>
                 <br>
                                                    
