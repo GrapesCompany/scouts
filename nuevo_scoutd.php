@@ -1,5 +1,5 @@
 <?php
- $pep ='		<div class="row">	      	
+ $pep ='	<div class="row">	      	
 		  	  
  <div class="span10">
      
@@ -85,7 +85,6 @@
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
  
-  
 
 <div class="span4 hespan">	      		
 <div class="widget">	      			
@@ -97,6 +96,16 @@
          <option value="3">Caminante</option>
          <option value="4">Rover</option>                           
    </select> 
+</div> <!-- /widget-content -->
+</div> <!-- /widget -->
+</div> <!-- /span4 -->
+
+<div class="span4 hespan">	      		
+<div class="widget">	      			
+  <div class="widget-content colorwidget">
+<label for="uespecifica" class="tamletra">Unidad específica</label>
+      <input type="text" id="uespecifica" class="form-control monte" placeholder="Unidad específica" required="required" autofocus="autofocus">
+      
 </div> <!-- /widget-content -->
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
@@ -117,9 +126,9 @@
      <label for="invisible" class="tamletra">Invisible</label>
             <input type="password" id="invisible" class="form-control monte" placeholder="invisible" required="required" autofocus="autofocus"> 
          
-            </div>    
+            </div>   
      </div>  
- </div>  /span4 -->
+ </div>  -->
 
 
 
