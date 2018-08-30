@@ -349,7 +349,7 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     '&apellido=' + document.getElementById('apellido').value +
     '&telefono=' + document.getElementById('telefono').value +
     '&unidad=' + document.getElementById('unidad').value +
-    '&cargo=' + document.getElementById('cargo').value +
+
     '&edad=' + document.getElementById('edad').value +
     '&inputPassword=' + document.getElementById('contrasena').value +
     '&genero=' + document.getElementById('genero').value +
@@ -367,7 +367,7 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
 if (document.getElementById('cedula').value && document.getElementById('nombre').value && document.getElementById('apellido').value &&
     document.getElementById('telefono').value && document.getElementById('genero').value && document.getElementById('contrasena').value &&
     document.getElementById('fech_nac').value && document.getElementById('direccion').value && document.getElementById('celectronico').value &&
-    document.getElementById('edad').value &&  document.getElementById('cargo').value && document.getElementById('unidad').value   ) {
+    document.getElementById('edad').value && document.getElementById('unidad').value   ) {
    
             $.ajax({
                 type: "POST",
@@ -391,3 +391,7 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
 }
 
  }
+
+
+
+ 

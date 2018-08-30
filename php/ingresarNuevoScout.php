@@ -7,6 +7,8 @@ $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
 $direccion=$_POST['direccion'];
 $genero=$_POST['genero'];
+
+$genero=$_POST['genero'];
 $edad=$_POST['edad'];
 $telefono=$_POST['telefono'];
 $fech_nac=$_POST['fech_nac'];
@@ -14,10 +16,10 @@ $correo=$_POST['correo'];
 $inputPassword=$_POST['inputPassword'];
 $unidad=$_POST['unidad'];
 $unidadEspesifica=$_POST['uespecifica'];
-$cargo=$_POST['cargo'];
+
 $cedular=$_POST['cedular'];
-$nombrer=$_POST['nombrer '];
-$direccionr=$_POST['direccionr '];
+$nombrer=$_POST['nombrer'];
+$direccionr=$_POST['direccionr'];
 $telefonor=$_POST['telefonor'];
 
 $conexion=conectar();
@@ -35,6 +37,7 @@ echo "El Scout que desea registrar ya existe en la base de datos.  ";
 `ID_GRUPO_SCOUT`, 
 `NOMBRE`, 
 `APELLIDO`,
+`SEXO_SCO`,
 `FECHA_NAC`, 
 `DIRECCION`, 
 `TELEFONO`, 
@@ -47,10 +50,10 @@ echo "El Scout que desea registrar ya existe en la base de datos.  ";
 `TELEFONO_REPRE`, 
 `ESTADO`,
 `CONTRASENA`) values
-   ('$cedula' ,'$unidad' , '$nombre' , '$apellido' ,'$fech_nac', '$direccion', '$telefono','$edad',
+   ('$cedula' ,'$unidad' , '$nombre' , '$apellido' ,'$genero','$fech_nac', '$direccion', '$telefono','$edad',
    '$correo','$unidadEspesifica','$cedular','$nombrer','$direccionr','$telefonor','0','$inputPassword')" ) or die("Problemas en el select.  ".mysqli_error($conexion));
 
 echo "El Scout se ha registrado correctamente.  ";
 cerrar($conexion);
-
+ }
 ?>
