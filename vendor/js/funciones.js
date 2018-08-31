@@ -425,7 +425,6 @@ function showListadoJefegc(str) {
  /*__________________________________________Fin Administrador - Scout________________________________________________________________*/
 
 
-
  function onlinecampos()
  {      
      document.getElementById("nombre").removeAttribute("disabled");

@@ -32,6 +32,21 @@ if(isset($_SESSION['userJefeGrupo'])){
 		
 		<link href="./assets/css/pages/reports.css" rel="stylesheet">
 
+
+<script languaje="Javascript">   
+<!--  
+document.write('<style type="text/css">div.cp_oculta{display: none;}</style>');  
+function MostrarOcultar(capa,enlace)  
+{  
+    if (document.getElementById)  
+    {  
+        var aux = document.getElementById(capa).style;  
+        aux.display = aux.display? "":"block";  
+    }  
+}  
+   
+//-->  
+</script> 
  
   </head>
 
@@ -127,7 +142,8 @@ if(isset($_SESSION['userJefeGrupo'])){
 					</a>	
 				
 					<ul class="dropdown-menu">
-                        <li><a href="#" onclick="showReporteGenero(this.value)">Por género</a></li>
+						<li><a class="texto" href="javascript:MostrarOcultar('texto1');">Por género</a></li>
+						   
                      </ul>    				
 				</li>
 			
@@ -147,6 +163,89 @@ if(isset($_SESSION['userJefeGrupo'])){
 	    <div class="container">
 <!-- __________________________________________________________________________________________________________________________________ -->
 
+<?php 
+include 'conexion.php';
+$conexion=conectar();
+
+$sql = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Manada'";
+$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+		$masculino =(int)$r[0];
+}
+
+$sql = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Manada'";
+$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+	$femenino =(int)$r[0];
+}
+
+ $dataPoints = array( 
+	 array("label"=>"Masculino", "y"=>$masculino),
+	 array("label"=>"Femenino", "y"=>$femenino),
+ )	
+ ?>
+
+ <?php 
+ 
+$sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Tropa'";
+$result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+		$masculino2 =(int)$r[0];
+}
+
+$sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Tropa'";
+$result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+	$femenino2 =(int)$r[0];
+}
+
+ $dataPoints2 = array( 
+	 array("label"=>"Masculino", "y"=>$masculino2),
+	 array("label"=>"Femenino", "y"=>$femenino2),
+ )	
+ ?>
+
+  <?php 
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Caminante'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+		 $masculino2 =(int)$r[0];
+ }
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Caminante'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+	 $femenino2 =(int)$r[0];
+ }
+ 
+  $dataPoints3 = array( 
+	  array("label"=>"Masculino", "y"=>$masculino2),
+	  array("label"=>"Femenino", "y"=>$femenino2),
+  )	
+  ?>
+
+    <?php 
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Rover'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+		 $masculino2 =(int)$r[0];
+ }
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Rover'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+	 $femenino2 =(int)$r[0];
+ }
+ 
+  $dataPoints4 = array( 
+	  array("label"=>"Masculino", "y"=>$masculino2),
+	  array("label"=>"Femenino", "y"=>$femenino2),
+  )	
+  ?>
+
+
 <!--Agregar Jefe de Grupo-->              
 <div id="div_nuevojefegrupo" class="container"></div>
 
@@ -165,8 +264,32 @@ if(isset($_SESSION['userJefeGrupo'])){
 <!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
 
+ 
+
 <!--Reporte por Genero-->              
-<div id="div_reportegenero" class="container"></div>
+<div class="cp_oculta" id="texto1">
+<div id="div_reportegenero">
+
+<h2>Manada:</h2> 
+<hr>
+<div id="chartContainer" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Tropa:</h2> 
+<hr>
+<div id="chartContainer2" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Caminante:</h2> 
+<hr>
+<div id="chartContainer3" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Rover:</h2> 
+<hr>
+<div id="chartContainer4" style="height: 300pt; width: 100%;"></div>
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</div>
+</div>
 
 <!--Listado de Scouts-->              
 <div id="div_listadoscouts" class="container"></div>
@@ -175,40 +298,10 @@ if(isset($_SESSION['userJefeGrupo'])){
 <div id="div_listadodirigentes" class="container"></div>
 
 
-<?php
  
+       
 
-include '../conexion.php';
-$conexion=conectar();
-$sql = "SELECT `COUNT(CEDULA)` FROM `usuario` WHERE `SEXO_SCO` = 'Masculino'";
 
-$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
- 
-if($r=mysqli_fetch_array($result))
-{
-	$masculino =$r;
-
-}
-
-$sql = "SELECT `COUNT(CEDULA)` FROM `usuario` WHERE `SEXO_SCO` = 'Femenino'";
-
-$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
- 
-if($r=mysqli_fetch_array($result))
-{
-	$femenino =$r;
-
-}
-
- $dataPoints = array( 
-	 array("label"=>"Masculino", "y"=>$masculino),
-	 array("label"=>"Femenino", "y"=>$femenino),
- )
-	
- ?>
-
-  <div id="chartContainer" style="height: 400pt; width: 100%;"></div>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -362,6 +455,7 @@ if($r=mysqli_fetch_array($result))
  
 
 <script>
+
 window.onload = function() {
  
  
@@ -371,18 +465,74 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: "Reporte"
 	},
 	subtitles: [{
-		text: "Noviembre 2017"
+		text: "por género:"
 	}],
 	data: [{
 		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
+		yValueFormatString: "#,##0\"\"",
 		indexLabel: "{label} ({y})",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
+var chart4 = new CanvasJS.Chart("chartContainer4", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints4, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
 chart.render();
+chart2.render();
+chart3.render();
+chart4.render();
  
 }
+
+
+
+
 </script>
 
  
