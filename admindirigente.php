@@ -110,8 +110,8 @@ if(isset($_SESSION['userDirigente'])){
 					</a>	
 				
 					<ul class="dropdown-menu">
-						<li><a href="#" onclick="showListarScoutsd(this.value)">Scout</a></li>
-                    	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>                        
+						<li><a href="#" onclick="showListarScoutsd(this.value)">Scouts</a></li>
+                    	<li><a href="#" onclick="showListadoJefeGd(this.value)">Dirigentes</a></li>                        
                     </ul>    				
 				</li>
 			

@@ -1,10 +1,19 @@
 <?php
+
+include 'conexion.php';
+session_start();
+$conexion = conectar();
+$grupoD = $_SESSION["userDirigente"][0]["grupoD"];
+
+$findDirigentes = mysqli_query($conexion, "SELECT * FROM jefe_grupo JOIN trabajador on jefe_grupo.CEDULA_TRA = trabajador.CEDULA_TRA")
+or die("Problemas en el select" . mysqli_error($conexion));
+
  $pep ='<div class="row">	      	
 		  	  
  <div class="span10">     
      <div class="widget paddi">       
        <div class="widget-content padd">       
-         <h2 class="colores"> <i class="icon-bar-chart"></i> Listado Jefe de Grupo</h2>         
+         <h2 class="colores"> <i class="icon-bar-chart"></i> Listado Jefe de Grupo - Dirigentes</h2>         
           <hr>
 
 <div class="container">	  
@@ -18,8 +27,8 @@
          <tr>
            <th scope="col">#</th>
            <th scope="col">Cédula</th>
-           <th scope="col">Nombre</th>
-           <th scope="col">Apellido</th>
+           <th scope="col">Fecha de Eleccion</th>
+           <th scope="col">Informacion</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>
        </thead>
