@@ -61,7 +61,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra">Nombre</label>
-  <input type="text" name="nombre" id="nombre" value="'; echo $nombrerS;echo'" class="form-control monte" placeholder="Example" disabled required="required">
+  <input type="text" name="nombre" id="nombre"   onkeyup="this.value=soloLetras(this.value)"  value="'; echo $nombrerS;echo'" class="form-control monte" placeholder="Example" disabled required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -70,7 +70,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra">Apellido</label>
-              <input type="text" name="apellido" id="apellido" value="'; echo $apellidoS;echo'" class="form-control monte" disabled placeholder="Example" required="required">		      		
+              <input type="text" name="apellido" id="apellido" onkeyup="this.value=soloLetras(this.value)"  value="'; echo $apellidoS;echo'" class="form-control monte" disabled placeholder="Example" required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -89,8 +89,8 @@ echo '		<div class="row">
    <div class="widget-content colorwidget">
    <label for="genero" class="tamletra">Genero</label>				
    <select type="text" id="genero" name="genero" value="'; echo $sexoS;echo'" class="form-control monte" disabled placeholder="Genero" required="required" autofocus="autofocus">
-            <option value="1">Masculino</option>
-            <option value="2">Femenino</option>                                   
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>                                   
       </select> 
 </div> <!-- /widget-content -->
  </div> <!-- /widget -->
@@ -109,7 +109,7 @@ echo '		<div class="row">
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra">Teléfono</label>
-            <input type="text" id="telefono" name="telefono"  value="'; echo $telefonoS;echo'" class="form-control monte" disabled placeholder="Teléfono" required="required" autofocus="autofocus">
+            <input type="text" id="telefono"  nkeyup="this.value=soloNumeros(this.value)" maxlength="2"   onkeyup="this.value=soloNumeros(this.value)" name="telefono"  value="'; echo $telefonoS;echo'" class="form-control monte" disabled placeholder="Teléfono" required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -195,7 +195,7 @@ echo '		<div class="row">
             <div class="widget">	      			
               <div class="widget-content colorwidget">
           <label for="nombrer" class="tamletra">Nombre</label>
-                   <input type="text" id="nombrer" value="'; echo $nombrerS;echo'" class="form-control monte2" placeholder="Example" disabled required="required" autofocus="autofocus">      
+                   <input type="text" id="nombrer"   onkeyup="this.value=soloLetras(this.value)"  value="'; echo $nombrerS;echo'" class="form-control monte2" placeholder="Example" disabled required="required" autofocus="autofocus">      
          </div> <!-- /widget-content -->
             </div> <!-- /widget -->
           </div> <!-- /span4 -->
@@ -213,7 +213,7 @@ echo '		<div class="row">
         <div class="widget">	      			
           <div class="widget-content colorwidget">
       <label for="telefonor" class="tamletra">Telefóno</label>
-               <input type="text" id="telefonor" value="'; echo $telefonorS;echo'" class="form-control monte2" placeholder="0999988888" disabled required="required" autofocus="autofocus">      
+               <input type="text" id="telefonor"  onkeyup="this.value=soloNumeros(this.value)" maxlength="10"  value="'; echo $telefonorS;echo'" class="form-control monte2" placeholder="0999988888" disabled required="required" autofocus="autofocus">      
      </div> <!-- /widget-content -->
         </div> <!-- /widget -->
       </div> <!-- /span4 -->
