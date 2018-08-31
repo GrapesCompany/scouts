@@ -471,8 +471,6 @@ function showListadoJefegc(str) {
      document.getElementById("direccion").removeAttribute("disabled");     
      //document.getElementById("unidad").removeAttribute("disabled");
      document.getElementById("uespecifica").removeAttribute("disabled");
-      
-
      document.getElementById("cedular").removeAttribute("disabled");
      document.getElementById("nombrer").removeAttribute("disabled");
      document.getElementById("direccionr").removeAttribute("disabled");
