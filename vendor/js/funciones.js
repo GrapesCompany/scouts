@@ -186,6 +186,8 @@ function showListadoScouts(str) {
 
 function showListadoDirigentes(str) {
 
+    var idUnidad = document.getElementById('unidad').value;
+
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
@@ -203,7 +205,7 @@ function showListadoDirigentes(str) {
         }
     }
 
-    xmlhttp.open("GET", "listado_dirigentes.php?q=" + str, true);
+    xmlhttp.open("GET", "listado_dirigentes.php?q=" + idUnidad, true);
     xmlhttp.send();
 }
  
