@@ -178,25 +178,25 @@ if(isset($_SESSION['userJefeGrupo'])){
 <?php
  
 
-include '../conexion.php';
+include 'conexion.php';
 $conexion=conectar();
-$sql = "SELECT `COUNT(CEDULA)` FROM `usuario` WHERE `SEXO_SCO` = 'Masculino'";
+$sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Masculino'";
 
 $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
  
 if($r=mysqli_fetch_array($result))
 {
-	$masculino =$r;
+	$masculino =(int)$r[0];
 
 }
 
-$sql = "SELECT `COUNT(CEDULA)` FROM `usuario` WHERE `SEXO_SCO` = 'Femenino'";
+$sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Femenino '";
 
 $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
  
 if($r=mysqli_fetch_array($result))
 {
-	$femenino =$r;
+	$femenino =(int)$r[0];
 
 }
 
