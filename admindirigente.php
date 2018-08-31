@@ -71,7 +71,9 @@ if(isset($_SESSION['userDirigente'])){
 				</ul>
 			
 				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Buscar...">
+					<input type="text" id='strBuscar' class="search-query" placeholder="Buscar...">
+					&nbsp;
+					<a onclick="showBuscarTotalMiembrosd(this.value)"><i class="icon-search icon-large colorsearch"></i></a>
 				</form>
 				
 			</div><!--/.nav-collapse -->	
@@ -146,6 +148,11 @@ if(isset($_SESSION['userDirigente'])){
 
 <!--Listado de Jefes de Grupo-->              
 <div id="div_listadojefegd" class="container"></div>  
+
+<!--Buscar total miembros-->              
+<div id="div_buscartotalmiembrosd" class="container"></div> 
+
+
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
