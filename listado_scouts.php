@@ -1,5 +1,14 @@
 <?php
- $pep ='<div class="row">	      	
+
+include 'conexion.php';
+$idUnidad = $_GET['q'];
+$conexion = conectar();
+
+$findCita = mysqli_query($conexion, "SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =$idUnidad")
+or die("Problemas en el select" . mysqli_error($conexion));
+
+
+ echo '<div class="row">	      	
 		  	  
  <div class="span10">     
      <div class="widget paddi">       
@@ -20,19 +29,27 @@
            <th scope="col">Cédula</th>
            <th scope="col">Nombre</th>
            <th scope="col">Apellido</th>
+           <th scope="col">Edad</th>
+           <th scope="col">Correo</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>
        </thead>
-       <tbody>
+       <tbody>';
+       $c = 1;
+          while ($row = (mysqli_fetch_array($findCita))) {
+       echo '
          <tr>
-           <th scope="row">1</th>
-           <td>1717171717</td>
-           <td>Pepito</td>
-           <td>Alcazer</td>          
+           <th scope="row">'.$c.'</th>
+           <td>'.$row[0].'</td>
+           <td>'.$row[2].'</td>
+           <td>'.$row[3].'</td>          
+           <td>'.$row[8].'</td>          
+           <td>'.$row[9].'</td>          
            <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</button></td> 
-         </tr>
-        
-         
+         </tr>';
+         $c++;
+       }
+    echo '   
        </tbody>
      </table>
      
@@ -64,5 +81,5 @@
    </div> <!-- /span12 -->
 
  </div> <!-- /row -->';
-echo $pep;
+
 ?>
