@@ -20,14 +20,7 @@
 <div class="span4 hespan">	      		
 <div class="widget">	      			
   <div class="widget-content colorwidget">				   
- <label for="unidad" class="tamletra">Unidad</label> 
-    <select type="text" id="unidad" name="unidad" class="form-control monte" placeholder="Unidad" required="required" autofocus="autofocus">
-    
-         <option value="1">Manada</option>
-         <option value="2">Tropa</option>  
-         <option value="3">Caminante</option>
-         <option value="4">Rover</option>
-    </select> 
+ 
     </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
@@ -51,7 +44,7 @@
       <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>
       &nbsp;&nbsp;-->
       
-      <button type="button" class="btn btn-primary btn-block coloricono" onclick="showListadoScoutsd(this.value)"><i class="icon-search icon-2x"></i></button>
+      <!--<button type="button" class="btn btn-primary btn-block coloricono" onclick="showListadoScoutsd(this.value)"><i class="icon-search icon-2x"></i></button>-->
  </div>  
      </div>  
  </div> <!-- /span4 -->
