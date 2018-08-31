@@ -225,12 +225,24 @@ padding-bottom: 0px;
         text-decoration: none !important;
 }
 
- 
 
 .enelcentro{      
     right: 100px !important;
 }
 
+.colorsearch{
+    color: white !important;
+}
+.colorsearch:focus{
+    color: white !important;
+    opacity: 0.4;
+}
+.colorsearch:hover{
+    color: white !important;
+    opacity: 0.4;
+    text-decoration: none !important;
+    
+}
  
 
 

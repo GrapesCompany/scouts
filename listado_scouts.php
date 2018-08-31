@@ -19,7 +19,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
 <div class="container">	  
  
  
-    <div class="span8 hespan">	      		
+    <div class="span8">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
        <table class="table">
@@ -56,8 +56,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
  </div> 
  
      </div>  
-   </div>  <!--/span4             <td><button type="button" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</a></button></td> 
-   -->      	
+   </div>   	
    
    
 

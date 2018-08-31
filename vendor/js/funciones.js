@@ -10,6 +10,7 @@ function showAgregarJefeGrupo(str) {
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -32,6 +33,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
 
 
      var xmlhttp = new XMLHttpRequest();
@@ -55,6 +57,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -77,6 +80,7 @@ function showAgregarDirigente(str) {
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -101,6 +105,7 @@ function showListarScouts(str) {
     document.getElementById("div_reportegenero").innerHTML = "";  
     document.getElementById("div_listadoscouts").innerHTML = ""; 
     document.getElementById("div_listadodirigentes").innerHTML = "";  
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -123,7 +128,8 @@ function showListarDirigentes(str) {
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_reportegenero").innerHTML = ""; 
     document.getElementById("div_listadoscouts").innerHTML = ""; 
-    document.getElementById("div_listadodirigentes").innerHTML = "";    
+    document.getElementById("div_listadodirigentes").innerHTML = "";  
+    document.getElementById("div_buscartotalmiembros").innerHTML = "";   
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -147,6 +153,7 @@ function showReporteGenero(str) {
     document.getElementById("div_listardirigentes").innerHTML = "";
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -171,6 +178,7 @@ function showListadoScouts(str) {
     document.getElementById("div_listardirigentes").innerHTML = "";
     document.getElementById("div_reportegenero").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
+    document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -195,7 +203,8 @@ function showListadoDirigentes(str) {
     document.getElementById("div_listarscouts").innerHTML = ""; 
     document.getElementById("div_listardirigentes").innerHTML = "";
     document.getElementById("div_reportegenero").innerHTML = "";
-    document.getElementById("div_listadoscouts").innerHTML = "";    
+    document.getElementById("div_listadoscouts").innerHTML = "";  
+    document.getElementById("div_buscartotalmiembros").innerHTML = "";   
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -206,6 +215,32 @@ function showListadoDirigentes(str) {
     }
 
     xmlhttp.open("GET", "listado_dirigentes.php?q=" + idUnidad, true);
+    xmlhttp.send();
+}
+
+
+function showBuscarTotalMiembros(str) {
+
+    var strString = document.getElementById('btnBuscar').value;
+
+    document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+    document.getElementById("div_nuevodirigente").innerHTML = "";
+    document.getElementById("div_nuevoscout").innerHTML = "";
+    document.getElementById("div_modificarjefegrupo").innerHTML = "";
+    document.getElementById("div_listarscouts").innerHTML = ""; 
+    document.getElementById("div_listardirigentes").innerHTML = "";
+    document.getElementById("div_reportegenero").innerHTML = "";
+    document.getElementById("div_listadoscouts").innerHTML = "";  
+    document.getElementById("div_listadodirigentes").innerHTML = "";  
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_buscartotalmiembros").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "buscar_totalmiembros.php?q=" + strString, true);
     xmlhttp.send();
 }
  

@@ -22,7 +22,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
 <div class="container">	  
  
  
-    <div class="span8 hespan">	      		
+    <div class="span8">	      		
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
        <table class="table">
