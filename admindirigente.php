@@ -169,7 +169,7 @@ if(isset($_SESSION['userDirigente'])){
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=dirigente">Si</button>
+          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
           <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
             
           </div>

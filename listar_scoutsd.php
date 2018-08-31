@@ -13,7 +13,7 @@ echo '<div class="row">
 <div class="span10">     
     <div class="widget paddi">       
       <div class="widget-content padd">       
-        <h2 class="colores"> <i class="icon-bar-chart"></i> Listado Jefe de Grupo - Scout</h2>         
+        <h2 class="colores"> <i class="icon-bar-chart"></i> Listado de Scouts</h2>         
          <hr>
 
 <div class="container">	  
