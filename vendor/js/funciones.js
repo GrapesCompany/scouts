@@ -161,6 +161,8 @@ function showReporteGenero(str) {
 
 function showListadoScouts(str) {
 
+    var idUnidad = document.getElementById('unidad').value;
+
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
@@ -178,7 +180,7 @@ function showListadoScouts(str) {
         }
     }
 
-    xmlhttp.open("GET", "listado_scouts.php?q=" + str, true);
+    xmlhttp.open("GET", "listado_scouts.php?q=" + idUnidad, true);
     xmlhttp.send();
 }
 
