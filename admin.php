@@ -62,7 +62,7 @@ function MostrarOcultar(capa,enlace)
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - ADMINISTRACIÓN			
 			</a>		
 			
@@ -80,15 +80,15 @@ function MostrarOcultar(capa,enlace)
 							<li><a href="#" onclick="showModificarJefeGrupo(this.value)">Perfil</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
-
-
-							
 						</ul>						
 					</li>
 				</ul>
 			
 				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Buscar...">
+				
+					<input type="text" class="search-query" id='btnBuscar' placeholder="Buscar...">
+					&nbsp;
+					<a onclick="showBuscarTotalMiembros(this.value)"><i class="icon-search icon-large colorsearch"></i></a> 
 				</form>
 				
 			</div><!--/.nav-collapse -->	
@@ -265,6 +265,10 @@ if($r=mysqli_fetch_array($result)){
 <!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
 
+<!--Buscar Total Miembros-->              
+<div id="div_buscartotalmiembros" class="container"></div>
+
+
  
 
 <!--Reporte por Genero-->              
@@ -326,8 +330,8 @@ if($r=mysqli_fetch_array($result)){
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
-          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+          <a class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=jefedegrupo">Si</a>
+          <a class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</a>
             
           </div>
         </div>

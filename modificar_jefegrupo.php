@@ -113,8 +113,8 @@ $informacionJG=$jefegrupo[0]['informacionJG'];
        <div class="widget-content colorwidget">				   
       <label for="genero" class="tamletra">Género</label>				
     <select type="text" id="genero" name="genero" value="'; echo $generoJG;echo'" class="form-control monte" placeholder="Género" disabled required="required" autofocus="autofocus">
-              <option value="1" class="monte">Masculino</option>
-              <option value="2">Femenino</option>                           
+              <option value="Masculino" class="monte">Masculino</option>
+              <option value="Femenino">Femenino</option>                           
         </select>
  
  

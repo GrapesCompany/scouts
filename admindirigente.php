@@ -45,7 +45,7 @@ if(isset($_SESSION['userDirigente'])){
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - DIRIGENTE			
 			</a>		
 			
@@ -71,7 +71,9 @@ if(isset($_SESSION['userDirigente'])){
 				</ul>
 			
 				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Buscar...">
+					<input type="text" id='strBuscar' class="search-query" placeholder="Buscar...">
+					&nbsp;
+					<a onclick="showBuscarTotalMiembrosd(this.value)"><i class="icon-search icon-large colorsearch"></i></a>
 				</form>
 				
 			</div><!--/.nav-collapse -->	
@@ -110,8 +112,8 @@ if(isset($_SESSION['userDirigente'])){
 					</a>	
 				
 					<ul class="dropdown-menu">
-						<li><a href="#" onclick="showListarScoutsd(this.value)">Scout</a></li>
-                    	<li><a href="#" onclick="showListarUJefesd(this.value)">Jefe de Grupo</a></li>                        
+						<li><a href="#" onclick="showListarScoutsd(this.value)">Scouts</a></li>
+                    	<li><a href="#" onclick="showListadoJefeGd(this.value)">Jefes de Unidad</a></li>                        
                     </ul>    				
 				</li>
 			
@@ -147,6 +149,15 @@ if(isset($_SESSION['userDirigente'])){
 <!--Listado de Jefes de Grupo-->              
 <div id="div_listadojefegd" class="container"></div>  
 
+<!--Buscar total miembros-->              
+<div id="div_buscartotalmiembrosd" class="container"></div> 
+
+
+<!--Mostrar Datos Scout-->              
+<div id="div_datoscoutd" class="container"></div> 
+
+
+
 <!-- __________________________________________________________________________________________________________________________________ -->
 
 	    </div> <!-- /container -->    
@@ -169,8 +180,8 @@ if(isset($_SESSION['userDirigente'])){
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
-          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+          <a class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=dirigente">Si</a>
+          <a class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</a>
             
           </div>
         </div>

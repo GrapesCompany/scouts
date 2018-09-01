@@ -5,22 +5,18 @@ session_start();
 $tipo = $_GET['tipo'];
 
 switch ($tipo) {
-    case 'administrador':unset($_SESSION['userAdministrador']);
+    case 'jefedegrupo':unset($_SESSION['userJefeGrupo']);
         header("Location: ../../index2.php?salir=exito");
         break;
-    case 'auxiliar':unset($_SESSION['userAuxiliar']);
+    case 'dirigente':unset($_SESSION['userDirigente']);
         header("Location: ../../index2.php?salir=exito");
         break;
-    case 'medico':unset($_SESSION['userMedico']);
+    case 'scout':unset($_SESSION['userScout']);
         header("Location: ../../index2.php?salir=exito");
         break;
-    case 'paciente':unset($_SESSION['userPaciente']);
-        header("Location: ../../index.php?salir=exito");
-        break;
-    default:unset($_SESSION['userAdministrador']);
-            unset($_SESSION['userAuxiliar']);
-            unset($_SESSION['userMedico']);
-            unset($_SESSION['userPaciente']);
+    default:unset($_SESSION['userJefeGrupo']);
+            unset($_SESSION['userDirigente']);
+            unset($_SESSION['userScout']);
             header("Location: ../../index.php?salir=exito");
 }
 
