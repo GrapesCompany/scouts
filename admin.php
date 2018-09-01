@@ -397,9 +397,14 @@ if($r=mysqli_fetch_array($result)){
          <option value="3">Caminante</option>
          <option value="4">Rover</option>
   		 </select> 
+		  
+		   
 		   <p class="altra"></p><br>
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
-          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          <button class="btn btn-lg tambutton2 colorbtn3"  onclick="actualizarScoutUnidadJG()" data-dismiss="modal" href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+		  <input type= "text"  id="prueba"  style="visibility:hidden"> 
+
+		           
           </div>
 
         </div>
@@ -425,15 +430,16 @@ if($r=mysqli_fetch_array($result)){
           <input type="text" id="unidada" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
 		   <hr>
 		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
-    	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+    	  <select type="text" id="unidadnD" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
          <option value="1">Manada</option>
          <option value="2">Tropa</option>  
          <option value="3">Caminante</option>
          <option value="4">Rover</option>
   		 </select> 
 		   <p class="altra"></p><br>
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
-          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          <button class="btn btn-lg tambutton2 colorbtn3" onclick="actualizarDirigenteUnidadJG()" data-dismiss="modal"  href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+		  <input type= "text"  id="pruebaD"  >           
           </div>
 
         </div>
