@@ -1224,3 +1224,36 @@ function actualizarDirigenteUnidadJG()
     });
    
 }
+
+
+function CambiarScoutUnidadD(cedula)
+{
+    $('#CambiarScoutAd').modal('show');
+		$('#pruebaSD').val(cedula)
+
+}
+
+function actualizarScoutUnidadD()
+{
+
+    var dataString = 'cedula=' + document.getElementById('pruebaSD').value +
+    '&unidad=' + document.getElementById('unidadSD').value;
+
+
+    $.ajax({
+            
+        type: "POST",
+        url: "php/cambiarScoutUnidadD.php",
+        data: dataString,
+        success: function (data) {
+         
+            alert(data);
+            //recuperando las variables
+           
+        }, error: function (errorThrown) {
+            alert("Existe un error" + errorThrown);
+        }
+
+    });
+   
+}
