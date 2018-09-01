@@ -385,8 +385,7 @@ if($r=mysqli_fetch_array($result)){
           </div>
           <div class="modal-footer"> 
 		  <p class="altra"></p>
-	 	   <label for="unidadac" class="tamletra aligfn">Unidad Actual:</label>
-          <input type="text" id="unidadac" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+	  
 		   <hr>
 		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
     	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
@@ -400,8 +399,7 @@ if($r=mysqli_fetch_array($result)){
 		   <p class="altra"></p><br>
           <button class="btn btn-lg tambutton2 colorbtn3"  onclick="actualizarScoutUnidadJG()" data-dismiss="modal" href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
-		  <input type= "text"  id="prueba"  style="visibility:hidden"> 
-
+ 
 		           
           </div>
 
@@ -424,11 +422,10 @@ if($r=mysqli_fetch_array($result)){
           </div>
           <div class="modal-footer"> 
 		  <p class="altra"></p>
-	 	   <label for="unidada" class="tamletra aligfn">Unidad Actual:</label>
-          <input type="text" id="unidada" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+	 	   
 		   <hr>
-		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
-    	  <select type="text" id="unidadnD" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+		  <label for="unidadnD" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
+    	  <select type="text" id="unidadnD" name="unidadnD" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
          <option value="1">Manada</option>
          <option value="2">Tropa</option>  
          <option value="3">Caminante</option>
@@ -437,7 +434,36 @@ if($r=mysqli_fetch_array($result)){
 		   <p class="altra"></p><br>
           <button class="btn btn-lg tambutton2 colorbtn3" onclick="actualizarDirigenteUnidadJG()" data-dismiss="modal"  href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
-		  <input type= "text"  id="pruebaD"  >           
+		            
+          </div>
+
+        </div>
+      </div>
+	</div>
+
+		    <!-- Seccion Cambiar Cargo de Dirigentes-->
+			<div class="modal fade colorbtn2" id="CambiarDirigenteCargo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar el cargo de un Dirigente?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+          </div>
+          <div class="modal-footer"> 
+		  <p class="altra"></p>
+	 	    
+		   <hr>
+		  <label for="cargod" class="tamletra aligfn"><b>Nuevo Cargo:</b></label> 
+		  <input type="text" id="cargod" class="form-control monte7"  required="required" autofocus="autofocus">
+
+		   <p class="altra"></p><br>
+          <button class="btn btn-lg tambutton2 colorbtn3" data-dismiss="modal"  href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+		            
           </div>
 
         </div>

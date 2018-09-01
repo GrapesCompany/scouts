@@ -59,7 +59,7 @@
     font-size: 12pt;
     position: absolute;
     right: 40px;
-    bottom: 120px;
+    bottom: 65px;
 }
 
 .monte8{
@@ -243,6 +243,11 @@ padding-bottom: 0px;
 .colorbtnlist{
         color: white !important;
         text-decoration: none !important;
+}
+
+.letratipo{
+    font-size: 8pt !important;
+    padding: 0px !important;
 }
 
 

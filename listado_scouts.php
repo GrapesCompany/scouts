@@ -46,7 +46,8 @@ or die("Problemas en el select" . mysqli_error($conexion));
            <td>'.$row[8].'</td>          
            <td>'.$row[9].'</td>          
            <td><button type="button"  value="'.$row[0].'"  onclick="cambioUnidadScoutJG(this.value)" class="btn btn-warning dropdown-item colorbtnlist" >Cambiar Unidad</button></td> 
-         </tr>';
+ 
+           </tr>';
          $c++;
        }
     echo '   

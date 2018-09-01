@@ -35,6 +35,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
             <th scope="col">Edad</th>
             <th scope="col">Correo</th>
             <th scope="col" class="text-center">Acción</th>
+            <th scope="col"></th>
          </tr>
        </thead>
        <tbody>';
@@ -48,8 +49,10 @@ or die("Problemas en el select" . mysqli_error($conexion));
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button"  value="'.$row[0].'"  onclick="cambioUnidadDirigenteJG(this.value)" class="btn btn-warning dropdown-item colorbtnlist" >Cambiar Unidad</button></td> 
-         </tr>';
+           <td><button type="button"  value="'.$row[0].'"  onclick="cambioUnidadDirigenteJG(this.value)" class="btn btn-warning dropdown-item colorbtnlist letratipo" >Cambiar Unidad</button></td> 
+           <td><button type="button"  data-toggle="modal" data-target="#CambiarDirigenteCargo" class="btn btn-warning dropdown-item colorbtnlist letratipo" >Cambiar Cargo</button></td> 
+          
+           </tr>';
          $c++;
        }
     echo '       
