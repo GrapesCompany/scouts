@@ -226,7 +226,7 @@ if($r=mysqli_fetch_array($result)){
   ?>
 
     <?php 
- 
+	
  $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Rover'";
  $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
  if($r=mysqli_fetch_array($result)){
@@ -242,6 +242,7 @@ if($r=mysqli_fetch_array($result)){
   $dataPoints4 = array( 
 	  array("label"=>"Masculino", "y"=>$masculino2),
 	  array("label"=>"Femenino", "y"=>$femenino2),
+	 
   )	
   ?>
 
