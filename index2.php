@@ -51,11 +51,11 @@
                             <br>
 
                             <div class="radio">
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="jefegrupo" checked><a href="http://localhost/scouts/admin.php">Administrador</label></a> 
+                            &nbsp;&nbsp;&nbsp;  
+                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="jefegrupo" checked>Administrador</label></a> 
                 &nbsp;&nbsp;&nbsp;
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="dirigente"><a href="http://localhost/scouts/admindirigente.php">Dirigente</label></a>
-                &nbsp;&nbsp;&nbsp;           
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio"><a href="http://localhost/scouts/adminscout.php">Usuario</label></a>
+                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="dirigente">Dirigente</label></a>
+                
                 </div>
                 <br>
                                                    

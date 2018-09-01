@@ -31,10 +31,10 @@
                     <div class="login" id="card">
                     	<div class="front signin_form"> 
                         <p class="tamtitulo">SCOUT SAN FELIPE NERI</p>
-                          <form class="login-form">
+                          <form class="login-form" method='post' action='./login/verificar.php/?tipoP=scout'>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Usuario:">
+                                      <input type="text" name="username" class="form-control" placeholder="Usuario:">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-user"></i>
                                       </span>
@@ -42,7 +42,7 @@
                               </div>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="password" class="form-control" placeholder="Contraseña:">
+                                      <input type="password" name="password" class="form-control" placeholder="Contraseña:">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-lock"></i>
                                       </span>
@@ -51,6 +51,25 @@
                               <br>                          
                                <div class="form-group sign-btn">
                                   <input type="submit" class="btn" value="Entrar">
+
+                                <p>
+                                  <?php
+                                    if (isset($_GET['error'])) { ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        Datos no válidos
+                                    </div>
+                                    <?php } 
+                                    if(isset($_GET['salir'])){?>
+                                    <div class="alert alert-info" role="alert">
+                                        Gracias por usar nuestros servicios
+                                    </div>
+                                    <?php }
+                                    if(isset($_GET['denegado'])){?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Acceso denegado
+                    </div> <?php } ?>
+                                  </p>
+
                                    <a href="#" class="forgot evhover">Olvidé mi contraseña!</a> 
                                   <a href="http://localhost/scouts/index2.php" class="forgot evhover">Ingresar al Sistema Administrativo</a> 
                                </div>

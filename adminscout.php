@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - SCOUT			
 			</a>		
 			
@@ -79,8 +79,8 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showListarUJefese(this.value)">Jefe de Grupo</a></li>
-                        <li><a href="#" onclick="showListarScoutse(this.value)">Scout</a></li>
+                    	<li><a href="#" onclick="showListadoScoutssc(this.value)">Jefes de Unidad</a></li>
+                        <li><a href="#" onclick="showListadoJefegc(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 			
@@ -113,6 +113,15 @@
 
 <!--Listado Jefe de Grupo-->              
 <div id="div_listarjefegsc" class="container"></div>
+
+<!--Mostrar datos scouts-->              
+<div id="div_datoscout" class="container"></div>
+
+<!--Mostrar Datos Jefe de Grupo-->              
+<div id="div_datojefeg" class="container"></div> 
+
+<!--Mostrar Datos Dirigentes-->              
+<div id="div_datodiri" class="container"></div> 
  
 
 <!-- __________________________________________________________________________________________________________________________________ -->
@@ -137,8 +146,8 @@
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
-          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+          <a class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=scout">Si</a>
+          <a class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</a>
             
           </div>
         </div>

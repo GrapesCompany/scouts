@@ -32,6 +32,21 @@ if(isset($_SESSION['userJefeGrupo'])){
 		
 		<link href="./assets/css/pages/reports.css" rel="stylesheet">
 
+
+<script languaje="Javascript">   
+<!--  
+document.write('<style type="text/css">div.cp_oculta{display: none;}</style>');  
+function MostrarOcultar(capa,enlace)  
+{  
+    if (document.getElementById)  
+    {  
+        var aux = document.getElementById(capa).style;  
+        aux.display = aux.display? "":"block";  
+    }  
+}  
+   
+//-->  
+</script> 
  
   </head>
 
@@ -47,7 +62,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - ADMINISTRACIÓN			
 			</a>		
 			
@@ -65,15 +80,15 @@ if(isset($_SESSION['userJefeGrupo'])){
 							<li><a href="#" onclick="showModificarJefeGrupo(this.value)">Perfil</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
-
-
-							
 						</ul>						
 					</li>
 				</ul>
 			
 				<form class="navbar-search pull-right">
-					<input type="text" class="search-query" placeholder="Buscar...">
+				
+					<input type="text" class="search-query" id='btnBuscar' placeholder="Buscar...">
+					&nbsp;
+					<a onclick="showBuscarTotalMiembros(this.value)"><i class="icon-search icon-large colorsearch"></i></a> 
 				</form>
 				
 			</div><!--/.nav-collapse -->	
@@ -127,7 +142,8 @@ if(isset($_SESSION['userJefeGrupo'])){
 					</a>	
 				
 					<ul class="dropdown-menu">
-                        <li><a href="#" onclick="showReporteGenero(this.value)">Por género</a></li>
+						<li><a class="texto" href="javascript:MostrarOcultar('texto1');">Por género</a></li>
+						   
                      </ul>    				
 				</li>
 			
@@ -147,6 +163,90 @@ if(isset($_SESSION['userJefeGrupo'])){
 	    <div class="container">
 <!-- __________________________________________________________________________________________________________________________________ -->
 
+<?php 
+include 'conexion.php';
+$conexion=conectar();
+
+$sql = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Manada'";
+$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+		$masculino =(int)$r[0];
+}
+
+$sql = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Manada'";
+$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+	$femenino =(int)$r[0];
+}
+
+ $dataPoints = array( 
+	 array("label"=>"Masculino", "y"=>$masculino),
+	 array("label"=>"Femenino", "y"=>$femenino),
+ )	
+ ?>
+
+ <?php 
+ 
+$sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Tropa'";
+$result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+		$masculino2 =(int)$r[0];
+}
+
+$sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Tropa'";
+$result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+if($r=mysqli_fetch_array($result)){
+	$femenino2 =(int)$r[0];
+}
+
+ $dataPoints2 = array( 
+	 array("label"=>"Masculino", "y"=>$masculino2),
+	 array("label"=>"Femenino", "y"=>$femenino2),
+ )	
+ ?>
+
+  <?php 
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Caminante'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+		 $masculino2 =(int)$r[0];
+ }
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Caminante'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+	 $femenino2 =(int)$r[0];
+ }
+ 
+  $dataPoints3 = array( 
+	  array("label"=>"Masculino", "y"=>$masculino2),
+	  array("label"=>"Femenino", "y"=>$femenino2),
+  )	
+  ?>
+
+    <?php 
+	
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Masculino' AND `UNIDAD` = 'Rover'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+		 $masculino2 =(int)$r[0];
+ }
+ 
+ $sql2 = "SELECT COUNT(*) FROM `usuario` where `SEXO_SCO` = 'Femenino' AND `UNIDAD` = 'Rover'";
+ $result = mysqli_query($conexion,$sql2) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  "); 
+ if($r=mysqli_fetch_array($result)){
+	 $femenino2 =(int)$r[0];
+ }
+ 
+  $dataPoints4 = array( 
+	  array("label"=>"Masculino", "y"=>$masculino2),
+	  array("label"=>"Femenino", "y"=>$femenino2),
+	 
+  )	
+  ?>
+
+
 <!--Agregar Jefe de Grupo-->              
 <div id="div_nuevojefegrupo" class="container"></div>
 
@@ -165,19 +265,13 @@ if(isset($_SESSION['userJefeGrupo'])){
 <!--Listar Dirigentes-->              
 <div id="div_listardirigentes" class="container"></div>
 
-<!--Reporte por Genero-->              
-<div id="div_reportegenero" class="container"></div>
-
-<!--Listado de Scouts-->              
-<div id="div_listadoscouts" class="container"></div>
-
-<!--Listado de Dirigentes-->              
-<div id="div_listadodirigentes" class="container"></div>
+<!--Buscar Total Miembros-->              
+<div id="div_buscartotalmiembros" class="container"></div>
 
 
-<?php
  
 
+<<<<<<< HEAD
 include 'conexion.php';
 $conexion=conectar();
 $sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Masculino'";
@@ -187,9 +281,34 @@ $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifi
 if($r=mysqli_fetch_array($result))
 {
 	$masculino =(int)$r[0];
+=======
+<!--Reporte por Genero-->              
+<div class="cp_oculta" id="texto1">
+<div id="div_reportegenero">
 
-}
+<h2>Manada:</h2> 
+<hr>
+<div id="chartContainer" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Tropa:</h2> 
+<hr>
+<div id="chartContainer2" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Caminante:</h2> 
+<hr>
+<div id="chartContainer3" style="height: 300pt; width: 100%;"></div>
+<br>
+<h2>Rover:</h2> 
+<hr>
+<div id="chartContainer4" style="height: 300pt; width: 100%;"></div>
 
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+>>>>>>> master
+
+</div>
+</div>
+
+<<<<<<< HEAD
 $sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Femenino '";
 
 $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
@@ -197,18 +316,17 @@ $result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifi
 if($r=mysqli_fetch_array($result))
 {
 	$femenino =(int)$r[0];
+=======
+<!--Listado de Scouts-->              
+<div id="div_listadoscouts" class="container"></div>
 
-}
+<!--Listado de Dirigentes-->              
+<div id="div_listadodirigentes" class="container"></div>
+>>>>>>> master
 
- $dataPoints = array( 
-	 array("label"=>"Masculino", "y"=>$masculino),
-	 array("label"=>"Femenino", "y"=>$femenino),
- )
-	
- ?>
+       
 
-  <div id="chartContainer" style="height: 400pt; width: 100%;"></div>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 
 <!-- __________________________________________________________________________________________________________________________________ -->
 
@@ -232,8 +350,8 @@ if($r=mysqli_fetch_array($result))
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="#">Si</button>
-          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+          <a class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=jefedegrupo">Si</a>
+          <a class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</a>
             
           </div>
         </div>
@@ -255,19 +373,20 @@ if($r=mysqli_fetch_array($result))
           </div>
          
           <div class="modal-footer">
-		  
+		
 		  <label for="catual" class="tamletra aligfn">Contraseña Actual</label>
-		  <input type="password" id="catual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
+		  <input type="password" id="cactual" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">   
 		  <hr>
 		  <label for="cnueva" class="tamletra aligfn">Contraseña Nueva</label>
 		  <input type="password" id="cnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
 		  
 		  <label for="rcnueva" class="tamletra aligfn">Repetir Contraseña Nueva </label>
           <input type="password" id="rcnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
+		
+          <button class="btn btn-lg tambutton2 colorbtn3"  onclick="cambiarContrasenaJefeGrupo()" href="#">Guardar</button>
+          
+		  <button  class="btn btn-lg tambutton2" type="submit" data-dismiss="modal">Cancelar</button>
 		 
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Guardar</button>
-          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>
-            
           </div>
         </div>
       </div>
@@ -288,8 +407,7 @@ if($r=mysqli_fetch_array($result))
           </div>
           <div class="modal-footer"> 
 		  <p class="altra"></p>
-	 	   <label for="unidadac" class="tamletra aligfn">Unidad Actual:</label>
-          <input type="text" id="unidadac" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+	  
 		   <hr>
 		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
     	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
@@ -298,9 +416,13 @@ if($r=mysqli_fetch_array($result))
          <option value="3">Caminante</option>
          <option value="4">Rover</option>
   		 </select> 
+		  
+		   
 		   <p class="altra"></p><br>
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
-          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          <button class="btn btn-lg tambutton2 colorbtn3"  onclick="actualizarScoutUnidadJG()" data-dismiss="modal" href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+ 
+		           
           </div>
 
         </div>
@@ -322,20 +444,49 @@ if($r=mysqli_fetch_array($result))
           </div>
           <div class="modal-footer"> 
 		  <p class="altra"></p>
-	 	   <label for="unidada" class="tamletra aligfn">Unidad Actual:</label>
-          <input type="text" id="unidada" class="form-control monte7" placeholder="Manada" disabled required="required" autofocus="autofocus">
+	 	   
 		   <hr>
-		  <label for="unidadn" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
-    	  <select type="text" id="unidadn" name="unidadn" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
+		  <label for="unidadnD" class="tamletra aligfn"><b>Unidad Nueva:</b></label> 
+    	  <select type="text" id="unidadnD" name="unidadnD" class="form-control monte8" placeholder="Unidad" required="required" autofocus="autofocus">
          <option value="1">Manada</option>
          <option value="2">Tropa</option>  
          <option value="3">Caminante</option>
          <option value="4">Rover</option>
   		 </select> 
 		   <p class="altra"></p><br>
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Cambiar</button>
-          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>            
+          <button class="btn btn-lg tambutton2 colorbtn3" onclick="actualizarDirigenteUnidadJG()" data-dismiss="modal"  href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+		            
           </div>
+
+        </div>
+      </div>
+	</div>
+
+		    <!-- Seccion Cambiar Cargo de Dirigentes-->
+			<div class="modal fade colorbtn2" id="CambiarDirigenteCargo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title letrasalir" id="exampleModalLabel">¿Desea cambiar el cargo de un Dirigente?
+
+			 <button class="close reubicarclose" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+			</h5>
+          </div>
+          <div class="modal-footer"> 
+		  <p class="altra"></p>
+	 	    
+		   <hr>
+		  <label for="cargod" class="tamletra aligfn"><b>Nuevo Cargo:</b></label> 
+		  <input type="text" id="cargod" class="form-control monte7"  required="required" autofocus="autofocus">
+
+		   <p class="altra"></p><br>
+          <button class="btn btn-lg tambutton2 colorbtn3" data-dismiss="modal"  href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
+		            
+           </div>
 
         </div>
       </div>
@@ -361,6 +512,7 @@ if($r=mysqli_fetch_array($result))
  
 
 <script>
+
 window.onload = function() {
  
  
@@ -370,18 +522,74 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: "Reporte"
 	},
 	subtitles: [{
-		text: "Noviembre 2017"
+		text: "por género:"
 	}],
 	data: [{
 		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
+		yValueFormatString: "#,##0\"\"",
 		indexLabel: "{label} ({y})",
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
+var chart4 = new CanvasJS.Chart("chartContainer4", {
+	animationEnabled: true,
+	title: {
+		text: "Reporte"
+	},
+	subtitles: [{
+		text: "por género:"
+	}],
+	data: [{
+		type: "pie",
+		yValueFormatString: "#,##0\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($dataPoints4, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+
 chart.render();
+chart2.render();
+chart3.render();
+chart4.render();
  
 }
+
+
+
+
 </script>
 
  

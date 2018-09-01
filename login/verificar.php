@@ -8,32 +8,35 @@ $password = $_POST['password'];
 $tipoP = $_GET['tipoP'];
 $cargo = $_POST['optradio'];
 
-if ($tipoP == 'paciente' && $username != "" && $username != null && $password != "" && $password != null) {
-    $existenciausuario = mysqli_query($conexion, "SELECT * FROM paciente WHERE paciente.`CEDULA_PAC`='$username' AND  paciente.`CONTRASENA_PAC`='$password' AND  paciente.`ESTADO_PAC`='0'") or die("Problemas en el select" . mysqli_error($conexion));
+if ($tipoP == 'scout' && $username != "" && $username != null && $password != "" && $password != null) {
+    $existenciausuario = mysqli_query($conexion, "SELECT * FROM usuario WHERE usuario.`CEDULA`='$username' AND  usuario.`CONTRASENA`='$password' AND  usuario.`ESTADO`='0'") or die("Problemas en el select" . mysqli_error($conexion));
 
     while ($f = mysqli_fetch_array($existenciausuario)) {
-        $arreglo_paciente[] = array('cedulaP' => $f['CEDULA_PAC'],
-            'nombreP' => $f['NOMBRE_PAC'],
-            'apellidoP' => $f['APELLIDO_PAC'],
-            'telefonoP' => $f['TELEFONO_PAC'],
-            'fechaNacP' => $f['FECHA_NAC_PAC'],
-            'edadP' => $f['EDAD_PAC'],
-            'provinciaP' => $f['PROVINCIA_PAC'],
-            'cantonP' => $f['CANTON_PAC'],
-            'profesionP' => $f['PROFESION'],
-            'estadoCivilP' => $f['ESTADOCIVIL'],
-            'sexoP' => $f['SEXO'],
-            'estadoP' => $f['ESTADO_PAC'],
-            'contrasenaP' => $f['CONTRASENA_PAC'],
-            'correoP'=> $f['CORREO_PAC'],
-            'direccionP'=> $f['DIRECCION_PAC']
+        $arreglo_scout[] = array('cedulaS' => $f['CEDULA'],
+            'nombreS' => $f['NOMBRE'],
+            'idGrupoS' => $f['ID_GRUPO_SCOUT'],
+            'apellidoS' => $f['APELLIDO'],
+            'telefonoS' => $f['TELEFONO'],
+            'fechaNacS' => $f['FECHA_NAC'],
+            'edadS' => $f['EDAD'],
+            'grupoS' => $f['ID_GRUPO_SCOUT'],
+            'sexoS' => $f['SEXO_SCO'],
+             'estadoS' => $f['ESTADO'],
+            'contrasenaS' => $f['CONTRASENA'],
+            'correoS'=> $f['EMAIL'],
+            'unidadS'=> $f['UNIDAD'],   
+            'direccionS'=> $f['DIRECCION'],
+            'cedularS' => $f['CED_REPRE'],
+            'nombrerS' => $f['NOMBRE_REPRE'],
+            'direccionrS' => $f['DIRECCION_REPRE'],
+            'telefonorS' => $f['TELEFONO_REPRE']
             
         );
     }
-    if ($arreglo_paciente != null) {
-        $_SESSION['userPaciente']=$arreglo_paciente;
-        echo "eres paciente";
-        header('Location: ../../adminpaciente.php');
+    if ($arreglo_scout != null) {
+        $_SESSION['userScout']=$arreglo_scout;
+        echo "eres scout";
+        header('Location: ../../adminscout.php');
     } else {
         header('Location: ../../index.php?error=fail');
     }
