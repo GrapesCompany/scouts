@@ -1240,3 +1240,41 @@ function actualizarScoutUnidadD()
     });
    
 }
+
+
+
+
+
+function cambioCargoDirigenteJG(cedula)
+{
+    $('#CambiarDirigenteCargo').modal('show');
+		$('#pruebaCargo').val(cedula)
+
+}
+
+function actualizarCargoDirigenteJG()
+{
+
+    var dataString = 'cedula=' + document.getElementById('pruebaCargo').value +
+    '&cargo=' + document.getElementById('cargod').value;
+
+
+    $.ajax({
+            
+        type: "POST",
+        url: "php/cambiarCargoDirigenteJG.php",
+        data: dataString,
+        success: function (data) {
+         
+            alert(data);
+            //recuperando las variables
+           
+        }, error: function (errorThrown) {
+            alert("Existe un error" + errorThrown);
+        }
+
+    });
+   
+}
+
+
