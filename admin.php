@@ -329,8 +329,8 @@ if($r=mysqli_fetch_array($result)){
           </div>
          
           <div class="modal-footer">
-          <button class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=jefedegrupo">Si</button>
-          <button class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</button>
+          <a class="btn btn-lg tambutton colorbtn" href="./login/cerrar.php/?tipo=jefedegrupo">Si</a>
+          <a class="btn btn-lg tambutton" type="button" data-dismiss="modal">No</a>
             
           </div>
         </div>
