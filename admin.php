@@ -271,17 +271,6 @@ if($r=mysqli_fetch_array($result)){
 
  
 
-<<<<<<< HEAD
-include 'conexion.php';
-$conexion=conectar();
-$sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Masculino'";
-
-$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
- 
-if($r=mysqli_fetch_array($result))
-{
-	$masculino =(int)$r[0];
-=======
 <!--Reporte por Genero-->              
 <div class="cp_oculta" id="texto1">
 <div id="div_reportegenero">
@@ -303,26 +292,15 @@ if($r=mysqli_fetch_array($result))
 <div id="chartContainer4" style="height: 300pt; width: 100%;"></div>
 
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
->>>>>>> master
 
 </div>
 </div>
 
-<<<<<<< HEAD
-$sql = "SELECT COUNT(CEDULA) FROM `usuario` WHERE `SEXO_SCO` = 'Femenino '";
-
-$result = mysqli_query($conexion,$sql) or die("Problemas al Reservar cita verifique que sea un usuario del sistema.  ");
- 
-if($r=mysqli_fetch_array($result))
-{
-	$femenino =(int)$r[0];
-=======
 <!--Listado de Scouts-->              
 <div id="div_listadoscouts" class="container"></div>
 
 <!--Listado de Dirigentes-->              
 <div id="div_listadodirigentes" class="container"></div>
->>>>>>> master
 
        
 
