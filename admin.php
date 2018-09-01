@@ -62,7 +62,7 @@ function MostrarOcultar(capa,enlace)
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - ADMINISTRACIÓN			
 			</a>		
 			

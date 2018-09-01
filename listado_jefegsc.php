@@ -49,16 +49,14 @@ or die("Problemas en el select" . mysqli_error($conexion));
             <td>'.$row[5].'</td>          
             <td>'.$row[6].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
          </tr>';
          $c++;
        }
     echo '
        </tbody>
-     </table>
-     
+     </table>  
  </div> 
- 
      </div>  
    </div>  <!--/span4             <td><button type="button" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</a></button></td> 
    -->      	

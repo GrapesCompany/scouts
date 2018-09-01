@@ -221,7 +221,8 @@ function showListadoDirigentes(str) {
 
 function showBuscarTotalMiembros(str) {
 
- 
+    var strBuscar = document.getElementById('btnBuscar').value;
+
     document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
     document.getElementById("div_nuevodirigente").innerHTML = "";
     document.getElementById("div_nuevoscout").innerHTML = "";
@@ -239,7 +240,7 @@ function showBuscarTotalMiembros(str) {
         }
     }
 
-    xmlhttp.open("GET", "buscar_totalmiembros.php?q=" + strString, true);
+    xmlhttp.open("GET", "buscar_totalmiembros.php?q=" + strBuscar, true);
     xmlhttp.send();
 }
  

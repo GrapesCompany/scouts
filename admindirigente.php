@@ -45,7 +45,7 @@ if(isset($_SESSION['userDirigente'])){
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - DIRIGENTE			
 			</a>		
 			

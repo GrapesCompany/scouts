@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index2.php">
+			<a class="brand" href="#">
 				SCOUT SAN FELIPE NERI - SCOUT			
 			</a>		
 			
@@ -79,8 +79,8 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-                    	<li><a href="#" onclick="showListadoJefegc(this.value)">Jefe de Grupo</a></li>
-                        <li><a href="#" onclick="showListadoScoutssc(this.value)">Scout</a></li>
+                    	<li><a href="#" onclick="showListadoScoutssc(this.value)">Jefes de Unidad</a></li>
+                        <li><a href="#" onclick="showListadoJefegc(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 			
