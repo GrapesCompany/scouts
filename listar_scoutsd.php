@@ -31,8 +31,7 @@ echo '<div class="row">
           <th scope="col">Representante</th>
           <th scope="col">Direccion</th>
           <th scope="col">Telefono</th>
-          <th scope="col" class="text-center">Acción</th>
-        </tr>
+         </tr>
       </thead>
       <tbody>';
       $c = 1;
@@ -45,8 +44,7 @@ echo '<div class="row">
            <td>'.$row[12].'</td>            
            <td>'.$row[13].'</td>            
            <td>'.$row[14].'</td>            
-          <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
-        </tr>';
+         </tr>';
         $c++;
       }
    echo ' 

@@ -256,6 +256,7 @@ function showAgregarScoutd(str) {
     document.getElementById("div_listadoscoutsd").innerHTML = "";
     document.getElementById("div_listadojefegd").innerHTML = "";
     document.getElementById("div_buscartotalmiembrosd").innerHTML = "";
+    document.getElementById("div_datoscoutd").innerHTML = "";
  
      var xmlhttp = new XMLHttpRequest();
      xmlhttp.onreadystatechange = function () {
@@ -276,6 +277,7 @@ function showAgregarScoutd(str) {
     document.getElementById("div_listadoscoutsd").innerHTML = "";
     document.getElementById("div_listadojefegd").innerHTML = "";
     document.getElementById("div_buscartotalmiembrosd").innerHTML = "";
+    document.getElementById("div_datoscoutd").innerHTML = "";
     
 
     var xmlhttp = new XMLHttpRequest();
@@ -298,6 +300,7 @@ function showListarUJefesd(str) {
     document.getElementById("div_listadoscoutsd").innerHTML = "";
     document.getElementById("div_listadojefegd").innerHTML = "";
     document.getElementById("div_buscartotalmiembrosd").innerHTML = "";
+    document.getElementById("div_datoscoutd").innerHTML = "";
            
 
     var xmlhttp = new XMLHttpRequest();
@@ -318,7 +321,8 @@ function showModificarDirigente(str) {
     document.getElementById("div_listarujefesd").innerHTML = "";
     document.getElementById("div_listadoscoutsd").innerHTML = "";
     document.getElementById("div_listadojefegd").innerHTML = "";
-    document.getElementById("div_buscartotalmiembrosd").innerHTML = "";     
+    document.getElementById("div_buscartotalmiembrosd").innerHTML = ""; 
+    document.getElementById("div_datoscoutd").innerHTML = "";    
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -340,6 +344,7 @@ function showListadoScoutsd(str) {
     document.getElementById("div_modificardirigente").innerHTML = "";  
     document.getElementById("div_listadojefegd").innerHTML = "";  
     document.getElementById("div_buscartotalmiembrosd").innerHTML = "";
+    document.getElementById("div_datoscoutd").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -359,7 +364,8 @@ function showListadoJefeGd(str) {
     document.getElementById("div_listarujefesd").innerHTML = "";
     document.getElementById("div_modificardirigente").innerHTML = "";  
     document.getElementById("div_listadoscoutsd").innerHTML = ""; 
-    document.getElementById("div_buscartotalmiembrosd").innerHTML = "";   
+    document.getElementById("div_buscartotalmiembrosd").innerHTML = ""; 
+    document.getElementById("div_datoscoutd").innerHTML = "";  
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -382,6 +388,7 @@ function showBuscarTotalMiembrosd(str) {
     document.getElementById("div_modificardirigente").innerHTML = "";  
     document.getElementById("div_listadoscoutsd").innerHTML = "";
     document.getElementById("div_listadojefegd").innerHTML = ""; 
+    document.getElementById("div_datoscoutd").innerHTML = "";
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -391,6 +398,32 @@ function showBuscarTotalMiembrosd(str) {
     }
 
     xmlhttp.open("GET", "buscar_totalmiembrosd.php?q=" + strBuscar, true);
+    xmlhttp.send();
+}
+ 
+
+function showdatoscoutd(str) {
+
+    document.getElementById("div_nuevoscoutd").innerHTML = ""; 
+    document.getElementById("div_listarscoutsd").innerHTML = "";  
+    document.getElementById("div_listarujefesd").innerHTML = "";
+    document.getElementById("div_modificardirigente").innerHTML = "";  
+    document.getElementById("div_listadoscoutsd").innerHTML = ""; 
+    document.getElementById("div_buscartotalmiembrosd").innerHTML = "";  
+    document.getElementById("div_listadojefegd").innerHTML = ""; 
+
+ 
+    
+     
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("div_datoscoutd").innerHTML = this.responseText;
+        }
+    }
+
+    xmlhttp.open("GET", "mostrar_datscoutd.php?q=" + str, true);
     xmlhttp.send();
 }
 

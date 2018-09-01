@@ -34,8 +34,21 @@
     font-size: 12pt;
 }
 
+.monte11{
+    width: 70%;
+    height: 30px;
+    font-size: 12pt;
+}
+
 .monte{
     width: 100%;
+    height: 30px;
+    font-size: 12pt;
+}
+
+.monte10{
+    right:50px !important;
+    width: 70%;
     height: 30px;
     font-size: 12pt;
 }
@@ -84,6 +97,13 @@ padding-bottom: 0px;
 
 .tamletra{
     font-size: 12pt;
+}
+
+.tamletra2{
+    font-size: 11pt !important;
+    text-align: left !important;
+    padding-left: 0px !important;
+    font-weight: bold !important;
 }
 
 .sinpadd{
@@ -242,6 +262,10 @@ padding-bottom: 0px;
     opacity: 0.4;
     text-decoration: none !important;
     
+}
+
+.colorcajastext{
+    background-color: #fff !important;
 }
  
 

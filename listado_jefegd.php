@@ -36,11 +36,10 @@ echo '<div class="row">
           <th scope="col">#</th>
           <th scope="col">Cédula</th>
           <th scope="col">Nombres y Apellidos</th>
-          <th scope="col">Telefono</th>
+          <th scope="col">Teléfono</th>
           <th scope="col">Email</th>
-          <th scope="col">Direccion</th>
-          <th scope="col" class="text-center">Acción</th>
-        </tr>
+          <th scope="col">Dirección</th>
+         </tr>
       </thead>
       <tbody>';
       $d = 1;
@@ -53,8 +52,7 @@ echo '<div class="row">
            <td>'.$row[3].'</td>                    
            <td>'.$row[7].'</td>            
            <td>'.$row[10].'</td>            
-          <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
-        </tr>';
+         </tr>';
         $d++;
       }
    echo ' 
@@ -110,12 +108,11 @@ echo '<div class="row">
          <tr>
            <th scope="col">#</th>
            <th scope="col">Cédula</th>
-           <th scope="col">Fecha de Eleccion</th>
+           <th scope="col">Fecha de Elección</th>
            <th scope="col">Nombres y Apellidos</th>
-           <th scope="col">Telefono</th>
-           <th scope="col">Direccion</th>
-           <th scope="col" class="text-center">Acción</th>
-         </tr>
+           <th scope="col">Teléfono</th>
+           <th scope="col">Dirección</th>
+          </tr>
        </thead>
        <tbody>';
        $c = 1;
@@ -128,8 +125,7 @@ echo '<div class="row">
             <td>'.$row[4].' &nbsp '.$row[5].'</td>            
             <td>'.$row[6].'</td>            
             <td>'.$row[13].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
-         </tr>';
+          </tr>';
          $c++;
        }
     echo ' 

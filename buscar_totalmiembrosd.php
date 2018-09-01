@@ -38,7 +38,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
      <div class="widget">	      			
        <div class="widget-content colorwidget">	
 
-       <h2 class="colores"> <i class="icon-group"></i> Usuarios</h2>         
+       <h2 class="colores"> <i class="icon-group"></i>Scouts</h2>         
        <hr>
 
        <table class="table">
@@ -64,7 +64,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[3].'</td>          
             <td>'.$row[8].'</td>          
             <td>'.$row[9].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatoscoutd(this.value)">Ver</button></td> 
          </tr>';
          $c++;
        }
@@ -98,7 +98,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatojefed(this.value)">Ver</button></td> 
          </tr>';
          $d++;
        }
@@ -132,7 +132,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatodirid(this.value)">Ver</button></td> 
          </tr>';
          $e++;
        }
@@ -143,13 +143,9 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
  </div> 
  
      </div>  
-   </div>  <!--/span4             <td><button type="button" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</a></button></td> 
-   -->      	
-   
+   </div>   
    
 
-   
- 
    <!--<div class="span1 hespan">	      		
      <div class="widget">	      			
        <div class="widget-content paddibutton">

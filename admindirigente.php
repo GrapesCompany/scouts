@@ -113,7 +113,7 @@ if(isset($_SESSION['userDirigente'])){
 				
 					<ul class="dropdown-menu">
 						<li><a href="#" onclick="showListarScoutsd(this.value)">Scouts</a></li>
-                    	<li><a href="#" onclick="showListadoJefeGd(this.value)">Dirigentes</a></li>                        
+                    	<li><a href="#" onclick="showListadoJefeGd(this.value)">Jefes de Unidad</a></li>                        
                     </ul>    				
 				</li>
 			
@@ -151,6 +151,10 @@ if(isset($_SESSION['userDirigente'])){
 
 <!--Buscar total miembros-->              
 <div id="div_buscartotalmiembrosd" class="container"></div> 
+
+
+<!--Mostrar Datos Scout-->              
+<div id="div_datoscoutd" class="container"></div> 
 
 
 
