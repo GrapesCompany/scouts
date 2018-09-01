@@ -303,6 +303,16 @@ if($r=mysqli_fetch_array($result)){
 <div id="div_listadodirigentes" class="container"></div>
 
 
+
+<!--Mostrar datos scouts-->              
+<div id="div_datoscout" class="container"></div>
+
+<!--Mostrar Datos Jefe de Grupo-->              
+<div id="div_datojefeg" class="container"></div> 
+
+<!--Mostrar Datos Dirigentes-->              
+<div id="div_datodiri" class="container"></div> 
+
  
        
 

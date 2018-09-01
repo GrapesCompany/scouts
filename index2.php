@@ -51,11 +51,11 @@
                             <br>
 
                             <div class="radio">
+                            &nbsp;&nbsp;&nbsp;  
                 <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="jefegrupo" checked>Administrador</label></a> 
                 &nbsp;&nbsp;&nbsp;
                 <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio" id="optradio" value="dirigente">Dirigente</label></a>
-                &nbsp;&nbsp;&nbsp;           
-                <label class="checkbox-inline fadeIn third"><input type="radio" name="optradio">Usuario</label></a>
+                
                 </div>
                 <br>
                                                    

@@ -13,7 +13,7 @@ echo '<div class="row">
 <div class="span10">     
     <div class="widget paddi">       
       <div class="widget-content padd">       
-        <h2 class="colores"> <i class="icon-bar-chart"></i> Listado de Scouts</h2>         
+        <h2 class="colores"> <i class="icon-list"></i> Listado de Scouts dsfsfdd</h2>         
          <hr>
 
 <div class="container">	  
@@ -31,6 +31,7 @@ echo '<div class="row">
           <th scope="col">Representante</th>
           <th scope="col">Direccion</th>
           <th scope="col">Telefono</th>
+          <th scope="col">Accion</th>
          </tr>
       </thead>
       <tbody>';
@@ -43,7 +44,8 @@ echo '<div class="row">
            <td>'.$row[9].'</td>                    
            <td>'.$row[12].'</td>            
            <td>'.$row[13].'</td>            
-           <td>'.$row[14].'</td>            
+           <td>'.$row[14].'</td>   
+           <td><button type="button" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" data-toggle="modal" data-target="#CambiarScoutAd">Cambiar</a></button></td>           
          </tr>';
         $c++;
       }
@@ -59,7 +61,7 @@ echo '<div class="row">
   
   
 
-  
+  CambiarScoutAd
 
   <!--<div class="span1 hespan">	      		
     <div class="widget">	      			

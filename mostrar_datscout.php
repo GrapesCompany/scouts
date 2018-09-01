@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Detalle Datos Scout</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Detalle Datos Scout Admi</h2>
          
           <hr>
 
@@ -175,7 +175,7 @@
   <div class="widget">	      			
     <div class="widget-content colorwidget">
     <br>
-    <button type="button" class="btn btn-warning colorbtnlist" onclick="showBuscarTotalMiembrosd()">Regresar</button>
+    <button type="button" class="btn btn-warning colorbtnlist" onclick="showBuscarTotalMiembros()">Regresar</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span4 -->
