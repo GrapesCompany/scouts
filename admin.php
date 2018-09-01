@@ -122,7 +122,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 				</li>
 
 					<li class="dropdown">					
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" onClick="location.reload(false);" data-toggle="dropdown">
 						<i class="icon-bar-chart"></i>
 						<span>Reportes</span>
 						<b class="caret"></b>
