@@ -39,7 +39,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
      <div class="widget">	      			
        <div class="widget-content colorwidget">	
 
-       <h2 class="colores"> <i class="icon-group"></i> Usuarios</h2>         
+       <h2 class="colores"> <i class="icon-group"></i>Scouts</h2>         
        <hr>
 
        <table class="table">
@@ -65,7 +65,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[3].'</td>          
             <td>'.$row[8].'</td>          
             <td>'.$row[9].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
+            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatoscout(this.value)">Ver</button></td> 
          </tr>';
          $c++;
        }
@@ -99,7 +99,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
+            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatojefe(this.value)">Ver</button></td> 
          </tr>';
          $d++;
        }
@@ -133,7 +133,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
+            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatdiri(this.value)">Ver</button></td> 
          </tr>';
          $e++;
        }
@@ -147,17 +147,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
    </div>   	
    
    
-
-   
  
-   <!--<div class="span1 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content paddibutton">
-       <br> 
-      <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecampos(this.value)">Modificar</button>     
-  </div>  
-     </div>  
- </div>  /span4 -->
 
 
 </div> <!-- /container -->
