@@ -12,7 +12,7 @@ switch ($tipo) {
         header("Location: ../../index2.php?salir=exito");
         break;
     case 'scout':unset($_SESSION['userScout']);
-        header("Location: ../../index2.php?salir=exito");
+        header("Location: ../../index.php?salir=exito");
         break;
     default:unset($_SESSION['userJefeGrupo']);
             unset($_SESSION['userDirigente']);
