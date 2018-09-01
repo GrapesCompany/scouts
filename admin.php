@@ -464,7 +464,7 @@ if($r=mysqli_fetch_array($result)){
           <button class="btn btn-lg tambutton2 colorbtn3" data-dismiss="modal"  href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
 		            
-          </div>
+           </div>
 
         </div>
       </div>
