@@ -34,15 +34,26 @@ if(isset($_SESSION['userJefeGrupo'])){
 
 
 <script languaje="Javascript">   
-<!--  
+  
 document.write('<style type="text/css">div.cp_oculta{display: none;}</style>');  
 function MostrarOcultar(capa,enlace)  
 {  
     if (document.getElementById)  
     {  
+		document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
+ 
         var aux = document.getElementById(capa).style;  
         aux.display = aux.display? "":"block";  
-    }  
+		
+		 
+		dibujargrafico();
+
+   		
+    } 
+ 
+
+ 
+
 }  
    
 //-->  
@@ -134,7 +145,7 @@ function MostrarOcultar(capa,enlace)
                     </ul>    				
 				</li>
 
-					<li class="  dropdown">					
+					<li class="dropdown">					
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-bar-chart"></i>
 						<span>Reportes</span>
@@ -149,10 +160,8 @@ function MostrarOcultar(capa,enlace)
 			
 			</ul>
 
-		</div> <!-- /container -->
-	
-	</div> <!-- /subnavbar-inner -->
-
+		</div> <!-- /container -->	
+	</div> <!-- /subnavbar-inner -->	
 </div> <!-- /subnavbar -->
     
 		
@@ -491,7 +500,7 @@ if($r=mysqli_fetch_array($result)){
 
 <script>
 
-window.onload = function() {
+function dibujargrafico() {
  
  
 var chart = new CanvasJS.Chart("chartContainer", {

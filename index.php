@@ -70,8 +70,7 @@
                     </div> <?php } ?>
                                   </p>
 
-                                   <a href="#" class="forgot evhover">Olvidé mi contraseña!</a> 
-                                  <a href="http://localhost/scouts/index2.php" class="forgot evhover">Ingresar al Sistema Administrativo</a> 
+                                   <a href="./index2.php" class="forgot evhover">Ingresar al Sistema Administrativo</a> 
                                </div>
     
                               
