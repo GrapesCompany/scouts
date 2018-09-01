@@ -883,6 +883,10 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
     document.getElementById('edad').value && document.getElementById('unidad').value   ) {
         if (cedulaVerificada == true && cedulaVerificadar==true) {
             if (valcorreo == true) {
+
+                if((document.getElementById('unidad').value='1' && document.getElementById('edad').value >5 && document.getElementById('edad').value <12) || (document.getElementById('unidad').value=='2' && document.getElementById('edad').value >10 && document.getElementById('edad').value <16) || 
+                 (document.getElementById('unidad').value=='3' && document.getElementById('edad').value >14 && document.getElementById('edad').value <18)  ||  (document.getElementById('unidad').value=='4' && document.getElementById('edad').value >16 && document.getElementById('edad').value <23))
+                {
             $.ajax({
                 type: "POST",
                 url: "php/ingresarNuevoScout.php",
@@ -898,6 +902,13 @@ if (document.getElementById('cedula').value && document.getElementById('nombre')
                 }
 
             });
+
+
+        }else
+        {
+            alert("La Unidad no es Adecuada para la Edad del Scout");
+        }
+
         } else {
             alert("El correo electronico ingresado es incorrecto");
         }

@@ -22,6 +22,9 @@ $nombrer=$_POST['nombrer'];
 $direccionr=$_POST['direccionr'];
 $telefonor=$_POST['telefonor'];
 
+
+
+
 $conexion=conectar();
 $sql = "SELECT `CEDULA` FROM `usuario` WHERE `CEDULA`='$cedula'" ;
 
