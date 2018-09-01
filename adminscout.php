@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['userScout'])){
+ // $administrador=$_SESSION['userAdministrador'];
+}else
+{
+  header("Location: index.php?denegado=peligro");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   
