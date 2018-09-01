@@ -61,7 +61,7 @@ if(isset($_SESSION['userDirigente'])){
 						
 						<ul class="dropdown-menu">
 							<li><a href="#" onclick="showModificarDirigente(this.value)">Perfil</a></li>
-							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
+							<li><a class="dropdown-item" href="#" data-id="" data-toggle="modal" data-target="#logoutModal2">Cambiar contraseña</a></li>
 							<li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a></li>
 
 
@@ -155,6 +155,12 @@ if(isset($_SESSION['userDirigente'])){
 
 <!--Mostrar Datos Scout-->              
 <div id="div_datoscoutd" class="container"></div> 
+
+<!--Mostrar Datos Jefe de Grupo-->              
+<div id="div_datojefegd" class="container"></div> 
+
+<!--Mostrar Datos Dirigentes-->              
+<div id="div_datodirid" class="container"></div> 
 
 
 

@@ -121,18 +121,6 @@
  
  
 
- <!-- <div class="span4 hespan">	      		
-     <div class="widget">	      			
-       <div class="widget-content colorwidget invisible">
-     <label for="invisible" class="tamletra">Invisible</label>
-            <input type="password" id="invisible" class="form-control monte10" placeholder="invisible" required="required" autofocus="autofocus"> 
-         
-            </div>   
-     </div>  
- </div>  -->
-
-
-
  <div class="container">	    	  
   <div class="span10"> 
      <div class="widget medida2">

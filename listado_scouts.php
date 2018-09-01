@@ -13,7 +13,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
  <div class="span10">     
      <div class="widget paddi">       
        <div class="widget-content padd">       
-         <h2 class="colores"> <i class="icon-bar-chart"></i> Listado Scouts Administración</h2>         
+         <h2 class="colores"> <i class="icon-list"></i> Listado Scouts</h2>         
           <hr>
 
 <div class="container">	  
@@ -45,7 +45,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
            <td>'.$row[3].'</td>          
            <td>'.$row[8].'</td>          
            <td>'.$row[9].'</td>          
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarScoutAd">Cambiar</button></td> 
          </tr>';
          $c++;
        }

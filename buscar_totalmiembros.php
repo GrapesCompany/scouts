@@ -65,7 +65,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[3].'</td>          
             <td>'.$row[8].'</td>          
             <td>'.$row[9].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
          </tr>';
          $c++;
        }
@@ -99,7 +99,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>                
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
          </tr>';
          $d++;
        }
@@ -133,7 +133,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Mostrar</button></td> 
+           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Ver</button></td> 
          </tr>';
          $e++;
        }
@@ -144,8 +144,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
  </div> 
  
      </div>  
-   </div>  <!--/span4             <td><button type="button" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" data-toggle="modal" data-target="#CambiarScoutAd">Mostrar</a></button></td> 
-   -->      	
+   </div>   	
    
    
 
