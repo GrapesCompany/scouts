@@ -40,8 +40,8 @@ session_start();
            <th scope="col">Cédula</th>
            <th scope="col">Nombre</th>
            <th scope="col">Apellido</th>
-           <th scope="col">Telefono</th>
-           <th scope="col">Unidad</th>
+           <th scope="col">Teléfono</th>
+           <th scope="col">Unidad Específica</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>
        </thead>
@@ -116,7 +116,7 @@ session_start();
            <th scope="col">Cédula</th>
            <th scope="col">Nombre</th>
            <th scope="col">Apellido</th>
-           <th scope="col">Telefono</th>
+           <th scope="col">Teléfono</th>
            <th scope="col">Email</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>
