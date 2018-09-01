@@ -1,5 +1,18 @@
 <?php
- $pep ='		<div class="row">	      	
+
+include 'conexion.php';
+$idUsuario = $_GET['q'];
+$conexion = conectar();
+
+$infoJefeGrupo = mysqli_query($conexion, "SELECT *
+                                          FROM trabajador t
+                                          INNER JOIN jefe_grupo jg ON t.CEDULA_TRA = jg.CEDULA_TRA
+                                          WHERE t.CEDULA_TRA = '$idUsuario'")or die("Problemas en el select" . mysqli_error($conexion));
+
+
+while ($row = (mysqli_fetch_array($infoJefeGrupo))) {
+
+ echo '		<div class="row">	      	
 		  	  
  <div class="span10">
      
@@ -17,7 +30,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="cedula" class="tamletra2">Cédula</label>					 
-     <input type="text" name="cedula" id="cedula" onkeyup="this.value=soloNumeros(this.value)" minlength="10" disabled class="form-control monte10" placeholder="1717171717" required="required" autofocus="autofocus">
+     <input type="text" name="cedula" id="cedula" onkeyup="this.value=soloNumeros(this.value)" minlength="10" disabled class="form-control monte10" placeholder="'.$row[0].'" required="required" autofocus="autofocus">
            </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->
@@ -26,7 +39,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">			      		
      <label for="nombre" class="tamletra2">Nombre</label>
-  <input type="text" name="nombre" id="nombre"  onkeyup="this.value=soloLetras(this.value)" disabled class="form-control monte10" placeholder="Example" required="required">
+  <input type="text" name="nombre" id="nombre"  onkeyup="this.value=soloLetras(this.value)" disabled class="form-control monte10" placeholder="'.$row[1].'" required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
    </div> <!-- /span4 -->      		 	
@@ -35,7 +48,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
      <label for="apellido" class="tamletra2">Apellido</label>
-              <input type="text" name="apellido" id="apellido"  onkeyup="this.value=soloLetras(this.value)" disabled class="form-control monte10" placeholder="Example" required="required">		      		
+              <input type="text" name="apellido" id="apellido"  onkeyup="this.value=soloLetras(this.value)" disabled class="form-control monte10" placeholder="'.$row[2].'" required="required">		      		
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -44,7 +57,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="fech_nac" class="tamletra2">Fecha de Nacimiento</label>
-             <input type="text" id="fech_nac" name="fech_nac"  class="form-control monte10" disabled placeholder="Fecha de Nacimiento" required="required">
+             <input type="text" id="fech_nac" name="fech_nac"  class="form-control monte10" disabled placeholder="'.$row[4].'" required="required">
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -53,7 +66,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="telefono" class="tamletra2">Teléfono</label>
-            <input type="text" id="telefono" name="telefono" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="10" class="form-control monte10" placeholder="Teléfono" required="required" autofocus="autofocus">
+            <input type="text" id="telefono" name="telefono" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="10" class="form-control monte10" placeholder="'.$row[3].'" required="required" autofocus="autofocus">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -62,7 +75,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
     <label for="edad" class="tamletra2">Edad</label>
-            <input type="text" id="edad" name="edad" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="2" class="form-control monte10" placeholder="18" required="required">
+            <input type="text" id="edad" name="edad" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="2" class="form-control monte10" placeholder="'.$row[5].'" required="required">
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -71,7 +84,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">				   
       <label for="genero" class="tamletra2">Género</label>				
-      <input type="text" id="genero" name="genero" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="2" class="form-control monte10" placeholder="Masculino" required="required">
+      <input type="text" id="genero" name="genero" onkeyup="this.value=soloNumeros(this.value)" disabled maxlength="2" class="form-control monte10" placeholder="'.$row[6].'" required="required">
 
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
@@ -81,7 +94,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
    <label for="celectronico" class="tamletra2">Correo electrónico</label>
-             <input type="text" id="celectronico" class="form-control monte10" disabled placeholder="example@correo.com" required="required">
+             <input type="text" id="celectronico" class="form-control monte10" disabled placeholder="'.$row[7].'" required="required">
    </div> <!-- /widget-content -->
      </div> <!-- /widget -->
  </div> <!-- /span4 -->
@@ -93,7 +106,7 @@
 <div class="widget">	      			
   <div class="widget-content colorwidget">
 <label for="direccion" class="tamletra2">Dirección</label>
-<input type="text" id="direccion" class="form-control monte10" placeholder="Riobamba-Ecuador" disabled required="required" autofocus="autofocus">   
+<input type="text" id="direccion" class="form-control monte10" placeholder="'.$row[10].'" disabled required="required" autofocus="autofocus">   
 </div> <!-- /widget-content -->
 </div> <!-- /widget -->
 </div> <!-- /span4 -->
@@ -114,7 +127,7 @@
            <div class="widget">	      			
              <div class="widget-content colorwidget">
          <label for="fech_eleccion" class="tamletra2">Fecha Elección</label>
-                  <input type="text" id="fech_eleccion" disabled minlength="10" maxlength="10" class="form-control monte11" placeholder="1717171717" required="required" autofocus="autofocus">      
+                  <input type="text" id="fech_eleccion"  onkeyup="this.value=soloNumeros(this.value)" disabled minlength="10" maxlength="10" class="form-control monte11" placeholder="'.$row[12].'" required="required" autofocus="autofocus">      
         </div> <!-- /widget-content -->
            </div> <!-- /widget -->
          </div> <!-- /span4 -->
@@ -123,7 +136,7 @@
            <div class="widget">	      			
              <div class="widget-content colorwidget">
          <label for="informacion" class="tamletra2">Información especifica</label>
-         <textarea type="text" id="informacion"  class="form-control monte11" placeholder="Información Adicional" disabled rows="5"> </textarea>
+         <textarea type="text" id="informacion"  class="form-control monte11" placeholder="'.$row[13].'" disabled rows="5">'.$row[13].' </textarea>
         </div> <!-- /widget-content -->
            </div> <!-- /widget -->
          </div> <!-- /span4 -->
@@ -155,5 +168,5 @@
    </div> <!-- /span12 -->
 
  </div> <!-- /row -->';
-echo $pep;
+}
 ?>

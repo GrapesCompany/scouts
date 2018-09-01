@@ -399,7 +399,7 @@ if($r=mysqli_fetch_array($result)){
 		   <p class="altra"></p><br>
           <button class="btn btn-lg tambutton2 colorbtn3"  onclick="actualizarScoutUnidadJG()" data-dismiss="modal" href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
- 
+		  <input type="text" id="prueba" style="visible:hidden">   
 		           
           </div>
 
@@ -434,7 +434,7 @@ if($r=mysqli_fetch_array($result)){
 		   <p class="altra"></p><br>
           <button class="btn btn-lg tambutton2 colorbtn3" onclick="actualizarDirigenteUnidadJG()" data-dismiss="modal"  href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
-		            
+		       <input type="text" id="pruebaD" style="visible:hidden">     
           </div>
 
         </div>
@@ -461,9 +461,9 @@ if($r=mysqli_fetch_array($result)){
 		  <input type="text" id="cargod" class="form-control monte7"  required="required" autofocus="autofocus">
 
 		   <p class="altra"></p><br>
-          <button class="btn btn-lg tambutton2 colorbtn3" data-dismiss="modal"  href="#">Cambiar</button>
+          <button class="btn btn-lg tambutton2 colorbtn3"  onclick="actualizarCargoDirigenteJG()" data-dismiss="modal"  href="#">Cambiar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>  
-		            
+		    <input type ="text" id="pruebaCargo" style="visible:hidden">
            </div>
 
         </div>

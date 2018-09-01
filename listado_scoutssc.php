@@ -56,7 +56,7 @@ session_start();
             <td>'.$row[2].'</td>
             <td>'.$row[3].'</td>          
             <td>'.$row[13].'</td>            
-            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatdiri(this.value)">Ver</button></td> 
+            <td><button type="button" value='.$row[0].' class="btn btn-warning colorbtnlist" onclick="showdatdiri(this.value)">Ver</button></td> 
          </tr>';
          $c++;
        }
@@ -132,7 +132,7 @@ session_start();
             <td>'.$row[2].'</td>
             <td>'.$row[3].'</td>          
             <td>'.$row[7].'</td>             
-            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatojefe(this.value)">Ver</button></td> 
+            <td><button type="button" value='.$row[0].' class="btn btn-warning colorbtnlist" onclick="showdatojefe(this.value)">Ver</button></td> 
          </tr>';
          $c++;
        }
