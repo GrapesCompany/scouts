@@ -210,6 +210,7 @@ if(isset($_SESSION['userScout'])){
 <script src="./assets/js/guidely/guidely.min.js"></script>
 <script src="./vendor/js/funciones.js"></script>
 
+<script src="./vendor/js/validaciones.js"></script>
 
  
   </body>

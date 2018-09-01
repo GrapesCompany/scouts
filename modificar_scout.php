@@ -230,7 +230,7 @@ echo '		<div class="row">
     <br>
    <button type="button" class="btn btn-primary btn-block colorbtn6" onclick="onlinecamposscout(this.value)">Modificar</button>
    &nbsp;&nbsp;
-   <button type="button" class="btn btn-primary btn-block colorbtn">Guardar</button>
+   <button type="button"  onclick="modificarMicuentaUsuarioScout(this.value)" class="btn btn-primary btn-block colorbtn">Guardar2</button>
 </div> <!-- /widget-content -->
   </div> <!-- /widget -->
 </div> <!-- /span8 -->
