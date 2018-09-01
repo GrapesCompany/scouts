@@ -79,7 +79,7 @@
                     </div> <?php } ?>
                                   </p>
                                </div>                             
-                                <a href="./index.php" class="evhover">Ingresar como usuario</a> 
+                                <a href="./index.php" class="evhover3">Ingresar como usuario</a> 
  
 
                                   <!--   <a href="https://www.facebook.com/">
