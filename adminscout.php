@@ -80,7 +80,7 @@
 					</a>
 					<ul class="dropdown-menu">
                     	<li><a href="#" onclick="showListadoJefegc(this.value)">Jefe de Grupo</a></li>
-                        <li><a href="#" onclick="showListarScoutse(this.value)">Scout</a></li>
+                        <li><a href="#" onclick="showListadoScoutssc(this.value)">Scout</a></li>
                     </ul>    				
 				</li>
 			
