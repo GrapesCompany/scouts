@@ -51,8 +51,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <th scope="col">Apellido</th>
             <th scope="col">Edad</th>
             <th scope="col">Correo</th>
-            <th scope="col" class="text-center">Acción</th>
-         </tr>
+          </tr>
        </thead>
        <tbody>';
        $c = 1;
@@ -65,8 +64,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[3].'</td>          
             <td>'.$row[8].'</td>          
             <td>'.$row[9].'</td>                
-            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatoscout(this.value)">Ver</button></td> 
-         </tr>';
+          </tr>';
          $c++;
        }
     echo '       
@@ -85,8 +83,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <th scope="col">Apellido</th>
             <th scope="col">Edad</th>
             <th scope="col">Correo</th>
-            <th scope="col" class="text-center">Acción</th>
-         </tr>
+          </tr>
        </thead>
        <tbody>';
        $d = 1;
@@ -99,8 +96,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>                
-            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatojefe(this.value)">Ver</button></td> 
-         </tr>';
+          </tr>';
          $d++;
        }
     echo '       
@@ -119,8 +115,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <th scope="col">Apellido</th>
             <th scope="col">Edad</th>
             <th scope="col">Correo</th>
-            <th scope="col" class="text-center">Acción</th>
-         </tr>
+          </tr>
        </thead>
        <tbody>';
        $e = 1;
@@ -133,8 +128,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-            <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatdiri(this.value)">Ver</button></td> 
-         </tr>';
+          </tr>';
          $e++;
        }
     echo '       

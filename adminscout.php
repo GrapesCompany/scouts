@@ -113,6 +113,15 @@
 
 <!--Listado Jefe de Grupo-->              
 <div id="div_listarjefegsc" class="container"></div>
+
+<!--Mostrar datos scouts-->              
+<div id="div_datoscout" class="container"></div>
+
+<!--Mostrar Datos Jefe de Grupo-->              
+<div id="div_datojefeg" class="container"></div> 
+
+<!--Mostrar Datos Dirigentes-->              
+<div id="div_datodiri" class="container"></div> 
  
 
 <!-- __________________________________________________________________________________________________________________________________ -->
