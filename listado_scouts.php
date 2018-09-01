@@ -2,6 +2,19 @@
 
 include 'conexion.php';
 $idUnidad = $_GET['q'];
+$UnidadStr;          
+
+if($idUnidad == '1')
+  $UnidadStr = 'Manada';
+else
+  if($idUnidad == '2')
+    $UnidadStr = 'Tropa';
+  else
+    if($idUnidad == '3')
+      $UnidadStr = 'Caminante';
+    else
+      $UnidadStr = 'Rover';
+
 $conexion = conectar();
 
 $findCita = mysqli_query($conexion, "SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =$idUnidad")
@@ -30,6 +43,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
            <th scope="col">Nombre</th>
            <th scope="col">Apellido</th>
            <th scope="col">Edad</th>
+           <th scope="col">Unidad</th>
            <th scope="col">Correo</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>
@@ -44,6 +58,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
            <td>'.$row[2].'</td>
            <td>'.$row[3].'</td>          
            <td>'.$row[8].'</td>          
+           <td>'.$UnidadStr.'</td>          
            <td>'.$row[9].'</td>          
            <td><button type="button"  value="'.$row[0].'"  onclick="cambioUnidadScoutJG(this.value)" class="btn btn-warning dropdown-item colorbtnlist" >Cambiar Unidad</button></td> 
  
