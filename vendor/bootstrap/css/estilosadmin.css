@@ -129,6 +129,14 @@ a:hover, a:focus {
  color: white;
 }
 
+.evhover3:hover{
+    font-weight:bolder;
+    color: white;
+    
+   }
+
+ 
+
 .login .sign-btn input.btn:hover {
   
   border-color:#fff;
