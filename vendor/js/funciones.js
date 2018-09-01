@@ -11,8 +11,7 @@ function showAgregarJefeGrupo(str) {
     document.getElementById("div_listadoscouts").innerHTML = "";
     document.getElementById("div_listadodirigentes").innerHTML = "";
     document.getElementById("div_buscartotalmiembros").innerHTML = ""; 
-    document.getElementById("texto1").style.display = "hidden";
-
+ 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {

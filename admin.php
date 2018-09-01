@@ -33,31 +33,7 @@ if(isset($_SESSION['userJefeGrupo'])){
 		<link href="./assets/css/pages/reports.css" rel="stylesheet">
 
 
-<script languaje="Javascript">   
-  
-document.write('<style type="text/css">div.cp_oculta{display: none;}</style>');  
-function MostrarOcultar(capa,enlace)  
-{  
-    if (document.getElementById)  
-    {  
-		document.getElementById("div_nuevojefegrupo").innerHTML = ""; 
  
-        var aux = document.getElementById(capa).style;  
-        aux.display = aux.display? "":"block";  
-		
-		 
-		dibujargrafico();
-
-   		
-    } 
- 
-
- 
-
-}  
-   
-//-->  
-</script> 
  
   </head>
 
@@ -152,10 +128,7 @@ function MostrarOcultar(capa,enlace)
 						<b class="caret"></b>
 					</a>	
 				
-					<ul class="dropdown-menu">
-						<li><a class="texto" href="javascript:MostrarOcultar('texto1');">Por género</a></li>
-						   
-                     </ul>    				
+					  				
 				</li>
 			
 			</ul>
@@ -275,14 +248,17 @@ if($r=mysqli_fetch_array($result)){
 <div id="div_listardirigentes" class="container"></div>
 
 <!--Buscar Total Miembros-->              
-<div id="div_buscartotalmiembros" class="container"></div>
+<div id="div_buscartotalmiembros" class="container"></div> 
 
+<!--Listado de Scouts-->              
+<div id="div_listadoscouts" class="container"></div>
+
+<!--Listado de Dirigentes-->              
+<div id="div_listadodirigentes" class="container"></div>
 
  
+ <div id="div_reportegenero">
 
-<!--Reporte por Genero-->              
-<div class="cp_oculta" id="texto1">
-<div id="div_reportegenero">
 
 <h2>Manada:</h2> 
 <hr>
@@ -300,16 +276,10 @@ if($r=mysqli_fetch_array($result)){
 <hr>
 <div id="chartContainer4" style="height: 300pt; width: 100%;"></div>
 
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 
 </div>
-</div>
-
-<!--Listado de Scouts-->              
-<div id="div_listadoscouts" class="container"></div>
-
-<!--Listado de Dirigentes-->              
-<div id="div_listadodirigentes" class="container"></div>
 
        
 
@@ -500,7 +470,7 @@ if($r=mysqli_fetch_array($result)){
 
 <script>
 
-function dibujargrafico() {
+window.onload = function() {
  
  
 var chart = new CanvasJS.Chart("chartContainer", {
@@ -573,12 +543,9 @@ chart3.render();
 chart4.render();
  
 }
-
-
-
-
 </script>
 
+ 
  
   </body>
 
