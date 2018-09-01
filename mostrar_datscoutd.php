@@ -4,6 +4,8 @@ include 'conexion.php';
 $idUsuario = $_GET['q'];
 $conexion = conectar();
 
+$UnidadStr;          
+
 $infoUsuarios = mysqli_query($conexion, "SELECT * FROM usuario u 
                                           inner JOIN grupo g 
                                           on u.ID_GRUPO_SCOUT = g.ID_GRUPO_SCOUT
@@ -11,6 +13,20 @@ $infoUsuarios = mysqli_query($conexion, "SELECT * FROM usuario u
 
 
 while ($row = (mysqli_fetch_array($infoUsuarios))) {
+
+  if($row[10] == '1')
+  $UnidadStr = 'Manada';
+else
+  if($row[10] == '2')
+    $UnidadStr = 'Tropa';
+  else
+    if($row[10] == '3')
+      $UnidadStr = 'Caminante';
+    else
+    $row[10] = 'Rover';
+
+
+
  echo '		<div class="row">	      	
 		  	  
  <div class="span10">
@@ -114,7 +130,7 @@ while ($row = (mysqli_fetch_array($infoUsuarios))) {
 <div class="widget">	      			
   <div class="widget-content colorwidget">				   
  <label for="unidad" class="tamletra2">Unidad</label>				
- <input type="text" id="unidad" name="unidad" disabled class="form-control monte10" placeholder="'.$row[10].'" required="required">
+ <input type="text" id="unidad" name="unidad" disabled class="form-control monte10" placeholder="'.$UnidadStr.'" required="required">
 
 </div> <!-- /widget-content -->
 </div> <!-- /widget -->
