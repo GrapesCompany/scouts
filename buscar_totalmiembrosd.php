@@ -64,7 +64,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[3].'</td>          
             <td>'.$row[8].'</td>          
             <td>'.$row[9].'</td>                
-           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatoscoutd(this.value)">Ver</button></td> 
+           <td><button type="button" value='.$row[0].' class="btn btn-warning colorbtnlist" onclick="showdatoscoutd(this.value)">Ver</button></td> 
          </tr>';
          $c++;
        }
@@ -98,7 +98,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>                
-           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatojefed(this.value)">Ver</button></td> 
+           <td><button type="button" value='.$row[0].' class="btn btn-warning colorbtnlist" onclick="showdatojefed(this.value)">Ver</button></td> 
          </tr>';
          $d++;
        }
@@ -132,7 +132,7 @@ $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigent
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning colorbtnlist" onclick="showdatodirid(this.value)">Ver</button></td> 
+           <td><button type="button" value='.$row[0].' class="btn btn-warning colorbtnlist" onclick="showdatodirid(this.value)">Ver</button></td> 
          </tr>';
          $e++;
        }
