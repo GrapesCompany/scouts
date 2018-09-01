@@ -45,7 +45,7 @@ echo '<div class="row">
            <td>'.$row[12].'</td>            
            <td>'.$row[13].'</td>            
            <td>'.$row[14].'</td>   
-           <td><button type="button"   value="'.$row[0].'"  onclick="CambiarScoutUnidadD(this.value)" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" >Cambiar2</a></button></td>           
+           <td><button type="button"   value="'.$row[0].'"  onclick="CambiarScoutUnidadD(this.value)" class="btn btn-warning"><a class="dropdown-item colorbtnlist" href="#" >Cambiar Unidad</a></button></td>           
          </tr>';
         $c++;
       }
