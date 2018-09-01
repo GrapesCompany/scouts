@@ -7,7 +7,7 @@
        
        <div class="widget-content padd">
        
-         <h2 class="colores"> <i class="icon-user"></i> Detalle Datos Dirigente Admin</h2>
+         <h2 class="colores"> <i class="icon-user"></i> Detalle Datos Dirigente</h2>
          
           <hr>
 
@@ -140,7 +140,7 @@
      <div class="widget">	      			
        <div class="widget-content colorwidget">
        <br>
-       <button type="button" class="btn btn-warning colorbtnlist"  onclick="showBuscarTotalMiembros()">Regresar</button>
+       <button type="button" class="btn btn-warning colorbtnlist"  onclick="showListadoScoutssc()">Regresar</button>
       
  </div> <!-- /widget-content -->
      </div> <!-- /widget -->
