@@ -14,6 +14,7 @@ if ($tipoP == 'scout' && $username != "" && $username != null && $password != ""
     while ($f = mysqli_fetch_array($existenciausuario)) {
         $arreglo_scout[] = array('cedulaS' => $f['CEDULA'],
             'nombreS' => $f['NOMBRE'],
+            'idGrupoS' => $f['ID_GRUPO_SCOUT'],
             'apellidoS' => $f['APELLIDO'],
             'telefonoS' => $f['TELEFONO'],
             'fechaNacS' => $f['FECHA_NAC'],

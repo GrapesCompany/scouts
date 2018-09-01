@@ -19,7 +19,7 @@ $findJefedeGrupo = mysqli_query($conexion, "SELECT * FROM trabajador JOIN jefe_g
                                             LIKE '%$idBuscar%'")or die("Problemas en el select" . mysqli_error($conexion));
 
 $findDirigente = mysqli_query($conexion, "SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA 
-                                          WHERE (dirigente.ID_GRUPO_SCOUT='1') 
+                                          WHERE (dirigente.ID_GRUPO_SCOUT='$idgrupoD') 
                                           AND (trabajador.NOMBRE_TRA LIKE '%$idBuscar%' OR trabajador.APELLIDO_TRA)")
                                           or die("Problemas en el select" . mysqli_error($conexion));
 
