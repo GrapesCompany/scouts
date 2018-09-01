@@ -189,7 +189,7 @@ if(isset($_SESSION['userScout'])){
 		  <label for="rcnueva" class="tamletra aligfn">Repetir Contraseña Nueva </label>
           <input type="password" id="rcnueva" class="form-control monte" placeholder="******" required="required" autofocus="autofocus">  
 		 
-          <button class="btn btn-lg tambutton2 colorbtn3" href="#">Guardar</button>
+          <button class="btn btn-lg tambutton2 colorbtn3" onclick="cambiarContrasenaScout()"  data-dismiss="modal" href="#">Guardar</button>
           <button class="btn btn-lg tambutton2" type="button" data-dismiss="modal">Cancelar</button>
             
           </div>

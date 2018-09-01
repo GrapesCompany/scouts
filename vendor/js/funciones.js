@@ -1222,6 +1222,43 @@ function cambiarContrasenaDirigente() {
 
 }
 
+
+
+function cambiarContrasenaScout() {
+
+    
+    var dataString = 'cactual=' + document.getElementById('cactual').value +
+        '&cnueva=' + document.getElementById('cnueva').value +
+        '&rcnueva=' + document.getElementById('rcnueva').value;
+    if (document.getElementById('cnueva').value != document.getElementById('rcnueva').value) {
+        alert("Las contraseñas no coinciden");
+    } else {
+        $.ajax({
+            
+            type: "POST",
+            url: "php/cambiarContrasenaScout.php",
+            data: dataString,
+            success: function (data) {
+             
+                alert(data);
+                //recuperando las variables
+               
+            }, error: function (errorThrown) {
+                alert("Existe un error" + errorThrown);
+            }
+
+        });
+    }
+
+
+
+}
+
+
+
+
+
+
 // todo esto es lo del jefe de grup 
 function cambioUnidadScoutJG(cedula)
 {
