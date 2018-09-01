@@ -41,6 +41,7 @@ session_start();
            <th scope="col">Nombre</th>
            <th scope="col">Apellido</th>
            <th scope="col">Teléfono</th>
+           <th scope="col">Unidad</th>
            <th scope="col">Unidad Específica</th>
            <th scope="col" class="text-center">Acción</th>
          </tr>

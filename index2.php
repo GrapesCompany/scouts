@@ -79,16 +79,17 @@
                     </div> <?php } ?>
                                   </p>
                                </div>                             
-                               <div class="col-sm-12 mx-auto text-center" style="margin: auto">
-                                    <a href="https://www.facebook.com/">
+                                <a href="./index.php" class="evhover">Ingresar como usuario</a> 
+ 
+
+                                  <!--   <a href="https://www.facebook.com/">
                                       <i class="fa fa-facebook-square fa-2x evhover"></i>
                                     </a>
                                     &nbsp;
                                     <a href="https://www.instagram.com/?hl=es-la">
                                       <i class="fa fa-instagram fa-2x evhover"></i>           
-                                    </a>
-                                </div>                    
-                        
+                                    </a> -->
+                         
                         </form>
                         </div>
                         <div class="back signup_form"></div>
