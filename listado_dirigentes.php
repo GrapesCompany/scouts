@@ -48,7 +48,7 @@ or die("Problemas en el select" . mysqli_error($conexion));
             <td>'.$row[2].'</td>          
             <td>'.$row[5].'</td>          
             <td>'.$row[7].'</td>            
-           <td><button type="button" class="btn btn-warning dropdown-item colorbtnlist" data-toggle="modal" data-target="#CambiarDirigenteAd">Cambiar</button></td> 
+           <td><button type="button"  value="'.$row[0].'"  onclick="cambioUnidadDirigenteJG(this.value)" class="btn btn-warning dropdown-item colorbtnlist" >Cambiar Unidad</button></td> 
          </tr>';
          $c++;
        }

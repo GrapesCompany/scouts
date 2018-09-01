@@ -1163,3 +1163,68 @@ function cambiarContrasenaDirigente() {
 
 }
 
+// todo esto es lo del jefe de grup 
+function cambioUnidadScoutJG(cedula)
+{
+    $('#CambiarScoutAd').modal('show');
+		$('#prueba').val(cedula)
+
+}
+
+function actualizarScoutUnidadJG()
+{
+
+    var dataString = 'cedula=' + document.getElementById('prueba').value +
+    '&unidad=' + document.getElementById('unidadn').value;
+
+
+    $.ajax({
+            
+        type: "POST",
+        url: "php/cambiarScoutUnidadJG.php",
+        data: dataString,
+        success: function (data) {
+         
+            alert(data);
+            //recuperando las variables
+           
+        }, error: function (errorThrown) {
+            alert("Existe un error" + errorThrown);
+        }
+
+    });
+   
+}
+
+
+function cambioUnidadDirigenteJG(cedula)
+{
+    $('#CambiarDirigenteAd').modal('show');
+		$('#pruebaD').val(cedula)
+
+}
+
+function actualizarDirigenteUnidadJG()
+{
+
+    var dataString = 'cedula=' + document.getElementById('pruebaD').value +
+    '&unidad=' + document.getElementById('unidadnD').value;
+
+
+    $.ajax({
+            
+        type: "POST",
+        url: "php/cambiarDirigenteUnidadJG.php",
+        data: dataString,
+        success: function (data) {
+         
+            alert(data);
+            //recuperando las variables
+           
+        }, error: function (errorThrown) {
+            alert("Existe un error" + errorThrown);
+        }
+
+    });
+   
+}
