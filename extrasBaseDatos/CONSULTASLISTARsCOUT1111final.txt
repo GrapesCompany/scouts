@@ -1,0 +1,85 @@
+JEFE DE GRUPO   (ADMINISTRADOR)----------------------------  asdasd 123456
+
+9.	El sistema permitirá listar a los scouts por unidad. 					*********LISTO*********
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =1  CAMBIA EL NUEMRO DE ACUERDO A LA UNIDAD
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =1
+
+
+10.	El sistema permitirá listar a los dirigentes por unidad. A				*********LISTO*********
+
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=1
+EL NUEMRO DE ACUERDOA  LA UNIDAD
+
+
+
+
+12.	El sistema permitirá buscar a todos los miembros 					*********LISTO*********			
+
+SCOUT
+
+SELECT * FROM usuario WHERE NOMBRE LIKE '%%' OR APELLIDO LIKE '%S%' OR EMAIL LIKE '%%'
+
+JEFE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=jefe_grupo.CEDULA_TRA WHERE trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+DIRIGENTE
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+
+dIRIGENTE---------------------					32423 123456789
+				
+		
+-----LISTAR A LOS SCOUTS DE SU UNIDAD												*********LISTO*********	
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT ="1"
+
+--LISTAR A LOS DIRIGENTES													*********LISTO*********	
+
+SELECT * FROM jefe_grupo JOIN trabajador on jefe_grupo.CEDULA_TRA = trabajador.CEDULA_TRA
+
+LISTAR AL JEFE DE GRUPO														*********LISTO*********	
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=jefe_grupo.CEDULA_TRA
+
+24.	El sistema permitirá buscar a todos los miembros de su unidad 
+
+SCOUT
+
+SELECT * FROM usuario WHERE (IDID_GRUPO_SCOUT='1') AND (NOMBRE  LIKE '%%' OR APELLIDO LIKE '%S%' OR EMAIL LIKE '%%')
+
+JEFE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=jefe_grupo.CEDULA_TRA WHERE  trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+DIRIGENTE
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE (dirigente.ID_GRUPO_SCOUT='1') AND (trabajador.NOMBRE_TRA LIKE '%%' OR t
+rabajador.APELLIDO_TRA)
+
+
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////*****************************************************/////////////////////////////////////////////////////////////////////////
+
+
+SCOUT-------------------------				asdasd	asdasd
+-----LISTAR A LOS SCOUTS DE SU UNIDAD
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT ="1"
+
+--LISTAR A LOS DIRIGENTES
+
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''
+
+LISTAR AL JEFE DE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''

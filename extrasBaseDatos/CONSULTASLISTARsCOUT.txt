@@ -1,0 +1,77 @@
+JEFE DE GRUPO----------------------------
+
+9.	El sistema permitirá listar a los scouts por unidad. 
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =1  CAMBIA EL NUEMRO DE ACUERDO A LA UNIDAD
+
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT =1
+
+
+10.	El sistema permitirá listar a los dirigentes por unidad. A
+
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=1
+EL NUEMRO DE ACUERDOA  LA UNIDAD
+
+
+
+
+12.	El sistema permitirá buscar a todos los miembros 
+
+SCOUT
+
+SELECT * FROM usuario WHERE NOMBRE LIKE '%%' OR APELLIDO LIKE '%S%' OR EMAIL LIKE '%%'
+
+JEFE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=jefe_grupo.CEDULA_TRA WHERE trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+DIRIGENTE
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+
+
+dIRIGENTE---------------------
+
+
+-----LISTAR A LOS SCOUTS DE SU UNIDAD
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT ="1"
+
+--LISTAR A LOS DIRIGENTES
+
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''
+
+LISTAR AL JEFE DE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''
+
+24.	El sistema permitirá buscar a todos los miembros de su unidad 
+
+SCOUT
+
+SELECT * FROM usuario WHERE (IDID_GRUPO_SCOUT='1') AND (NOMBRE  LIKE '%%' OR APELLIDO LIKE '%S%' OR EMAIL LIKE '%%')
+
+JEFE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=jefe_grupo.CEDULA_TRA WHERE  trabajador.NOMBRE_TRA LIKE '%%' OR trabajador.APELLIDO_TRA LIKE '%S%' OR trabajador.EMAIL_TRA LIKE '%%'
+
+DIRIGENTE
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE (dirigente.ID_GRUPO_SCOUT='1') AND (trabajador.NOMBRE_TRA LIKE '%%' OR t
+rabajador.APELLIDO_TRA)
+
+
+
+
+SCOUT-------------------------
+-----LISTAR A LOS SCOUTS DE SU UNIDAD
+
+SELECT * FROM usuario WHERE ID_GRUPO_SCOUT ="1"
+
+--LISTAR A LOS DIRIGENTES
+
+SELECT * FROM trabajador JOIN dirigente ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''
+
+LISTAR AL JEFE DE GRUPO
+
+SELECT * FROM trabajador JOIN jefe_grupo ON trabajador.CEDULA_TRA=dirigente.CEDULA_TRA WHERE dirigente.ID_GRUPO_SCOUT=''
